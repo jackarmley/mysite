@@ -18,11 +18,90 @@
 			<h1>Jack Armley</h1>
 			<nav role="navigation" id="gl-nav_pri" class="clearfix">
 				<ul>
-					<li><a class="app-ico ico_home" href="" title="">Home</a></li>
-					<li><a class="app-ico ico_view" href="" title="">Stories</a></li>
-					<li><a class="app-ico ico_email" href="" title="">Contact</a></li>
+					<li><a class="app-ico ico_home" href="" title=""><span>Home</span></a></li>
+					<li><a class="app-ico ico_view st-active" href="" title=""><span>Stories</span></a></li>
+					<li><a class="app-ico ico_email" href="" title=""><span>Contact</span></a></li>
 				</ul>
 			</nav>	
 		</header>
+		<div id="gl-content_pri">
+			<article>
+									<h1>Keeping a clean (style) sheet</h1>
+									<div class="standfirst">
+										<p>
+				A stylesheet may seem small, but the kilobytes can add up. Sticking to a few simple rules can help keep the weight off.</p>
+
+									</div>	
+									<div class="body">
+										<p>
+				<img alt="A trash can with bits of discarded CSS syntax thrown in" class="float_right" src="http://www.jackarmley.com/images/uploads/images/blogimg-keepingacleansheet.png" /></p>
+			<h2>
+				Don&#39;t create empty rules, or comment out un-needed ones</h2>
+			<p>
+				It&#39;s very tempting when creating styles to open empty rules for HTML elements you&#39;ve created, like this: <code>.video_container&#123;&#125;</code>, which can be filled in later. I find that, often these empty rules get forgotton about ad end up lingering in the stylesheet. Although they contain no actual rules, they still need to be processed by the browser so I&#39;d always recommend: only creating new rules if you&#39;re going to use them,</p>
+
+										<p>
+				In the same way, commented-out rules (such as: <code>/*video_container&#123;padding:10px;&#125;*/</code>) can be forgotton about. If these type of rules may be neede later, I&#39;d recommend putting them in a fresh text document called <code>"depreciated_styles.txt"</code>, so you&#39;ll have them if needed.</p>
+			<h2>
+				Avoid unneccesary selectors</h2>
+			<p>
+				When the rules stack up, it can be difficult to navigate the stylesheet, and one way to keep tabs on what rules refers to where on the site, is to prefix the rule with the name of the element, or use descendant selectors to indicate where a rule belongs; like so:</p>
+
+				<p><code>body div#content-wrapper div#content-main div.panel h2&#123;font-size:16px;line-height:18px;&#125;</code></p>
+			<p>
+				This rule will work fine, but the browser has a lot of work to do to process it. Also, due to the amount of selectors used the rule has a really high specicifity (a value of 215 to be precise), which means that, if it needs to be overridden elsewhere in the stylesheet even more selectors will have to be used, in turn adding more weight and complexity to the stylesheet.<span style="font-weight: bold;"> </span></p>
+			<p>
+				To avoid this, I use the minimal amout of selectors neccesary to give the element I&#39;m targeting a unique set of styles, which using the above example would be:</p>
+			<pre>
+			.panel h2{font-size:16px;line-height:18px;}&#10;</pre>
+			<p>
+				If you&#39;ve quite a few rules and you want to keep track of what beongs to what, rather than using lots of elements and descendent selection, I find it better to indent them:</p>
+			<h3>
+				Before</h3>
+			<p>
+				<code>body&#123;height:100%;background-color:#fff;&#125;<br />
+				body #content-wrapper&#123;width:960px;margin:0 auto;&#125;<br />
+				body #content-wrapper #content-main&#123;width:600px;float:left;&#125;<br />
+				body #content-wrapper #content-main .panel&#123;padding:20px;background-color:#ccc;&#125;<br />
+				body #content-wrapper #content-main .panel h2&#123;font-size:1.2em;margin:0 0 .5em 0;color:#000;&#125;<br />
+				body #content-wrapper #content-main .panel p&#123;font-size:1em;margin:0 1em 0;color:#333;&#125; </code></p>
+			<h3>
+				After</h3>
+			<p>
+				<code>body&#123;height:100%;background-color:#fff;&#125;<br />
+				#content-wrapper&#123;width:960px;margin:0 auto;&#125;<br />
+				#content-main&#123;width:600px;float:left;&#125;<br />
+				.panel&#123;padding:20px;background-color:#ccc;&#125;<br />
+				.panel h2&#123;font-size:1.2em;margin:0 0 .5em 0;color:#000;&#125;<br />
+				.panel p&#123;font-size:1em;margin:0 1em 0;color:#333;&#125; </code></p>
+			<p>
+				You&#39;ll notice that all the CSS rules I&#39;ve written are on one line; this helps to keep the stylesheet smaller and makes it easier to scan throught. Of course this is purely preference; I find it easier to work with but of course, others may prefer to put each rule on a new line.</p>
+			<h2>
+				Group shared properties together</h2>
+			<p>
+				Another thing I tend to do, is to group together rules I know will be needed time and again throughout the stylesheet; what&#39;s the point of re-declaring something over and over again? To group multiple selecters behind one rule again, makes the stylesheet lighter and easier to manage.</p>
+			<p>
+				So for example this...</p>
+			<p>
+				<code>h1&#123;font-family:Arial,helvetica,sans-serif;font-weight:bold;color:#333;font-size:2em;&#125;<br />
+				h2&#123;font-family:Arial,helvetica,sans-serif;font-weight:bold;color:#333;font-size:2em;&#125;<br />
+				h3&#123;font-family:Arial,helvetica,sans-serif;font-weight:bold;color:#333;font-size:2em;&#125;</code></p>
+			<p>
+				Becomes this:</p>
+			<p>
+				<code>h1,h2,h3&#123;font-family:Arial,helvetica,sans-serif;font-weight:bold;color:#333;font-size:2em;&#125;</code></p>
+			<p>
+				Additionally, if I want to declare a new size for each font, I could re-declare this new rule underneath, along with other unique properties, like so:</p>
+			<p>
+				<code>h1,h2,h3&#123;font-family:Arial,helvetica,sans-serif;font-weight:bold;color:#333;&#125;<br />
+				h1&#123;font-size:2em;margin:0 0 0.25em 0;&#125;<br />
+				h2&#123;</code><code>font-size:1.5em;margin:1em 0 0.5em 0;</code><code>&#125;<br />
+				h3&#123;</code><code>font-size:1.2em;margin:0.75em 0 0.5em 0;</code><code>&#125; </code></p>
+			<h2>
+				Extending this thinking</h2>
+			<p>
+				Of course, here I&#39;ve started to foray a little into Modular (or object-oriented) CSS; the idea of using reusable chunks of code throughout a site in a really planned and systematic way. I&#39;ve writtenbriefly about this on the site, but I&#39;d recommend going to <a href="https://github.com/stubbornella/oocss/wiki" title="Find out more about OOCSS">Nicole Suillivan&#39;s github repo</a> for more info (she&#39;s a champion of modular CSS; she even managed to cut Facebook&#39;s mass of stylesheets down to size). I think, with an appropriate balance of modular and decendant-selection style CSS a site&#39;s styles can become much more lightweight and easy to manage. I&#39;ve only scratched the surface here so, like on any good topical news programme, I&#39;d love to hear your thoughts (and how many people hate CSS indenting; I hear quite a few).</p>
+								</article>
+		</div>
 	</body>		
 </html>

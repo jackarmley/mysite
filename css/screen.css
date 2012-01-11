@@ -186,20 +186,37 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 /*========
 [=4:Global layout styles]
 ======== */
-	body{width:80%;margin:0 auto;}
-		#gl-header_pri h1{text-align:center;}
-		#gl-nav_pri{border-top:1px solid #eee;border-bottom:1px solid #eee;}
+	body{width:80%;max-width:960px;margin:0 auto;}
+		#gl-header_pri{margin:0 0 2em 0;}
+			#gl-header_pri h1{
+				font-size:1.5em;text-align:center;margin:0 auto;padding:0.5em 0;background:#eee;width:60%;text-transform:uppercase;font-weight:bold;
+				background: -moz-linear-gradient(top, rgba(238,238,238,1) 88%, rgba(170,170,170,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(88%,rgba(238,238,238,1)), color-stop(100%,rgba(170,170,170,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* IE10+ */
+				background: linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* W3C */
+			}
+		#gl-nav_pri{border-top:1px solid #999;border-bottom:1px solid #999;}
 			#gl-nav_pri li{display:inline;font-size:1.5em;}
 			#gl-nav_pri a{display:block;float:left;width:33%;text-align:center;line-height:3em;}
 				#gl-nav_pri a:before{position:relative;bottom:-0.12em;padding:0 0.5em 0 0;font-size:2em;}
-		
+		    #gl-nav_pri .st-active{color:#aa0101;text-shadow:1px 1px 0 rgba(255,255,255,.5);}
+		    	#gl-nav_pri .st-active a:before{padding:0;}   
+	article{-webkit-column-count:2;}
+		article h1{-webkit-column-span:all;text-align:center;}
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */				
 			
 /*========
 [=6:Media queries]
-======== */	
+======== */
+	@media screen and (min-width:300px) and (max-width:600px){
+		#gl-nav_pri span{display:none;} 
+		article{-webkit-column-count:1;}
+		
+	}   
 	
 /*========
 [=7:Third-party styles]
