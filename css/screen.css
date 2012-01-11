@@ -49,13 +49,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			}  
 		/*-Set base rules for all typographic elements*/
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
-				body{font:12px/1.45em Arial,helvetica,sans-serif;color:#111;}
+				body{font:14px/1.45em Arial,helvetica,sans-serif;color:#111;}
 			/*Block elements*/   
-				p{margin:0 0 0.82em 0;line-height:1.45em;}
+				p{margin:0 0 1em 0;line-height:1.45em;}
 				hgroup{position:relative;}
-				h1,h2,h3,h4,h5,h6{line-height:1.3em;font-weight:normal;margin:2.08em 0 0.41em 0;color:#111;}
-					h1{font-size:3em;margin:1.1em 0 0.83em 0;} 
-					h2,h3,h4,h5,h6{font-size:1em;}
+				h1,h2,h3,h4,h5,h6{line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#111;}
+					h1{font-size:3em;margin:0 0 0.83em 0;} 
+					h2,h3,h4,h5,h6{font-size:1.5em;}
 				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
 						ul li,ol li{margin:0 0 0.41em 0;}
 					ul{list-style:disc outside;}
@@ -188,23 +188,20 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 ======== */
 	body{width:80%;max-width:960px;margin:0 auto;}
 		#gl-header_pri{margin:0 0 2em 0;}
-			#gl-header_pri h1{
-				font-size:1.5em;text-align:center;margin:0 auto;padding:0.5em 0;background:#eee;width:60%;text-transform:uppercase;font-weight:bold;text-shadow:0 1px 0 #fff;color:#333;
-				background: -moz-linear-gradient(top, rgba(238,238,238,1) 88%, rgba(170,170,170,1) 100%); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(88%,rgba(238,238,238,1)), color-stop(100%,rgba(170,170,170,1))); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* IE10+ */
-				background: linear-gradient(top, rgba(238,238,238,1) 88%,rgba(170,170,170,1) 100%); /* W3C */
-			}
-		#gl-nav_pri{border-top:1px solid #999;border-bottom:1px solid #999;}
-			#gl-nav_pri li{display:inline;font-size:1.5em;}
+			#gl-header_pri h1{font-size:1.5em;text-align:center;margin:0 auto;padding:0.5em 0;width:60%;text-transform:uppercase;font-weight:bold;text-shadow:0 1px 0 #fff;color:#333;}
+		#gl-nav_pri{border-top:1px solid #eee;border-bottom:1px solid #eee;}
+			#gl-nav_pri li{display:inline;font-size:1.2em;}
 			#gl-nav_pri a{display:block;float:left;width:33%;text-align:center;line-height:3em;}
 				#gl-nav_pri a:before{position:relative;bottom:-0.12em;padding:0 0.5em 0 0;font-size:2em;}
 		    #gl-nav_pri .st-active{color:#aa0101;text-shadow:1px 1px 0 rgba(255,255,255,.5);}
 		    	#gl-nav_pri .st-active a:before{padding:0;}   
-	article{-webkit-column-count:2;}
-		article h1{-webkit-column-span:all;text-align:center;}
+	.mod-article_pri{-webkit-column-count:2;-webkit-column-gap:4em;-webkit-column-rule:1px outset #eee;margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:2px solid #eee;}
+		.mod-article_pri h1{-webkit-column-span:all;text-align:center;}  
+		.mod-article_pri .standfirst{margin:0 auto 2em auto;-webkit-column-span:all;text-align:center;font-size:1.5em;width:60%;}
+		
+	#gl-content-sec article{float:left;width:33.3%;padding:0 2em 1em 0;-webkit-box-sizing:border-box;min-height:260px;}           
+		#gl-content-sec article:nth-child(3n+3){padding-right:0;}
+		#gl-content-sec article h1{font-size:1.5em;}
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */				
@@ -214,9 +211,24 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 ======== */
 	@media screen and (min-width:300px) and (max-width:600px){
 		#gl-nav_pri span{display:none;} 
-		article{-webkit-column-count:1;}
+		.mod-article_pri{-webkit-column-count:1;}                                                                         
+			.mod-article_pri .standfirst{width:100%;}
+		#gl-content-sec article{width:100%;padding-right:0;min-height:1px;border-bottom:1px solid #eee;margin:0 0 2em 0;}  
 		
-	}   
+		
+	}
+	@media screen and (min-width:601px) and (max-width:800px){
+		.mod-article_pri{-webkit-column-count:1;}   
+		#gl-content-sec article{float:left;width:50%;min-height:180px;}
+			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
+			#gl-content-sec article p{font-size:0.85em;}
+			
+		
+	} 
+	@media screen and (min-width:801px) and (max-width:960px){
+			#gl-content-sec article p{font-size:0.85em;}
+	}
+	
 	
 /*========
 [=7:Third-party styles]
