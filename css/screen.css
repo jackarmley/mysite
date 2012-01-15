@@ -46,10 +46,14 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			         url('../assets/fonts/snowcone/snowcone-regular-webfont.svg#SnowconeRegular') format('svg');
 			    font-weight: normal;
 			    font-style: normal;
-			}  
+			}
+			.mod-article_pri h1,
+			#gl-header_pri h1,
+			#gl-nav_pri span
+			{font-family:'Vast Shadow', serif;}    
 		/*-Set base rules for all typographic elements*/
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
-				body{font:14px/1.45em Arial,helvetica,sans-serif;color:#111;}
+				body{font:14px/1.45em 'Brawler', serif;color:#111;}
 			/*Block elements*/   
 				p{margin:0 0 1em 0;line-height:1.45em;}
 				hgroup{position:relative;}
@@ -186,21 +190,22 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 /*========
 [=4:Global layout styles]
 ======== */
-	body{width:80%;max-width:960px;margin:0 auto;}
-		#gl-header_pri{margin:0 0 2em 0;}
-			#gl-header_pri h1{font-size:1.5em;text-align:center;margin:0 auto;padding:0.5em 0;width:60%;text-transform:uppercase;font-weight:bold;text-shadow:0 1px 0 #fff;color:#333;}
-		#gl-nav_pri{border-top:1px solid #eee;border-bottom:1px solid #eee;}
+	body{width:90%;margin:5em auto 0 auto;}
+		#gl-header_pri{position:relative;float:left;display:none;}
+			#gl-header_pri h1{position:absolute;left:50%;top:15px;width:7em;text-align:center;font-size:1.5em;text-align:center;margin:0 0 0 -3.5em;text-transform:uppercase;font-weight:bold;text-shadow:0 1px 0 #fff;color:#333;background:#fff;z-index:1;border:1px dashed #111;}
+		#gl-nav_pri{position:relative;}
 			#gl-nav_pri li{display:inline;font-size:1.2em;}
-			#gl-nav_pri a{display:block;float:left;width:33%;text-align:center;line-height:3em;}
+			#gl-nav_pri a{display:block;text-align:center;border:1px dotted #111;background:#fff;z-index:1;width:3em;height:3em;}
 				#gl-nav_pri a:before{position:relative;bottom:-0.12em;padding:0 0.5em 0 0;font-size:2em;}
+			#gl-nav_pri span{display:none;}
 		    #gl-nav_pri .st-active{color:#aa0101;text-shadow:1px 1px 0 rgba(255,255,255,.5);}
 		    	#gl-nav_pri .st-active a:before{padding:0;}   
-	.mod-article_pri{-webkit-column-count:2;-webkit-column-gap:4em;-webkit-column-rule:1px outset #eee;margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:2px solid #eee;}
-		.mod-article_pri h1{-webkit-column-span:all;text-align:center;}  
-		.mod-article_pri .standfirst{margin:0 auto 2em auto;-webkit-column-span:all;text-align:center;font-size:1.5em;width:60%;}
+		#gl-content_pri{float:left;}    	
+	.mod-article_pri{-webkit-column-count:3;-webkit-column-gap:6em;-webkit-column-rule:1px dashed #111;margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:1px solid #111;}
+		.mod-article_pri .standfirst{margin:0 0 2em 0;font-size:1.5em;}
 		
-	#gl-content-sec article{float:left;width:33.3%;padding:0 2em 1em 0;-webkit-box-sizing:border-box;min-height:260px;}           
-		#gl-content-sec article:nth-child(3n+3){padding-right:0;}
+	#gl-content-sec article{float:left;width:25%;padding:0 6em 1em 0;-webkit-box-sizing:border-box;min-height:260px;}           
+		#gl-content-sec article:nth-child(4n+4){padding-right:0;}
 		#gl-content-sec article h1{font-size:1.5em;}
 /*========
 [=5:Section-specific layout styles]                                                          
