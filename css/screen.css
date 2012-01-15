@@ -47,8 +47,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			    font-weight: normal;
 			    font-style: normal;
 			}
-			.mod-article_pri h1,
-			#gl-header_pri h1,
+			h1,
 			#gl-nav_pri span
 			{font-family:'Vast Shadow', serif;}    
 		/*-Set base rules for all typographic elements*/
