@@ -53,9 +53,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			{font-family:'Vast Shadow', serif;}    
 		/*-Set base rules for all typographic elements*/
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
-				body{font:14px/1.45em 'Brawler', serif;color:#111;}
+				body{font:14px/1.5em 'Brawler', serif;color:#111;}
 			/*Block elements*/   
-				p{margin:0 0 1em 0;line-height:1.45em;}
+				p{margin:0 0 1em 0;line-height:1.5em;}
 				hgroup{position:relative;}
 				h1,h2,h3,h4,h5,h6{line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#111;}
 					h1{font-size:3em;margin:0 0 0.83em 0;} 
@@ -194,10 +194,11 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	body{width:90%;margin:5em auto 0 auto;}
 		#gl-header_pri{position:fixed;top:6em;left:0;}
 			#gl-header_pri h1{display:none;}
-			#gl-nav_pri li{position:relative;display:block;margin:0 0 0.5em 0;font-size:2em;}
-				#gl-nav_pri .st-active:before{content:" ";width:0.25em;height:0.25em;border-radius:0.25em;display:block;background:#111;position:absolute;top:50%;left:-0.12em;margin:-0.10em 0 0 0;}
-			#gl-nav_pri a{display:block;padding:0 0.5em;}
-			#gl-nav_pri span{display:none;}  
+			#gl-nav_pri ul{margin:0;}
+				#gl-nav_pri li{position:relative;display:block;margin:0 0 0.5em 0;font-size:2em;}
+					#gl-nav_pri .st-active:before{content:" ";width:0.25em;height:0.25em;border-radius:0.25em;display:block;background:#111;position:absolute;top:50%;left:-0.12em;margin:-0.10em 0 0 0;}
+				#gl-nav_pri a{display:block;padding:0 0.5em;}
+				#gl-nav_pri span{display:none;}  
 		#gl-content_pri{float:left;}    	
 	.mod-article_pri{-webkit-column-count:3;-webkit-column-gap:6em;-webkit-column-rule:1px dashed #111;margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:1px solid #111;}
 		.mod-article_pri .standfirst{margin:0 0 2em 0;font-size:1.5em;}
@@ -213,13 +214,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 [=6:Media queries]
 ======== */
 	@media screen and (min-width:10px) and (max-width:600px){
-		body{width:90%;margin:0 auto;}
-		#gl-header_pri{position:relative;top:0;left:0;margin:0 0 0.5em 0;}
+		body{width:100%;margin:0 auto;}
+		#gl-header_pri{position:relative;top:0;left:0;margin:0 0 1em 0;background:#111;}
 			#gl-nav_pri li{display:block;float:left;width:25%;}	
-				#gl-nav_pri .st-active:before{top:0;left:50%;margin:0 0 0 -0.10em;}
-			#gl-nav_pri a{float:left;padding:0.5em 0 0 0;text-align:center;width:100%;}
+				#gl-nav_pri .st-active:before{top:-0.12em;left:50%;margin:0 0 0 -0.10em;background:#fff;}
+			#gl-nav_pri a{float:left;padding:0.5em 0 0 0;text-align:center;width:100%;color:#fff;}
 		#gl-content_pri
-		{float:none;width:100%;}
+		{float:none;width:90%;margin:0 auto;}
 		.mod-article_pri{-webkit-column-count:1;}                                                                         
 			.mod-article_pri .standfirst{width:100%;}
 		#gl-content-sec article{width:100%;padding-right:0;min-height:1px;border-bottom:1px solid #eee;margin:0 0 2em 0;}  
@@ -227,8 +228,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		
 	}
 	@media screen and (min-width:601px) and (max-width:900px){
-		body{width:80%;}
-		.mod-article_pri{-webkit-column-count:1;}   
+		body{width:70%;}
+		#gl-content_pri{width:100%;float:none;}
+			.mod-article_pri{-webkit-column-count:1;}   
 		#gl-content-sec article{float:left;width:50%;min-height:180px;}
 			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
 			#gl-content-sec article p{font-size:0.85em;}
@@ -236,8 +238,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		
 	} 
 	@media screen and (min-width:901px) and (max-width:1024px){
-		body{width:70%;}
-		.mod-article_pri{-webkit-column-count:1;}   
+		body{width:60%;}
+		#gl-content_pri{width:100%;float:none;}
+			.mod-article_pri{-webkit-column-count:1;}   
 		#gl-content-sec article{float:left;width:50%;min-height:180px;}
 			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
 			#gl-content-sec article p{font-size:0.85em;}
