@@ -218,8 +218,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		body{width:100%;margin:0 auto;}
 		#gl-header_pri{position:relative;top:0;left:0;margin:0 0 2em 0;background:#111;}
 			#gl-nav_pri li{display:block;float:left;width:25%;}	
-				#gl-nav_pri .st-active:before{top:-0.12em;left:50%;margin:0 0 0 -0.10em;background:#fff;}
-			#gl-nav_pri a{float:left;padding:0.5em 0 0 0;text-align:center;width:100%;color:#fff;}
+				#gl-nav_pri .st-active:before{top:-0.12em;left:50%;margin:0 0 0 -0.10em;background:#FBFBF7;}
+			#gl-nav_pri a{float:left;padding:0.5em 0 0 0;text-align:center;width:100%;color:#FBFBF7;}
 		#gl-content_pri
 		{float:none;width:90%;margin:0 auto;}
 		.mod-article_pri{-webkit-column-count:1;}                                                                         
