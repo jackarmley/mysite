@@ -214,6 +214,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 [=6:Media queries]
 ======== */
 	@media screen and (min-width:10px) and (max-width:600px){
+		h1{font-size:2em;}
 		body{width:100%;margin:0 auto;}
 		#gl-header_pri{position:relative;top:0;left:0;margin:0 0 1em 0;background:#111;}
 			#gl-nav_pri li{display:block;float:left;width:25%;}	
