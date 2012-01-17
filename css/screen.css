@@ -190,7 +190,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 [=4:Global layout styles]
 ======== */
 	html{background:#FBFBF7;}
-	body{width:90%;margin:5em auto 0 auto;}
+	body{width:90%;margin:5em auto 0 auto;max-width:1200px;}
 		#gl-header_pri{position:fixed;top:6em;left:0;}
 			#gl-header_pri h1{display:none;}
 			#gl-nav_pri ul{margin:0;}
@@ -198,13 +198,12 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					#gl-nav_pri .st-active:before{content:" ";width:0.25em;height:0.25em;border-radius:0.25em;display:block;background:#111;position:absolute;top:50%;left:-0.12em;margin:-0.10em 0 0 0;}
 				#gl-nav_pri a{display:block;padding:0 0.5em;}
 				#gl-nav_pri span{display:none;}  
-		#gl-content_pri{float:left;}    	
-	.mod-article_pri{-webkit-column-count:3;-webkit-column-gap:6em;-webkit-column-rule:1px dashed #111;margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:1px solid #111;}
-		.mod-article_pri .standfirst{margin:0 0 2em 0;font-size:1.5em;}
-		
-	#gl-content-sec article{float:left;width:25%;padding:0 6em 1em 0;-webkit-box-sizing:border-box;min-height:260px;}           
-		#gl-content-sec article:nth-child(4n+4){padding-right:0;}
-		#gl-content-sec article h1{font-size:1.5em;}
+		#gl-content_pri{width:60%;margin:0 auto;}    	
+			.mod-article_pri{margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:1px solid #111;}
+				.mod-article_pri .standfirst{margin:0 0 2em 0;font-size:1.5em;}
+		#gl-content-sec{width:60%;margin:0 auto;}
+			#gl-content-sec article{}           
+				#gl-content-sec article h1{font-size:1.5em;}
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */				
@@ -220,8 +219,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				#gl-nav_pri .st-active:before{top:-0.12em;left:50%;margin:0 0 0 -0.10em;background:#FBFBF7;}
 			#gl-nav_pri a{float:left;padding:0.5em 0 0 0;text-align:center;width:100%;color:#FBFBF7;}
 		#gl-content_pri
-		{float:none;width:90%;margin:0 auto;}
-		.mod-article_pri{-webkit-column-count:1;}                                                                         
+		{float:none;width:90%;margin:0 auto;}                                                                        
 			.mod-article_pri .standfirst{width:100%;}
 		#gl-content-sec article{width:100%;padding-right:0;min-height:1px;border-bottom:1px solid #eee;margin:0 0 2em 0;}  
 		
@@ -229,8 +227,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	}
 	@media screen and (min-width:601px) and (max-width:900px){
 		body{width:70%;}
-		#gl-content_pri{width:100%;float:none;}
-			.mod-article_pri{-webkit-column-count:1;}   
+		#gl-content_pri{width:100%;float:none;} 
 		#gl-content-sec article{float:left;width:50%;min-height:180px;}
 			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
 			#gl-content-sec article p{font-size:0.85em;}
@@ -239,16 +236,14 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	} 
 	@media screen and (min-width:901px) and (max-width:1024px){
 		body{width:60%;}
-		#gl-content_pri{width:100%;float:none;}
-			.mod-article_pri{-webkit-column-count:1;}   
+		#gl-content_pri{width:100%;float:none;} 
 		#gl-content-sec article{float:left;width:50%;min-height:180px;}
 			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
 			#gl-content-sec article p{font-size:0.85em;}
 		
 	} 
 	@media screen and (min-width:1025px) and (max-width:1400px){
-		body{width:85%;}
-		.mod-article_pri{-webkit-column-count:2;}   
+		body{width:85%;} 
 		#gl-content-sec article{float:left;width:50%;min-height:180px;}
 			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
 			#gl-content-sec article p{font-size:0.85em;}
