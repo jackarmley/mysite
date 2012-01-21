@@ -235,6 +235,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-me #gl-content-sec{padding-top:120px;position:relative;} 
 			#pg-me .avatar{border-radius:300px;border:3px solid #d89f05;position:absolute;top:0;left:0;}
 	/*--[5: Work]--*/
+		/*--Listing page--*/
+			.work_item{position:relative;width:48%;margin-right:2%;float:left;}
+				.work_item div{display:none;}	
+			.work_item.featured{margin-top:-182px;margin-left:-7.92%;width:710px;width:111.88%;}
 		/*--Detail page--*/	
 			.pg-work_item .mod-articleimg-pri{margin-top:-182px;margin-left:-7.92%;width:710px;width:111.88%;}			
 	/*--[5: Articles]--*/
