@@ -7,6 +7,8 @@ Last revised: --
 --
 Contents:
 --
+Tools:
+http://mistupid.com/math/percents.htm (percentage calculator)
 ==================*/ 
 
 /*========
@@ -105,16 +107,20 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Standalone*/
 			img{margin:0 0 1em 0;padding:0.14em 0 0 0;max-width:100%;}
 		/*Within a figure tag*/
-			figure{margin:0 0 2.08em 0;}
-				figure img{margin:0 0 0.41em 0;}
-				figure figcaption{font-size:0.85em;margin:0;}
+			figure{margin:0 0 1em 0;}
+				figure img{margin:0 0 0.21em 0;}
+				figure figcaption{font-size:0.85em;margin:0;text-align:right;}
 	/*--[=2d:Forms]--*/
 		/*Set global constants*/
 			form{margin:0 0 1em 0;}
 				legend{margin:0 0 0.25em 0;}
 				label{display:block;margin:0 0 0.25em 0;}
+				button{font-family:Georgia,times,serif;}
+					button:hover{cursor:pointer;}
 		/*Set styles for full forms (sets of inputs/labels should always be encased in an ordered list for example)*/  
-				input,textarea{display:block;width:auto;margin:0 0 0.78em 0;padding:0.5em 5px;border:1px solid #D1D1D1;font-size:1em;line-height:1.4em;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+				form ol{margin:0;list-style:none;}
+				input,textarea{display:block;width:auto;margin:0 0 0.78em 0;padding:1.25em 20px;border:1px solid #D1D1D1;font:italic 1em/1.5em Georgia,times,serif;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;color:#111;}
+					input:focus,textarea:focus{border-radius:0.5em;border-color:#111;}
 				input[type="radio"],input[type="checkbox"]{width:auto;border:none;}
 				legend{display:none;} 
 	/*--[=2e:Tables]--*/
@@ -185,13 +191,25 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		
 	/*--[=3b: Lists]--*/			
 		.plain{list-style:none;margin-left:0;padding-top:0;}	
-		.icons li:before{padding-right:0.5em;}/*extends plain*/			
+		.icons li:before{padding-right:0.5em;}/*extends plain*/	
+	/*--[=3c: Add transitions to relevent elements]--*/
+		button,
+		input,
+		textarea,
+		nav a
+			{
+				-webkit-transition: all .2s ease-in-out;
+				-moz-transition: all .2s ease-in-out;
+				-o-transition: all .2s ease-in-out;
+				-ms-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+			}			
 
 /*========
 [=4:Global layout styles]
 ======== */
 	html{background:#fff;}
-	body{max-width:1320px;width:100%;margin:0 auto;position:relative;}
+	body{max-width:1320px;width:100%;margin:0 auto;position:relative;padding:0 0 3em 0;}
 	#gl-header_pri{width:190px;width:14.39%;float:left;position:fixed;top:180px;}
 		#gl-header_pri h1{
 			position:absolute;top:7px;left:0;margin:0;text-indent:-90000px;width:67px;height:35px;
@@ -207,17 +225,28 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			#pg-contact #gl-nav_pri li:nth-child(4) a:after
 			{display:block;position:absolute;top:50%;right:-20px;margin:-5px 0 0 0;content:" ";width:10px;height:10px;background:#d89f05;-moz-transform: rotate(45deg);border-radius:15px 0 15px 15px;}
 	#gl-content_wrapper{width:1010px;width:76.51%;position:relative;float:left;left:310px;left:23.48%;padding-top:180px;}	
-		#gl-content-pri{width:590px;width:58.41%;float:left;margin:0 120px 0 0;margin:0 11.88% 0 0;}
-		#gl-content-sec{width:300px;width:29.70%;float:left;}	
+		#gl-content-pri{position:relative;width:670px;/*590px+80px pad using border-box*/width:66.33%;float:left;margin:0 120px 0 0;margin:0 11.88% 0 0;padding:0 0 0 80px;padding:0 0 0 7.92%;-moz-box-sizing:border-box;}
+		#gl-content-sec{width:220px;width:21.78%;float:left;}	
 
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */
 	/*--[5: About page]--*/
 		#pg-me #gl-content-sec{padding-top:120px;position:relative;} 
-			#pg-me .avatar{border-radius:300px;border:3px solid #d89f05;position:absolute;top:0;left:0;}	
-					
-			
+			#pg-me .avatar{border-radius:300px;border:3px solid #d89f05;position:absolute;top:0;left:0;}
+	/*--[5: Work]--*/
+		/*--Detail page--*/	
+			.pg-work_item .mod-articleimg-pri{margin-top:-182px;margin-left:-7.92%;width:710px;width:111.88%;}			
+	/*--[5: Articles]--*/
+		/*--Photo post article--*/
+			.pg-articles_photopost .mod-articleimg-pri{margin-top:-182px;margin-left:-7.92%;width:710px;width:111.88%;}		
+		/*--Illu post article--*/
+			.pg-articles_illupost .mod-articleimg-pri{float:right;margin-right:-21%;}	
+	/*--[5: Contact page]--*/
+		#pg-contact button{display:block;background:#d89f05;-moz-transform: rotate(45deg);border-radius:0 90px 90px 90px;width:90px;height:90px;border:none;margin-top:-0.5em;float:right;box-shadow:0 0 10px rgba(1,1,1,.3);} 
+			#pg-contact button span{-moz-transform: rotate(315deg);display:block;text-align:center;font-size:1.2em;color:rgba(1,1,1,.9);text-shadow:0 1px 0 rgba(255,255,255,.6);}
+		#pg-contact button:hover{-moz-transform: rotate(90deg);background:#BA4F1B;box-shadow:inset 0 0 10px rgba(1,1,1,.5);}	
+			#pg-contact button:hover span{-moz-transform: rotate(270deg);}
 /*========
 [=6:Media queries]
 ======== */
