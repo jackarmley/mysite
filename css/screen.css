@@ -46,19 +46,16 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			         url('../assets/fonts/snowcone/snowcone-regular-webfont.svg#SnowconeRegular') format('svg');
 			    font-weight: normal;
 			    font-style: normal;
-			}
-			h1,
-			#gl-nav_pri span
-			{font-family:'Vast Shadow', serif;}    
+			} 
 		/*-Set base rules for all typographic elements*/
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
-				body{font:14px/1.5em 'Brawler', serif;color:#111;}
+				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Block elements*/   
 				p{margin:0 0 1em 0;line-height:1.5em;}
 				hgroup{position:relative;}
 				h1,h2,h3,h4,h5,h6{line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#111;}
-					h1{font-size:3em;margin:0 0 0.83em 0;} 
-					h2,h3,h4,h5,h6{font-size:1.5em;}
+					.app-page_title{font-size:1.5em;margin:0 0 0.83em 0;}
+					h1,h2,h3,h4,h5,h6{font-size:1em;}
 				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
 						ul li,ol li{margin:0 0 0.41em 0;}
 					ul{list-style:disc outside;}
@@ -184,75 +181,54 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-ico.ico_twitter_plain:before{content:"u";} 
 		.app-ico.ico_tag:before{content:"t";} 
 		.app-ico.ico_speedo:before{content:"y";}  
-		.app-ico.ico_tangentsnowball:before{content:"z";}						
+		.app-ico.ico_tangentsnowball:before{content:"z";}
+		
+	/*--[=3b: Lists]--*/			
+		.plain{list-style:none;margin-left:0;padding-top:0;}	
+		.icons li:before{padding-right:0.5em;}/*extends plain*/			
 
 /*========
 [=4:Global layout styles]
 ======== */
-	html{background:#FBFBF7;}
-	body{width:90%;margin:5em auto 0 auto;max-width:1200px;}
-		#gl-header_pri{position:fixed;top:6em;left:0;}
-			#gl-header_pri h1{display:none;}
-			#gl-nav_pri ul{margin:0;}
-				#gl-nav_pri li{position:relative;display:block;margin:0 0 0.5em 0;font-size:2em;}
-					#gl-nav_pri .st-active:before{content:" ";width:0.25em;height:0.25em;border-radius:0.25em;display:block;background:#111;position:absolute;top:50%;left:-0.12em;margin:-0.10em 0 0 0;}
-				#gl-nav_pri a{display:block;padding:0 0.5em;}
-				#gl-nav_pri span{display:none;}  
-		#gl-content_pri{width:60%;margin:0 auto;}    	
-			.mod-article_pri{margin:0 0 2em 0;padding:0 0 2em 0;border-bottom:1px solid #111;}
-				.mod-article_pri .standfirst{margin:0 0 2em 0;font-size:1.5em;}
-		#gl-content-sec{width:60%;margin:0 auto;}
-			#gl-content-sec article{}           
-				#gl-content-sec article h1{font-size:1.5em;}
+	html{background:#fff;}
+	body{max-width:1320px;width:100%;margin:0 auto;position:relative;}
+	#gl-header_pri{width:190px;width:14.39%;float:left;position:fixed;top:180px;}
+		#gl-header_pri h1{
+			position:absolute;top:7px;left:0;margin:0;text-indent:-90000px;width:67px;height:35px;
+			background:transparent url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00C%00%00%00%23%08%02%00%00%00%40%5C%20~%00%00%00%04gAMA%00%00%AF%C87%05%8A%E9%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%08TIDATx%DA%C4%99gL%14%5B%14%C7e%C5%5E%B0b%D7%88%1D%0B%B1%A1%115*J%2CX%D0%D8%12%C1%9A%A8%1F%B0%25%8A%25%98%A8A%8D%15%85%10%1BFAMl%24%18A%B0%C5%12%5B%04kD%8D%A2%02v%EC%5D%DA%BE%9F%7B%9E%97qw%D9%9D%5D%7C%BC%F3a2%3Bs%B9%F7%FC%CF%F9%9F6%B8%18%8D%C6R%C5%90%AF_%BF%DE%B9s%E7%FC%F9%F3o%DE%BC1%18%0C%A3G%8F%F6%F2%F2rqq%91m%E5%86%AB%EDM%D4b%B3%87J7%B5%A1v%BD%D9bWGU%FF%F6%ED%DB%A9S%A7%BE%7F%FF~%FD%FA%F5%DB%B7o%A7%A7%A7%DF%BBwO%BD%0D%0C%0C%14%85%94Zva%20%F9%F9%F9%BFTqu%D5.v1%89%F6%A7%0D%13%E8E%F2%F3%E7OT%FF%F8%F1%E3%8B%17%2F%CE%9E%3D%1B%13%13%93%96%96%A6%DE%0E%1D%3At%F8%F0%E1%A5K%97%DE%B6m%5B%A3F%8D%EC%EE%C6%A9%05%05%05%E2%2B%FE%8A'%BBv%ED%8A%8E%8E%C6F%01%01%01s%E7%CEuss%D3iV%AD%BDl!y%F6%EC%19%BB%C3%9F%3D%7B%F6%BC%7C%F9%F2%C9%93'%95%2BWvww%97%BF%ACR%A5%CA%A8Q%A3pB%9F%3E%7Dd%C7%23G%8E%BCz%F5%CA%C3%C3%C3%EE%F1%02%40%04%03-_%BE%3C%2B%2B%AB%7C%F9%F2%CB%96-%E3%BAp%E1B'x%EEZ%14%FB%C3%C3%C3w%EC%D8%D1%B2e%CB%BAu%EB%D6%AF_%7F%D8%B0a%8D%1B7%3Ey%F2dDDD%992eV%ACX1r%E4%C86m%DAh%FF%AAi%D3%A6%D9%D9%D9v%91h%25''%87%7Dp%02'%AEZ%B5%8A%83%82%82%82%7C%7C%7Cz%F5%EA%E50%14%E3o%81%AC8%E1%E6%CD%9Bs%E6%CCA%1BOOO%90%24%25%25%A5%A6%A6%3E%7F%FE%FC%C1%83%07!!!%15*TX%BCx1%C1m%B4%26%FB%F7%EF%0F%0B%0B3%3A%22%D8%0Bc-X%B0%A0u%EB%D6%F7%EF%DF%97M8%3A%23%23%C3%E8%A0%14%22%81H%D3%A7O%07%5B%ED%DA%B5g%CD%9Au%E9%D2%A5%A7O%9F%E2z%5E%1D%3F~%BCC%87%0E%B0%E8%EA%D5%AB6%F6%BAr%E5%CA%84%09%13%24%06%F4%C8%FB%F7%EF%E1%D2%C6%8D%1B%BBw%EF%3Ei%D2%24%9E%E4%E5%E5q%C5%1C~~~r%EF%0C%12%04c%B7o%DF%9E%AC%AA%9E%80%04%83%D5%ACY%13%3A%E5%E6%E6%DA%DE%0B%86%80%C4%EE2%25G%8F%1E%ADU%AB%D6%D2%A5K%BD%BD%BD%E5P%C8%065%B8%C2%AE%83%07%0F%3A%84%E4%8F8)%5B%B6%EC%981cp%AE%FC%A4J%00%838!%DB%D6%ABW%CF.Q%2BV%ACX%A3F%0D%C0%83%5C%0F%B1%D1%D5%DF%DF%1F.%40-%0E%05%03%C9%80%2Bq%B8a%C3%064%E9%D7%AF%1F%1B%EA%0C%13%83%D9o%F8C%B9HNN%0E%0E%0E%8E%8C%8C%9C1c%C6%81%03%07%F4%C0%10%810%9F%3F%7F%D6%B3%12%EA%C6%C5%C5%01%03%E4%ED%DA%B5%D3%96B%BC%DA%A5K%97%89%13'n%DA%B4%C9%99%88%974%BFs%E7N%09%89%A8%A8%A8O%9F%3E9%1Av%03%07%0E%A4b%EAYy%F8%F0a%3C%40J%1C%3Cx%F0%B5k%D7x%92k%92%1C%93%E0%19%2C%D2%A9S%A7%C7%8F%1F%3B%C3.%B6%9E%3Cy%F2%B8q%E3%A0%996%E5%EB%17%18O%E5%D1%B3%92d%C8q%2C%C6%FC%CD%9A5Cum%B1%E3'%B5%2B44t%EC%D8%B1%D4b%12%83%C3%ECBH%B5%CE%C1%40z%F7%EE%9D%98%98hw%19y%89%DC%C8)%9C%D5%B3g%CF%AAU%ABB%07%B3%5E%0B0%23F%8C%00%E4%96-%5B%9C%89%93b%0A%16%A5%A3%11%B5l%C8%DD%BBw%E3%E3%E3%ABW%AFN)%C4%8D%96%84%97V%0AY%B3f%CD%BAu%EBn%DD%BAU%D2H%9A7o~%E1%C2%85%2F_%BE%D8%5EF%F9C%D7%1F%3F~%A0k%9D%3Au%A4%83T%5D%B3%5C%A5%BC4l%D8%90%16f%F6%EC%D9%25%8D%84f%ACR%A5Jv%FB_%AA%07a%20%D4%E2Fa0k%DDy%08%18%8A%26m2%05%D4%99%BE%CBi!U%A0Y%B9r%E5l%ACy%F7%EE%1D%19%894E!f%B1%A2%A2j%E3%B5%86%90n%9Ff%AFc%C7%8E%DD%BAu%EB%D1%A3G%09%F9%84%A2%06%C1l%AF%A1d%C1%7B%C2%9D%B6%08%F2%80%04%C3%BB%9A%84%FC%0B%E5%98%20%98%23%F2M%C2%F4F%CDi%D2%A4%C9%CC%993i%20x%5EB%3EA%1B%08%C6y8%C7F%90HkC%84%D0%CF%03%83%92%82%8B%98%08%E8'%A8%98%97%2F_v7%09H%60%60%D7%AE%5D%19(%C0%8F'%09%18%CA%A5U%9F%FFe%24%98%10%24%1F%3E%7C%E0ZT%13%40%D3%00N%C0%B0%8C6%8F~%E4%C6%8D%1B%D4A%FC%C9C%BCD%85%91%04%FD%F0%E1CV%F2%0A%D8%3C%C4W%5B%B7ne%AA%1B4h%D0%7F%8E%04A%3F%02%A0%A8%E1%91%B6%1A'0%EB3%ED%AC%5E%BD%1A'%A0tff%26y%02'%10!%06%93p%23%C5%9E%B7%20%84%81%40Z%B2d%09%98)%2Ft%12%96I%C5%F0%D7%91%A0(H%AC%BEB!%06%5D%F4%20pi7%89(%0C%8F%A2%8C(%0D%1A4%40i0%C8%0E%129%AC%A1%BA%AB%19%93%F6%8CI%3B%25%25%85%86%CDz%C4C%C7%2C%93%FC%15%24%18%1B%0A%15%F55%83a%8Ei%84f%99%01S%C6%3Bi%E3%B9%AA%C1F%3B%EBK%A9%91%FC%D6%A2E%0B*ill%2C%D3%1E%7C3GBt%06%04%040c%D1n%E1n%BBEM%CFw%23ll%F5UBBBZZ%1A%3E%81Nbl%25f%1F%93Ty%D1%0A%0FI%0Cx%866%99T%A6Z%B5%7F%91l%DF%BE%9D%F1%80f%E9%D8%B1co%DF%BE%5D%B9re1%91%D0%ADX%FD%86%C6CX%E1e%12%82%98%C0%B0%FA%FDJ%CC%AF%FDh%A2%A0%E2m%DE%5E%BCxq%FE%FC%F9%CC%A7%14%99%3F%90%B0%82%B4%C0%1Dm%1C9%91%06%9B%A9%BD8HP%D1%D2%F5%C8%A3G%8F%C8Z%F4%DAd%5BF%B7%CE%9D%3B%2B%DA%08%00%11%09%95%C2%99%F67%1E%5E%B9%B9%B9%11N%8C%FB%84%16%25%7F%D1%A2E%DA%83%0C%245F%2B%89%16%E2%0F%9Am%DE%BC%B9%98%ECBW%CB%E7%1C%0C%CBi%3D(%0B%F4%8Ed%5B%19%12%B5V%D7j%AF%3E%C9%09%AF%24%EE%E9%09%80%C1%1FR%82%887z%BCB%24%B8%8C%91p%FD%FA%F5%ACc%C5%90!C%CE%9D%3B%97%94%94%E4%1C%0Cb%97%C0cP3%7B%CE%1C%02%B5%02%03%03Q%85%02O%F2e%827c%91%E4_%CBO%8C%CAEhH%FD%81%BD%8C%80b%9A%98%98%98%3FrWHH%08%AASzYJ%DA%0E%0B%0B%9B%3Au*e%C1%09%24%C0%90%E2%60%F6%5C%2C%C5%BC%81B%04d%DB%B6mY%A3%14%95%02%A2%8D%0Am%DC%AB%9F%AC'%E3%C1L%1AP~%F6%EF%DF%FF%F5%EB%D7%FB%F6%ED%A3b%16%C2%A5%9A%92Lh%04%24%EB%11R%D8%CF%E8%B8%EC%DE%BD%1BS%99%3D%04%1B%07%8D%1F%3F%9E%7B%26%13v%E6%0A%EF%81%8D%0Fe%E8U%F7RL%D4%BD%BCU7%E4q%C2%81%2C%2C%3B%9F%3E%7D%9A%9D%89%BD%C2%AFD%80c%0C%F0%F1%F1!%B1%CC%9B7%8FP%A9V%AD%DA%DA%B5ka%85~%18%A4%0A%D2%86%0C%E5JP%22%3C%3C%9C%F3%CE%9C9%83%9F%A7L%99%12%15%15%25%D5C%8F%E4%FF%16A%C8%86'N%9C%C0%D0%D9%D9%D9%B2%BF%BF%BF%3F%FD%E5%AF%CER%7B*%BF9%15.%92d%C8%CB%F4%AA%B0N6%92%7Dm%C0%C0%CC%24%8Ci%D3%A6%C9%C7%3E%ED%173%F9%BE%3A%60%C0%00H%D5%B7o_%D2%A8%B1%18%C2AL5%E8I%C0P%82%09%046%A7%C5%2Ce%B9%944%87B~~~%D2%87J%7D%90o%1F%19%19%19%94%02%B3%F5%EC%02-%C9ETXla%B9%E1%DE%BD%7Bi%C3%A8e%A9%A9%A9j%3CtZ%A0Itt4%F1%8C%C5%A9%FA%98%06%EE%FC%FA%BEQ%D4%7F%82%E0%DB%A1C%87(%94%0C%0CP%CE%D3%D3%13%DA%D0%B7B%F7%F4%F4t%C9%B3t%D7%E0%A4rc%24%FAm__%DF%A2%3EePsu~%CE%D3)x%86%C6%87%9A%0Eq%A4%C9w%B1%FD%3F-4%08%0D%0DMNNn%D5%AA%95%B7%B77-%1D9%07%7B%10yd%0C%9CF%60%D0%0E%F2%B6%D4%FF-%FF%080%00%D8%BA%25z%BE%86S%C0%00%00%00%00IEND%AEB%60%82") no-repeat top left;
+		}
+		#gl-nav_pri li{margin:0;text-align:right;}
+			#gl-nav_pri a{display:block;position:relative;}
+			#gl-nav_pri a:hover{color:#d89f05;}
+			#gl-nav_pri a:hover:after,
+			#pg-articles #gl-nav_pri li:nth-child(1) a:after,
+			#pg-work #gl-nav_pri li:nth-child(2) a:after,
+			#pg-me #gl-nav_pri li:nth-child(3) a:after,
+			#pg-contact #gl-nav_pri li:nth-child(4) a:after
+			{display:block;position:absolute;top:50%;right:-20px;margin:-5px 0 0 0;content:" ";width:10px;height:10px;background:#d89f05;-moz-transform: rotate(45deg);border-radius:15px 0 15px 15px;}
+	#gl-content_wrapper{width:1010px;width:76.51%;position:relative;float:left;left:310px;left:23.48%;padding-top:180px;}	
+		#gl-content-pri{width:590px;width:58.41%;float:left;margin:0 120px 0 0;margin:0 11.88% 0 0;}
+		#gl-content-sec{width:300px;width:29.70%;float:left;}	
+
 /*========
 [=5:Section-specific layout styles]                                                          
-======== */				
+======== */
+	/*--[5: About page]--*/
+		#pg-me #gl-content-sec{padding-top:120px;position:relative;} 
+			#pg-me .avatar{border-radius:300px;border:3px solid #d89f05;position:absolute;top:0;left:0;}	
+					
 			
 /*========
 [=6:Media queries]
 ======== */
-	@media screen and (min-width:10px) and (max-width:600px){
-		h1{font-size:2em;}
-		body{width:100%;margin:0 auto;}
-		#gl-header_pri{position:relative;top:0;left:0;margin:0 0 2em 0;background:#111;}
-			#gl-nav_pri li{display:block;float:left;width:25%;}	
-				#gl-nav_pri .st-active:before{top:-0.12em;left:50%;margin:0 0 0 -0.10em;background:#FBFBF7;}
-			#gl-nav_pri a{float:left;padding:0.5em 0 0 0;text-align:center;width:100%;color:#FBFBF7;}
-		#gl-content_pri
-		{float:none;width:90%;margin:0 auto;}                                                                        
-			.mod-article_pri .standfirst{width:100%;}
-		#gl-content-sec article{width:100%;padding-right:0;min-height:1px;border-bottom:1px solid #eee;margin:0 0 2em 0;}  
-		
-		
+	@media screen and (min-width:10px) and (max-width:500px){
 	}
-	@media screen and (min-width:601px) and (max-width:900px){
-		body{width:70%;}
-		#gl-content_pri{width:100%;float:none;} 
-		#gl-content-sec article{float:left;width:50%;min-height:180px;}
-			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
-			#gl-content-sec article p{font-size:0.85em;}
-			
-		
+	@media screen and (min-width:601px) and (max-width:900px){	
 	} 
-	@media screen and (min-width:901px) and (max-width:1024px){
-		body{width:60%;}
-		#gl-content_pri{width:100%;float:none;} 
-		#gl-content-sec article{float:left;width:50%;min-height:180px;}
-			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
-			#gl-content-sec article p{font-size:0.85em;}
-		
+	@media screen and (min-width:901px) and (max-width:1024px){	
 	} 
-	@media screen and (min-width:1025px) and (max-width:1400px){
-		body{width:85%;} 
-		#gl-content-sec article{float:left;width:50%;min-height:180px;}
-			#gl-content-sec article:nth-child(2n+2){padding-right:0;} 
-			#gl-content-sec article p{font-size:0.85em;}
-			
-		
+	@media screen and (min-width:1025px) and (max-width:1400px){	
 	} 
-	@media screen and (min-width:801px) and (max-width:960px){
-			#gl-content-sec article p{font-size:0.85em;}
-	}
 	
 	
 /*========
