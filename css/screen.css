@@ -203,7 +203,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		button,
 		input,
 		textarea,
-		nav a
+		nav a,
+		.state-workitem a img
 			{
 				-webkit-transition: all .2s ease-in-out;
 				-moz-transition: all .2s ease-in-out;
@@ -215,7 +216,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-shavetopmargin{margin-top:0;}	
 	/*--[=3e: Classes for listing content]--*/
 		.mod-listitem{margin:0 0 2em 0;}	
-			.mod-listitem h1{text-transform:uppercase;font-size:1.5em;margin:0 0 0.25em 0;}	
+			.mod-listitem h1{text-transform:uppercase;font-size:1.5em;margin:0 0 0.25em 0;}		
 /*========
 [=4:Global layout styles]
 ======== */
@@ -248,8 +249,6 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-content-sec{width:220px;width:21.78%;float:left;}	
 			#gl-content-sec li{font-size:0.85em;}
 
-		.pl-onecol #gl-content-pri{width:100%;padding:0 7.92% 0 7.92%;margin:0;}
-
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */
@@ -258,12 +257,15 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			#pg-me .avatar{border-radius:300px;border:3px solid #111;position:absolute;top:0;left:0;}
 	/*--[5: Work]--*/
 		/*--Listing page--*/
-			.work_item{position:relative;width:48%;margin-right:2%;float:left;}
-				.work_item div{display:none;position:absolute;top:0;left:0;z-index:1;}	
-				.work_item img{margin:0;}
-				.work_item:nth-child(2n+1){margin-right:0;}
-					.work_item:hover div{display:block;}
-			.work_item.featured{position:relative;margin:-182px 0 0 -7.92%;width:100%;}
+			.pg-work_home #gl-content-pri{width:100%;margin-right:0;padding-right:7.92%;}
+			/*Work listitem (extends mod-listitem)*/
+				.state-workitem{width:48%;float:left;margin:0 2% 1em 0;position:relative;border-radius:0.5em;overflow:hidden;-moz-box-sizing:border-box;border:3px solid #fff;background:#111;}
+					.state-workitem h1{position:absolute;top:0;left:0;padding:20px;color:#fff;text-shadow:0 -1px 0 #111;}
+					.state-workitem img{padding:0;margin:0;float:left;opacity:0.1;-moz-opacity: 0.1;}
+					.state-workitem:nth-child(2n+2){margin-right:0;}
+					.state-workitem a:hover:after{content:"F";font-family:"SnowconeRegular";color:#fff;font-size:2em;position:absolute;top:50%;left:50%;font-size:4em;text-shadow:0 0 10px #111;}
+					.state-workitem a:hover img{opacity:1;moz-opacity:1;}
+					.state-workitem a:hover h1{visibility:hidden;}
 		/*--Detail page--*/	
 
 	/*--[5: Articles]--*/
@@ -303,7 +305,14 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
 					.app-page_title{margin-left:0;}
 					.app-page_title.state-nopreceedingimg{margin-top:1em;}
-					.mod-img_pri{margin-top:0;width:100%;}		
+					.mod-img_pri{margin-top:0;width:100%;}
+		.pg-work_home #gl-content-pri{padding:0;}	
+				
+		.state-workitem{width:100%;float:none;margin:0 0 2em 0;border-radius:none;overflow:visible;border:none;background:transparent;}
+			.state-workitem h1{position:relative;padding:0;color:#111;text-shadow:none;}
+			.state-workitem img{float:none;opacity:1;-moz-opacity:1;}
+			.state-workitem a:hover:after{display:none;}
+			.state-workitem a:hover h1{visibility:visible;}					
 					
 		#pg-contact #gl-content-pri{border-bottom:none;}						
 			#pg-contact button{width:100%;margin-top:1em;}
