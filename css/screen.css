@@ -223,12 +223,14 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-nav_pri{margin-top:120px;}
 		#gl-nav_pri li{margin:0;text-align:right;}
 			#gl-nav_pri a{display:block;position:relative;}
+			@media screen and (min-width:701px){
 			#gl-nav_pri a:hover:after,
 			#pg-articles #gl-nav_pri li:nth-child(1) a:after,
 			#pg-work #gl-nav_pri li:nth-child(2) a:after,
 			#pg-me #gl-nav_pri li:nth-child(3) a:after,
 			#pg-contact #gl-nav_pri li:nth-child(4) a:after
 			{display:inline-block;content:"K";color:#111;font-family:"SnowconeRegular";position:absolute;margin-left:0.5em;}
+			}
 	#gl-content_wrapper{width:1010px;width:76.51%;position:relative;float:left;left:310px;left:23.48%;padding-top:180px;}	
 		#gl-content-pri{position:relative;width:670px;/*590px+80px pad using border-box*/width:66.33%;float:left;margin:0 120px 0 0;margin:0 11.88% 0 0;padding:0 0 0 80px;padding:0 0 0 7.92%;-moz-box-sizing:border-box;}
 			#gl-content-pri	.app-page_title{margin-left:80px;margin-left:7.92%;}
@@ -271,12 +273,17 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 ======== */
 	@media screen and (min-width:10px) and (max-width:700px){
 		#gl-header_pri{position:relative;top:0;left:0;width:100%;border-bottom:3px solid #111;background:#111;}
-			#gl-header_pri h1{position:relative;top:-15px;margin:0 auto;border:none;height:50px;}
+			#gl-header_pri h1{position:relative;top:0;margin:0 auto;border:none;height:50px;background-color:transparent;}
 			#gl-nav_pri{margin-top:0;}
 				#gl-nav_pri ul{float:left;width:100%;border-top:3px solid #111;margin:0;background:#fff;}
-				#gl-nav_pri li{display:inline;}
-				#gl-nav_pri a{display:block;float:left;width:25%;text-align:center;padding:1em 0;}
-					#gl-header_pri #gl-nav_pri a:after{position:absolute;}	
+				#gl-nav_pri li{display:inline;font-size:2em;}
+				#gl-nav_pri a{display:block;float:left;width:25%;text-align:center;padding:0.5em 0;}
+				#gl-nav_pri span{display:none;}
+					#gl-header_pri #gl-nav_pri li a:after{font-family:"SnowconeRegular";}
+					#gl-header_pri #gl-nav_pri li:nth-child(1) a:after{content:"T";}
+					#gl-header_pri #gl-nav_pri li:nth-child(2) a:after{content:"F";}		
+					#gl-header_pri #gl-nav_pri li:nth-child(3) a:after{content:"P";}	
+					#gl-header_pri #gl-nav_pri li:nth-child(4) a:after{content:"U";}	
 		#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
 			#gl-content-pri,#gl-content-sec{width:100%;float:none;margin:0 0 2em 0;padding:0;}	
 				.mod-img_pri{margin-top:0;width:100%;}		
