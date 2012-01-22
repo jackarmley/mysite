@@ -54,6 +54,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Set font famillies for all applicable elements*/
 				h1,
+				h2
 				.flex-control-nav
 				{font-family: 'Podkova',Georgia,serif;}
 			/*Block elements*/   
@@ -61,6 +62,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				hgroup{position:relative;}
 				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#111;}
 					.app-page_title{font-size:2em;margin:0 0 0.83em 0;text-transform:uppercase;}
+					h1{font-size:1.5em;text-transform:uppercase;}
 				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
 						ul li,ol li{margin:0 0 0.41em 0;}
 					ul{list-style:disc outside;}
@@ -248,6 +250,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 		#gl-content-sec{width:220px;width:21.78%;float:left;}	
 			#gl-content-sec li{font-size:0.85em;}
+			#gl-content-sec h1{font-size:1.2em;}
 
 /*========
 [=5:Section-specific layout styles]                                                          
@@ -306,7 +309,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					#pg-me #gl-nav_pri li:nth-child(3):after,
 					#pg-contact #gl-nav_pri li:nth-child(4):after
 					{content:" ";display:block;width:10px;height:10px;background:#111;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg);position:absolute;bottom:-0.25em;left:50%;margin:0 0 0 -5px;}
-					#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
+			#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
 			#gl-content-pri,#gl-content-sec{width:100%;float:none;}
 				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
 					.app-page_title{margin-left:0;}
@@ -324,9 +327,21 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			#pg-contact button{width:100%;margin-top:1em;}
 				#pg-contact button:hover{-moz-transform:scale(1);}
 	}
-	@media screen and (min-width:701px) and (max-width:900px){	
-	} 
-	@media screen and (min-width:901px) and (max-width:1024px){	
+	@media screen and (min-width:701px) and (max-width:1024px){
+		body{width:90%;font-size:14px;line-height:1.7em;}
+		p{line-height:1.7em;}
+		h1,h2,h3,h4,h5,h6{line-height:1.5em;}
+		#gl-nav_pri a{padding:0.5em 0;border-bottom:1px dotted #111;}
+		#gl-content_wrapper{padding-top:120px;}	
+			#gl-content-pri{padding:0 80px 0 0;margin-right:0;-moz-box-sizing:border-box;width:750px;width:74.25%;}
+				.app-page_title{margin-left:0;}
+				.mod-img_pri{margin-top:-120px;width:99.99%;}
+			#gl-content-sec{width:260px;width:25.74%;}	
+		
+		.pg-work_home #gl-content-pri{padding-right:0;}	
+		.state-workitem{width:100%;margin-right:0;}
+
+		#pg-contact #gl-content-pri{width:100%;padding:0;}
 	} 
 	@media screen and (min-width:1025px) and (max-width:1400px){	
 	} 
