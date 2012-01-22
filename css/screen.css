@@ -53,7 +53,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
 				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Set font famillies for all applicable elements*/
-				h1{font-family: 'Podkova',Georgia,serif;}
+				h1,
+				.flex-control-nav
+				{font-family: 'Podkova',Georgia,serif;}
 			/*Block elements*/   
 				p{margin:0 0 1em 0;line-height:1.5em;}
 				hgroup{position:relative;}
@@ -243,8 +245,6 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.app-page_title{margin-left:80px;margin-left:7.92%;}
 			.mod-img_pri{margin-top:-182px;margin-left:0;width:710px;width:70.29%;}	
 				.mod-img_pri img{border-bottom:4px solid #111;padding-top:0;}	
-				/*--Illu variant (no bottom border on image)--*/
-					.mod-img_pri img{border-bottom:none;}	
 
 		#gl-content-sec{width:220px;width:21.78%;float:left;}	
 			#gl-content-sec li{font-size:0.85em;}
@@ -259,7 +259,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*--Listing page--*/
 			.pg-work_home #gl-content-pri{width:100%;margin-right:0;padding-right:7.92%;}
 			/*Work listitem (extends mod-listitem)*/
-				.state-workitem{width:48%;float:left;margin:0 2% 1em 0;position:relative;border-radius:0.5em;overflow:hidden;-moz-box-sizing:border-box;border:3px solid #fff;background:#111;}
+				.state-workitem{width:48%;float:left;margin:0 2% 1em 0;position:relative;border-radius:0.5em;overflow:hidden;-moz-box-sizing:border-box;border:3px solid #fff;background:#aa0101;}
 					.state-workitem h1{position:absolute;top:0;left:0;padding:20px;color:#fff;text-shadow:0 -1px 0 #111;}
 					.state-workitem img{padding:0;margin:0;float:left;opacity:0.1;-moz-opacity: 0.1;}
 					.state-workitem:nth-child(2n+2){margin-right:0;}
@@ -267,7 +267,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					.state-workitem a:hover img{opacity:1;moz-opacity:1;}
 					.state-workitem a:hover h1{visibility:hidden;}
 		/*--Detail page--*/	
-
+			.state-slider{position:relative;}
+				.slides{padding:0;margin:0;list-style:none;}
+				.flex-control-nav{position:absolute;bottom:1.5em;left:0;padding:0;margin:0;list-style:none;}
+					.flex-control-nav li{display:inline;}
+					.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;}
+						.flex-control-nav a:hover{cursor:pointer;}
+						.flex-control-nav .active{background:#111;color:#fff;border-radius:0 0 0.5em 0.5em;}
 	/*--[5: Articles]--*/
 		/*--Post page--*/
 
