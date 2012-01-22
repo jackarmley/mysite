@@ -77,6 +77,14 @@
 						}
 				});
 			}
+		},
+		mobile:{
+			hideurlbar: function(){
+				addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+				function hideURLbar(){
+					window.scrollTo(0,1);
+				}
+			}
 		}
 	} 
 window.sitescripts = sitescripts;
@@ -85,7 +93,8 @@ window.sitescripts = sitescripts;
 
 $(document).ready(function() {
 	//Run globals
-		sitescripts.ui.addicons()	
+		sitescripts.ui.addicons()
+		sitescripts.mobile.hideurlbar()	
 	//Page specific
 		var pageid=$("html").attr("id");
 		if(pageid=="pg-contact"){
