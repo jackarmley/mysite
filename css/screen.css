@@ -276,7 +276,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				#gl-nav_pri ul{float:left;width:100%;border-top:3px solid #111;margin:0;background:#fff;}
 				#gl-nav_pri li{display:inline;}
 				#gl-nav_pri a{display:block;float:left;width:25%;text-align:center;padding:1em 0;}
-					#gl-header_pri #gl-nav_pri a:after{position:absolute;top:-90000px;text-indent:90000px;}	
+					#gl-header_pri #gl-nav_pri a:after{position:absolute;}	
 		#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
 			#gl-content-pri,#gl-content-sec{width:100%;float:none;margin:0 0 2em 0;padding:0;}	
 				.mod-img_pri{margin-top:0;width:100%;}		
