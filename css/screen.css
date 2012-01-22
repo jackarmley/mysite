@@ -252,7 +252,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 ======== */
 	/*--[5: About page]--*/
 		#pg-me #gl-content-sec{padding-top:120px;position:relative;} 
-			#pg-me .avatar{border-radius:300px;border:3px solid #d89f05;position:absolute;top:0;left:0;}
+			#pg-me .avatar{border-radius:300px;border:3px solid #111;position:absolute;top:0;left:0;}
 	/*--[5: Work]--*/
 		/*--Listing page--*/
 			.work_item{position:relative;width:48%;margin-right:2%;float:left;}
@@ -267,10 +267,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*--Post page--*/
 
 	/*--[5: Contact page]--*/
-		#pg-contact button{display:block;background:#d89f05;-moz-transform: rotate(45deg);border-radius:0 90px 90px 90px;width:90px;height:90px;border:none;margin-top:-0.5em;float:right;box-shadow:0 0 10px rgba(1,1,1,.3);} 
-			#pg-contact button span{-moz-transform: rotate(315deg);display:block;text-align:center;font-size:1.2em;color:rgba(1,1,1,.9);text-shadow:0 1px 0 rgba(255,255,255,.6);}
-		#pg-contact button:hover{-moz-transform: rotate(90deg);background:#BA4F1B;box-shadow:inset 0 0 10px rgba(1,1,1,.5);}	
-			#pg-contact button:hover span{-moz-transform: rotate(270deg);}
+		#pg-contact button{display:block;background:#111;color:#fff;border-radius:90px;width:60px;line-height:60px;border:none;float:right;box-shadow:0 0 10px rgba(255,255,255,.3);font-size:1.5em;} 
+			#pg-contact button span{display:none;}
+		#pg-contact button:hover{}	
 /*========
 [=6:Media queries]
 ======== */
@@ -294,7 +293,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
 					.app-page_title{margin-left:0;}
 					.app-page_title.state-nopreceedingimg{margin-top:1em;}
-					.mod-img_pri{margin-top:0;width:100%;}					
+					.mod-img_pri{margin-top:0;width:100%;}		
+					
+		#pg-contact #gl-content-pri{border-bottom:none;}						
+			#pg-contact button{width:100%;margin-top:1em;}
 	}
 	@media screen and (min-width:701px) and (max-width:900px){	
 	} 
