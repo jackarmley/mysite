@@ -285,7 +285,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					#gl-header_pri #gl-nav_pri li:nth-child(3) a:after{content:"P";}	
 					#gl-header_pri #gl-nav_pri li:nth-child(4) a:after{content:"U";}	
 		#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
-			#gl-content-pri,#gl-content-sec{width:100%;float:none;margin:0 0 2em 0;padding:0;}	
+			#gl-content-pri,#gl-content-sec{width:100%;float:none;}
+				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
 				.mod-img_pri{margin-top:0;width:100%;}		
 	}
 	@media screen and (min-width:701px) and (max-width:900px){	
