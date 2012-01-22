@@ -297,7 +297,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					#pg-work #gl-nav_pri li:nth-child(2):after,
 					#pg-me #gl-nav_pri li:nth-child(3):after,
 					#pg-contact #gl-nav_pri li:nth-child(4):after
-					{content:" ";display:block;width:10px;height:10px;background:#111;-moz-transform:rotate(45deg);position:absolute;bottom:-0.25em;left:50%;margin:0 0 0 -5px;}
+					{content:" ";display:block;width:10px;height:10px;background:#111;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg);position:absolute;bottom:-0.25em;left:50%;margin:0 0 0 -5px;}
 					#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
 			#gl-content-pri,#gl-content-sec{width:100%;float:none;}
 				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
