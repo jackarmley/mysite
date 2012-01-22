@@ -275,6 +275,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 [=6:Media queries]
 ======== */
 	@media screen and (min-width:10px) and (max-width:700px){
+		.mod-listitem h1{margin-bottom:1em;}
+
 		#gl-header_pri{position:relative;float:none;top:0;left:0;width:100%;border-bottom:3px solid #111;background:#111;}
 			#gl-header_pri h1{position:relative;top:0;margin:0 auto;border:none;height:50px;background-color:transparent;}
 			#gl-nav_pri{margin-top:0;}
@@ -292,7 +294,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
 					.app-page_title{margin-left:0;}
 					.app-page_title.state-nopreceedingimg{margin-top:1em;}
-					.mod-img_pri{margin-top:0;width:100%;}		
+					.mod-img_pri{margin-top:0;width:100%;}					
 	}
 	@media screen and (min-width:701px) and (max-width:900px){	
 	} 
