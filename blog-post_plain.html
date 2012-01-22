@@ -1,7 +1,7 @@
 <!doctype HTML>
-<!--[if IE 7 ]>    <html class="noscript oldie ie7 pg-articlest" id="pg-articles" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="noscript oldie ie8 pg-articles" id="pg-articles" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript pg-articles" id="pg-articles" lang="en"><!--<![endif]-->
+<!--[if IE 7 ]>    <html class="noscript oldie ie7 pg-articles_post" id="pg-articles" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="noscript oldie ie8 pg-articles_post" id="pg-articles" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript pg-articles_post" id="pg-articles" lang="en"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,user-scalable=no, scale=1, maximum-scale=1.0" /> 
@@ -10,6 +10,7 @@
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="stylesheet" href="css/screen.css" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="scripts/msite.js"></script>
 	</head>
@@ -25,9 +26,9 @@
 				</ul>
 			</nav>	
 		</header>
-		<div id="gl-content_wrapper">
-			<article id="gl-content-pri">
-				<h1 class="app-page_title">Know your descendence</h1>	
+		<article id="gl-content_wrapper">
+			<h1 class="app-page_title">Know your descendence</h1>
+			<div id="gl-content-pri">
 				<p>Principles like descendent selection and inheritance are what makes CSS so powerful, but used a little more wisely your stylesheet can be that little bit more efficient</p>
 				<p>When considering performance, CSS is often the last thing to be combed through; it's so tiny, what impact can it make on the speed of the site?</p>
 				<p>True, a stylesheet (in comparison to the countless images, webfonts and video you're asking a user to download) is pretty small, but it's surprising what a difference can be made from understanding how a browser reads it.</p>
@@ -42,7 +43,15 @@
 				<p>Why make the browser work harder to ensure the ID selector is applied to a DIV element. Also, why give the rule 1 more <a href="http://www.quora.com/Whats-the-difference-between-a-CSS-Class-and-ID/answer/Jack-Armley">point of specifity?</a> You're just adding more complexity to the cascade.</p>
 				<p>This same concept potentially knocks some of the shine off CSS resets. Whilst they are useful to ensure you always start with a clean, consistent base they do add more rules that get constantly overridden, and that subsequently mean the browser has to check them against any rules it's applying to the same element, further down the stylesheet.</p>
 				<p>Of course, as stylesheets are tiny I'm in no way suggesting that resets should be dropped, and the descendence shouldn't be used. I think however, it's always good to be aware of these things so our websites can be made even better-er!</p>						
-			</article>
-		</div>
+			</div>
+			<aside id="gl-content-sec">
+				<h1 class="inv">Post details</h1>
+				<h2 class="app-shavetopmargin">02.01.2011, under:</h2>	
+				<ul class="plain icons">
+					<li class="app-ico ico_tag">CSS</li>
+					<li class="app-ico ico_tag">Opinion</li>
+				</ul>
+			</aside>
+		</article>
 	</body>		
 </html>
