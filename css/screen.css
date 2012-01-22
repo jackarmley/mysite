@@ -120,8 +120,11 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					button:hover{cursor:pointer;}
 		/*Set styles for full forms (sets of inputs/labels should always be encased in an ordered list for example)*/  
 				form ol{margin:0;list-style:none;}
+				form li{position:relative;}
 				input,textarea{display:block;width:auto;margin:0 0 0.78em 0;padding:1.25em 20px;border:1px solid #D1D1D1;font:italic 1em/1.5em Georgia,times,serif;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;color:#111;}
 					input:focus,textarea:focus{border-radius:0.5em;border-color:#111;}
+					.state-error:after{content:"B";font-family:"SnowconeRegular";position:absolute;top:50%;right:-40px;z-index:1;width:30px;line-height:30px;margin:-15px 0 0 0;border-radius:30px;text-align:center;background:#aa0101;color:#fff;}
+					.state-error input,.state-error textarea{border-radius:0.5em;border-width:3px;border-color:#aa0101;color:#aa0101;}
 				input[type="radio"],input[type="checkbox"]{width:auto;border:none;}
 				legend{display:none;} 
 	/*--[=2e:Tables]--*/
@@ -269,26 +272,33 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	/*--[5: Contact page]--*/
 		#pg-contact button{display:block;background:#111;color:#fff;border-radius:90px;width:60px;line-height:60px;border:none;float:right;box-shadow:0 0 10px rgba(255,255,255,.3);font-size:1.5em;} 
 			#pg-contact button span{display:none;}
-		#pg-contact button:hover{}	
+		#pg-contact button:hover{-moz-transform:scale(1.2);}	
 /*========
 [=6:Media queries]
 ======== */
 	@media screen and (min-width:10px) and (max-width:700px){
+		.state-error:after{display:none;}
+
 		.mod-listitem h1{margin-bottom:0.75em;}
 
-		#gl-header_pri{position:relative;float:none;top:0;left:0;width:100%;border-bottom:3px solid #111;background:#111;}
-			#gl-header_pri h1{position:relative;top:0;margin:0 auto;border:none;height:50px;background-color:transparent;}
+		#gl-header_pri{position:relative;float:none;top:0;left:0;width:100%;border-bottom:3px solid #111;background:#fff;}
+			#gl-header_pri h1{position:relative;top:0;margin:-15px auto 0 auto;border:none;}
 			#gl-nav_pri{margin-top:0;}
-				#gl-nav_pri ul{float:left;width:100%;border-top:3px solid #111;margin:0;background:#fff;}
-				#gl-nav_pri li{display:inline;font-size:2em;}
-				#gl-nav_pri a{display:block;float:left;width:25%;text-align:center;padding:0.5em 0;}
+				#gl-nav_pri ul{float:left;width:100%;margin:0;overflow:hidden;}
+				#gl-nav_pri li{display:block;float:left;width:25%;font-size:2em;position:relative;}
+				#gl-nav_pri a{display:block;float:left;text-align:center;padding:0.5em 0;width:100%;}
 				#gl-nav_pri span{display:none;}
 					#gl-header_pri #gl-nav_pri li a:after{font-family:"SnowconeRegular";}
 					#gl-header_pri #gl-nav_pri li:nth-child(1) a:after{content:"T";}
 					#gl-header_pri #gl-nav_pri li:nth-child(2) a:after{content:"F";}		
 					#gl-header_pri #gl-nav_pri li:nth-child(3) a:after{content:"P";}	
-					#gl-header_pri #gl-nav_pri li:nth-child(4) a:after{content:"U";}	
-		#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
+					#gl-header_pri #gl-nav_pri li:nth-child(4) a:after{content:"U";}
+					#pg-articles #gl-nav_pri li:nth-child(1):after,
+					#pg-work #gl-nav_pri li:nth-child(2):after,
+					#pg-me #gl-nav_pri li:nth-child(3):after,
+					#pg-contact #gl-nav_pri li:nth-child(4):after
+					{content:" ";display:block;width:10px;height:10px;background:#111;-moz-transform:rotate(45deg);position:absolute;bottom:-0.25em;left:50%;margin:0 0 0 -5px;}
+					#gl-content_wrapper{width:90%;float:none;left:0;padding-top:0;margin:0 auto;}
 			#gl-content-pri,#gl-content-sec{width:100%;float:none;}
 				#gl-content-pri{border-bottom:1px dotted #111;margin:0 0 2em 0;padding:0 0 1em 0;}	
 					.app-page_title{margin-left:0;}
@@ -297,6 +307,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					
 		#pg-contact #gl-content-pri{border-bottom:none;}						
 			#pg-contact button{width:100%;margin-top:1em;}
+				#pg-contact button:hover{-moz-transform:scale(1);}
 	}
 	@media screen and (min-width:701px) and (max-width:900px){	
 	} 
