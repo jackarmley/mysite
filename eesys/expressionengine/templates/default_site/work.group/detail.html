@@ -1,120 +1,40 @@
-<!DOCTYPE html>
-<html lang="en-gb">
+<!doctype HTML>
+<!--[if IE 7 ]>    <html class="noscript oldie ie7 pg-work_home " id="pg-work" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="noscript oldie ie8 pg-work_home" id="pg-work" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript pg-work_home" id="pg-work" lang="en"><!--<![endif]-->
 	<head>
-		<!--[if lte IE 6]>
-			<meta http-equiv="refresh" content="0; url=/hi_there_ie6_user.html" />
-			<script type="text/javascript">
-			/* <![CDATA[ */
-			window.top.location = '/hi_there_ie6_user.html';
-			/* ]]> */
-			</script>
-		<![endif]-->
-		<meta charset="utf-8"/>
-		<title>Jack Armley | Work | {exp:channel:entries channel="work" disable="categories|custom_fields|member_data|pagination" status="open" limit="1"}{title}{/exp:channel:entries}</title>
-		<link rel="icon" href="{site_url}favicon.ico" type="image/x-icon" />
-		<meta name='description' content='My name&#x27;s Jack; I&#x27;m a web designer and I helped to create a website called &quot;{exp:channel:entries channel="work" disable="categories|member_data|custom_fields|pagination" status="open|Featured" limit="1" show_future_entries="yes"}{title}{/exp:channel:entries}&quot;' />
-		<link rel="stylesheet" href="{site_url}css/screen.css" media="screen"/>
-		<script src="http://www.google.com/jsapi"></script>
-		<script>
-			google.load("jquery", "1.5.2");
-			google.load("jqueryui", "1.8.11");
-		</script>
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="{site_url}scripts/selectivizr.js"></script>
-		<![endif]-->
-		<script src="{site_url}scripts/script_functions.js"></script>
+		<title>Jack Armley | Work</title>
+		{snpt-meta}
 	</head>
-	<body id="tg_work" class="t_index">
-		<div id="site_wrapper" class="clearfix">
-			<header role="banner" class="unit float five">
-				<h1 class="replaced"><a href="{site_url}" title="Back home then?">Jack Armley</a></h1>
-				<nav role="navigation">
-					<ul>
-						<li>
-							<a class="replaced" href="{path="blog"}" title="Putting what's in my head, to virtual paper">
-								<span>Blog</span>
-							</a>
-						</li>
-						<li class="current">
-							<a class="replaced" href="{path="work"}" title="Web stuff made with my own two hands">
-								<span>Work</span>
-							</a>
-						</li>
-						<li>
-							<a class="replaced" href="{path="about"}" title="What makes me tick?">
-								<span>About</span>
-							</a>
-						</li>
-						<li>
-							<a class="replaced" href="{path="contact"}" title="A word in my ear?">
-								<span>Contact</span>
-							</a>
-						</li>
-					</ul>	
-				</nav>
-			</header>
-{exp:channel:entries channel="whyilove" disable="categories|custom_fields|member_data|pagination" status="open" limit="1" sort="desc" orderby="random" dynamic="no"}			
-			<a id="whyilove" href="{title_permalink="ilove"}" title="Why do I love {title}?">I&#x27;m a web designer and I <span class="replaced">love</span> {title}</a>
-			<script>
-				$(document).ready(function() {
-					$("#whyilove").click(function() {
- 						$("body").prepend("<iframe src='{title_permalink="ilove"}' width='100%' height='100%' id='whyilove_iframe'></iframe>");
- 						setTimeout(function() {$('#whyilove+#close').fadeIn(100);},2000);
-					});	
-				});
-			</script>
-{/exp:channel:entries}	
-			<div id="content_wrapper" class="unit float nineteen">	
-				<section role="main">
-					<h1>Some websites I helped to create</h1>
-{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="open|Featured" limit="1" show_future_entries="yes"}
-					<article id="spotlight" class="round_5px unit_vertsp clearfix last nineteen_both">
-						<div class="unit float_right last seven_both">
-							<h1>{title}</h1>
-							{work-summary}
-						</div>
-						<div id="slides" class="round_5px unit float">
-							{if work-url}
-								<a id="visit_website" href="{work-url}" title="Visit {title} website">
-									<span>{work-url}</span>
-								</a>
-							{/if}
-							{if work-screencast}
-								<a id="play_screencast" class="fancybox round_5px" href="{path='work/screencast/{entry_id}'}" title="Screencast of {title}">Play screencast</a>
-							{/if}
-							<div class="slides_container">
-								{work-slides}
-									<div class="slide">
-										<img src="{-matrix-work-slides_image}" width="459" height="254" alt="{-matrix-work-slides_alt}" />
-									</div>
-								{/work-slides}
-							</div>
-						</div>
-					</article>	
-{/exp:channel:entries}
-				</section>	
-{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="open|Featured" limit="20" sort="asc" orderby="title" dynamic="no" show_future_entries="yes"}
-				{if "{count}"==1}
-				<section class="unit clearfix last" id="secondary">
-					<h1>More work</h1>
-				{/if}	
-					<article class="{if segment_3==url_title}current{/if} work_thumb round_5px unit_vertsp float {switch="|||last"}">
-						<a href="{title_permalink="work/detail"}" title="Find out a little more about {title}">
-							<div>
-								<h1>{title}</h1>
-							</div>
-							{work-thumb}
-								<img src="{-matrix-work-thumb_image}" width="169" height="126" alt="{-matrix-work-thumb_alt}">
-							{/work-thumb}
-						</a>
-					</article>	
-				{if "{count}"=="{total_results}"}
-				</section>	
-				{/if}
-{/exp:channel:entries}
+	<body class="clearfix">
+		{snpt-header}
+		{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="open|Featured" limit="1" show_future_entries="yes"}
+		<article id="gl-content_wrapper">
+			<div class="mod-img_pri state-slider clearfix">
+				<ul class="slides">
+					{work-slides}
+					<li>
+						<figure>
+							<img src="{-matrix-work-slides_image}" alt="{-matrix-work-slides_alt}">
+							<figcaption>Image of a website</figcaption>
+						</figure>
+					</li>
+					{/work-slides}
+				</ul>
 			</div>
-		</div>
-		{globalvar-footer}
+			<h1 class="app-page_title">{title}</h1>	
+			<div id="gl-content-pri">
+				{work-summary}
+			</div>
+			<aside id="gl-content-sec">
+				<h1 class="inv">Work details</h1>
+				{if work-url}
+				<ul class="plain icons">
+					<li class="app-ico ico_link"><a id="visit_website" href="{work-url}" title="Visit {title} website">Visit website</a></li>
+				</ul>
+				{/if}
+			</aside>
+		</article>
+		{/exp:channel:entries}
 	</body>		
 </html>

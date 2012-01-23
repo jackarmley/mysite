@@ -246,7 +246,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-content-pri{position:relative;width:670px;/*590px+80px pad using border-box*/width:66.33%;float:left;margin:0 120px 0 0;margin:0 11.88% 0 0;padding:0 0 0 80px;padding:0 0 0 7.92%;-moz-box-sizing:border-box;}
 			.app-page_title{margin-left:80px;margin-left:7.92%;}
 			.mod-img_pri{margin-top:-182px;margin-left:0;width:710px;width:70.29%;}	
-				.mod-img_pri img{border-bottom:4px solid #111;padding-top:0;}	
+				.mod-img_pri img{border-bottom:4px solid #111;padding-top:0;width:100%;}	
 
 		#gl-content-sec{width:220px;width:21.78%;float:left;}	
 			#gl-content-sec li{font-size:0.85em;}
