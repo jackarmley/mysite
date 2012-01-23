@@ -262,7 +262,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*--Listing page--*/
 			.pg-work_home #gl-content-pri{width:100%;margin-right:0;padding-right:7.92%;}
 			/*Work listitem (extends mod-listitem)*/
-				.state-workitem{width:48%;float:left;margin:0 2% 1em 0;position:relative;border-radius:0.5em;overflow:hidden;-moz-box-sizing:border-box;border:3px solid #fff;background:#aa0101;}
+				.state-workitem{width:48%;float:left;margin:0 2% 1em 0;position:relative;border-radius:0.5em;overflow:hidden;-moz-box-sizing:border-box;border:3px solid #fff;background:#eee;}
 					.state-workitem h1{position:absolute;top:0;left:0;padding:20px;color:#fff;text-shadow:0 -1px 0 #111;}
 					.state-workitem img{padding:0;margin:0;float:left;opacity:0.1;-moz-opacity: 0.1;}
 					.state-workitem:nth-child(2n+2){margin-right:0;}
