@@ -282,7 +282,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	#gl-wrapper_page{padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;border-bottom:1px solid rgba(1,1,1,.3);background:rgba(255,255,255,.3);}
 
 	#gl-header_pri{position:relative;border-bottom:1px dashed rgba(1,1,1,.6);height:100px;background:#5DCECE;box-shadow:0 2px 2px rgba(1,1,1,.2);}
-		#gl-header_pri h1{color:#fff;font-size:3em;line-height:100px;text-align:center;margin:0;text-shadow:3px 3px 0 rgba(1,1,1,.2);}
+		#gl-header_pri h1{color:#fff;font-size:3em;line-height:100px;text-align:center;margin:0;text-shadow:0 -1px 0 rgba(1,1,1,.7);}
 			#gl-header_pri h1 a{color:#fff;}
 			#gl-header_pri h1 a:hover{-moz-transform:scale(1.2);-o-transform:scale(1.2);-webkit-transform:scale(1.2);transform:scale(1.2);}
 
@@ -367,19 +367,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			#gl-header_pri h1{line-height:1.2em;padding:0.5em 0 0.25em 0;background:rgba(1,1,1,.2);}
 			#gl-nav_pri{width:100%;font-family: 'Ostrich-black',Arial,sans-serif;border-top:1px solid rgba(1,1,1,.3);}
 			#gl-nav_pri li{width:25%;text-align:center;display:block;float:left;margin:0;}
-				#gl-header_pri #gl-nav_pri a{width:100%;display:block;position:relative;float:left;top:0;left:0;margin:0;text-indent:0;background:none;height:auto;padding:1em 0;color:#333;font-size:1.2em;text-shadow:0 1px 0 #fff;border-left:1px solid rgba(255,255,255,.2);border-right:1px solid rgba(1,1,1,.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+				#gl-header_pri #gl-nav_pri a{width:100%;display:block;position:relative;float:left;top:0;left:0;margin:0;text-indent:0;background:none;height:auto;padding:1em 0;color:#fff;font-size:1.2em;text-shadow:0 -1px 0 rgba(1,1,1,.5);border-left:1px solid rgba(255,255,255,.2);border-right:1px solid rgba(1,1,1,.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
 					#gl-header_pri #gl-nav_pri li:last-child a{border-right:none;}
 					#pg-articles #gl-nav_pri li:nth-child(1) a:after,
 					#pg-work #gl-nav_pri li:nth-child(2) a:after,
 					#pg-me #gl-nav_pri li:nth-child(3) a:after,
 					#pg-contact #gl-nav_pri li:nth-child(4) a:after,
 					#gl-header_pri #gl-nav_pri a:after{bottom:-10px;background:#ECECEC;border-top:1px solid #666;border-left:1px solid #666;}
-
-		#pg-articles #gl-nav_pri li:nth-child(1) a, 
-		#pg-work #gl-nav_pri li:nth-child(2) a,
-		#pg-me #gl-nav_pri li:nth-child(3) a,
-		#pg-contact #gl-nav_pri li:nth-child(4) a
-		{color:#fff;text-shadow:3px 3px 0 rgba(1,1,1,.2);}
 
 		#gl-section_title{display:none;}			
 		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}			
