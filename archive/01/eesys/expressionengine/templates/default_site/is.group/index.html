@@ -1,0 +1,31 @@
+<!doctype HTML>
+<!--[if IE 7 ]><html class="noscript oldie ie7" id="pg-"pg-me"" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="noscript oldie ie8" id="pg-me" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-me" lang="en"><!--<![endif]-->
+	<head>
+		<title>Jack Armley | About me</title>
+		{snpt-meta}
+	</head>
+	<body class="clearfix">
+		{snpt-header}
+		<div id="gl-content_wrapper">
+			{exp:channel:entries channel="page" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" entry_id="12"}
+			<h1 class="app-page_title state-nopreceedingimg">{title}</h1>
+			<article id="gl-content-pri">
+				{page-standfirst}
+				{page-body}						
+			</article>
+			{/exp:channel:entries}
+			<aside id="gl-content-sec">
+				<h1>Find me elsewhere</h1>
+				<img class="avatar" src="http://www.jackarmley.com/images/uploads/images/graphicassets-biopic.png" alt="Avatar of me" />
+				<ul class="plain icons">
+					<li class="app-ico ico_twitter"><a href="" title="">Twitter</a></li>
+					<li class="app-ico ico_link"><a href="" title="">Foursquare</a></li>
+					<li class="app-ico ico_link"><a href="" title="">Github</a></li>
+					<li class="app-ico ico_link"><a href="" title="">Oink</a></li>
+				</ul>	
+			</aside>	
+		</div>
+	</body>		
+</html>
