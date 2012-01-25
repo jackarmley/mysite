@@ -97,8 +97,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 						dt{font-weight:bold;margin:0 0 0.41em 0;padding:1.1em 0 0 0;}
 						dd{margin:0 0 0.41em 0;}
 				blockquote{margin:0 0 2.5em 0;padding:1.1em 0 0 0;font-style:italic;}
-					blockquote p{color:#1AAB8A;margin-left:2.5em;}
-					blockquote footer{display:block;margin:-0.41em 0 0 2.5em;}
+					blockquote p{color:#1AAB8A;padding:0 1em;}
+					blockquote footer{display:block;margin:-0.41em 0 0 0;}
 				hr{border-top:1px dotted #ccc;padding:1.1em 0;margin:2.1em 0 0 0;}	
 				pre{white-space:pre;width:100%;overflow:auto;margin:1.1em 0;padding:0.82em 0;border:1px dotted #ccc;border-left:none;border-right:none;}
 					p pre{margin:0;padding:0;border:none;}
@@ -323,6 +323,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */
+	/*--[5: Home page]--*/
+		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;}
 	/*--[5: About page]--*/
 	/*--[5: Work]--*/
 		/*--Listing page--*/
