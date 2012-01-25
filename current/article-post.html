@@ -1,0 +1,58 @@
+<!doctype HTML>
+<!--[if IE 7 ]>    <html class="noscript oldie ie7" id="pg-articles" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="noscript oldie ie8" id="pg-articles" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-articles" lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no, scale=1, maximum-scale=1.0" /> 
+		<title>Jack Armley | Articles: Post</title>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/screen.css" media="screen" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="scripts/mysite.js"></script>
+	</head>
+	<body>
+		<header id="gl-header_pri" role="banner" class="clearfix">
+			<h1><a href="index.html">Jack Armley</a></h1>
+			<nav role="navigation" id="gl-nav_pri">
+				<ul>
+					<li><a href="articles.html" title="">Articles</a></li>
+					<li><a href="work.html" title="">Work</a></li>
+					<li><a href="is.html" title="">Me</a></li>
+					<li><a href="contact.html" title="">Contact</a></li>
+				</ul>
+			</nav>	
+		</header>
+		<h1 id="gl-section_title">Articles</h1>
+		<div id="gl-content_wrapper" class="clearfix">
+			<article class="clearfix">
+				<h1 class="app-page_title">Featured article</h1>
+				<div class="mod-gridunit gu-float gu-four">
+					<img src="assets/sample_content/insites_image.jpg" />
+					<p>Principles like descendent selection and inheritance are what makes CSS so powerful, but used a little more wisely your stylesheet can be that little bit more efficient</p>
+					<p>When considering performance, CSS is often the last thing to be combed through; it's so tiny, what impact can it make on the speed of the site?</p>
+					<p>True, a stylesheet (in comparison to the countless images, webfonts and video you're asking a user to download) is pretty small, but it's surprising what a difference can be made from understanding how a browser reads it.</p>
+					<p>The browser reads your stylesheet from the bottom up, and each rule from right to left.</p>
+					<p>It only does what it's told, and wants to make sure it's got each rule right, so for every rule it goes through a qualification process.</p>
+
+					<p>Take for example, the following:</p>
+					<p><code>html body div#wrapper article p{font-family:arial,sans-serif;margin:0 0 1em 0;}</code></p>
+					<p>In this example, in applying a style to the paragraph, the browser will (in reading from right to left) look inside the curly braces to find what rules are to be applied, then it will move on to the element(s) after the braces to figure out what to apply them too. It sees the first "p" in the stack (which looks like the last item to human eyes) and knows to apply the rule to that "p". However, before settling on this decision it checks if the rule for this "p" tag has been made any more specific. It goes up the chain of selectors, and for each one checks if the rule is still valid until it gets to the end if the stack.</p>
+					<p>It will then read upwards in the stylesheet, to check if any additional rules add properties to this "p" element, or override them.</p>
+					<p>Of course, this all happens pretty quick so the idea would never be to have one rule per element, with no descendence or inheritance. It does    however, bring home the importance of thinking through each rule, and what selectors are necessary to make it work. For example, this would be deemed an "over-qualified" rule:</p>
+					<p><code>div#main-content{...}</code></p>
+
+					<p>Why make the browser work harder to ensure the ID selector is applied to a DIV element. Also, why give the rule 1 more <a href="http://www.quora.com/Whats-the-difference-between-a-CSS-Class-and-ID/answer/Jack-Armley">point of specifity?</a> You're just adding more complexity to the cascade.</p>
+					<p>This same concept potentially knocks some of the shine off CSS resets. Whilst they are useful to ensure you always start with a clean, consistent base they do add more rules that get constantly overridden, and that subsequently mean the browser has to check them against any rules it's applying to the same element, further down the stylesheet.</p>
+					<p>Of course, as stylesheets are tiny I'm in no way suggesting that resets should be dropped, and the descendence shouldn't be used. I think however, it's always good to be aware of these things so our websites can be made even better-er!</p>						
+				</div>
+				<aside class="mod-gridunit gu-float_rt gu-last gu-two">
+					<p>Posted on 12th January 2011</p>
+					<p>Back to article listing</p>
+				</aside>	
+			</article>	
+		</div>
+	</body>		
+</html>
