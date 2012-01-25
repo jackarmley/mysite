@@ -270,8 +270,14 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
 			.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}
 	/*--[=3e: Classes for listing content]--*/
-		.mod-listitem{margin:0 0 2em 0;}	
-			.mod-listitem h1{text-transform:uppercase;font-size:1.5em;margin:0 0 0.25em 0;}		
+		.mod-listitem{margin:0 0 1em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
+			.mod-listitem:last-child{border-bottom:0;padding-bottom:0;}
+			.mod-listitem h1{margin-top:0;}		
+
+		/*Tweet subset*/
+			.mod-listitem.state-tweet blockquote{margin:0;padding:0;}
+				.mod-listitem.state-tweet blockquote p{margin:0 0 1em 0;}
+				.mod-listitem.state-tweet blockquote footer p{margin:0;}
 /*========
 [=4:Global layout styles]
 ======== */
@@ -334,6 +340,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	/*--[5: Home page]--*/
 		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;}
 	/*--[5: About page]--*/
+
 	/*--[5: Work]--*/
 		/*--Listing page--*/
 			/*Work listitem (extends mod-listitem)*/
