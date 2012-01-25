@@ -73,13 +73,14 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
 				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Set font famillies for all applicable elements*/
-				h1,
+				#gl-wrapper_page h1,
 				h2,
 				.app-page_title,
 				.flex-control-nav
 				{font-family: 'Ostrich-bold',Arial,sans-serif;}
 				#gl-header_pri h1,
 				#gl-section_title,
+				#gl-page_footer h1,
 				.app-button
 				{font-family: 'Ostrich-black',Arial,sans-serif;}
 			/*Block elements*/   
@@ -276,7 +277,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 [=4:Global layout styles]
 ======== */
 	html{height:100%;background:#ececec;}
-	body{max-width:1000px;min-width:320px;width:90%;margin:0 auto;position:relative;padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;background:rgba(255,255,255,.3);}
+	body{max-width:1000px;min-width:320px;width:90%;margin:0 auto;position:relative;}
+
+	#gl-wrapper_page{padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;border-bottom:1px solid rgba(1,1,1,.3);background:rgba(255,255,255,.3);}
 
 	#gl-header_pri{position:relative;border-bottom:1px dashed rgba(1,1,1,.6);height:100px;background:#5DCECE;box-shadow:0 2px 2px rgba(1,1,1,.2);}
 		#gl-header_pri h1{color:#fff;font-size:3em;line-height:100px;text-align:center;margin:0;text-shadow:3px 3px 0 rgba(1,1,1,.2);}
@@ -321,7 +324,11 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 		#gl-section_title{border:1px solid rgba(1,1,1,.1);border-top:none;margin:0 auto 0.90em auto;padding:0.5em 0;background:#fff;text-align:center;border-radius:0 0 0.25em 0.25em;-moz-border-radius:0 0 0.25em 0.25em;-webkit-border-radius:0 0 0.25em 0.25em;-o-border-radius:0 0 0.25em 0.25em;width:98%;color:#666;position:relative;}
 			#gl-section_title:after{border:1px solid rgba(1,1,1,.1);border-top:none;border-left:none;bottom:-10px;}
-
+		
+		#gl-page_footer{background:rgba(1,1,1,.06);clear:both;padding:1.5em 2% 1em 2%;color:#666;text-shadow:0 1px 0 rgba(255,255,255,.7);font-size:0.85em;border:1px dashed rgba(1,1,1,.1);border-top:none;border-bottom:none;}	
+			#gl-page_footer h1{color:#666;text-shadow:0 1px 0 #fff;margin-bottom:0.42em;}
+			#gl-page_footer p{line-height:1.7em;}
+			#gl-page_footer a{color:#666;}
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */
@@ -352,7 +359,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-page_title{font-size:3em;}
 		.app-button{width:100%;display:block;padding-left:0;padding-right:0;}
 		.app-setcol{-moz-column-count:1;-webkit-column-count:1;-o-column-count:1;column-count:1;}
-		body{width:100%;padding-right:0;padding-left:0;border:none;background:transparent;}
+		body{width:100%;background:transparent;}
+
+		#gl-wrapper_page{padding-right:0;padding-left:0;border:none;}
+
 		#gl-header_pri{height:auto;margin:0 0 1.6em 0;box-shadow:none;}
 			#gl-header_pri h1{line-height:1.2em;padding:0.5em 0 0.25em 0;background:rgba(1,1,1,.2);}
 			#gl-nav_pri{width:100%;font-family: 'Ostrich-black',Arial,sans-serif;border-top:1px solid rgba(1,1,1,.3);}
