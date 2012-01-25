@@ -306,7 +306,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-articles #gl-nav_pri li:nth-child(1) a:after,
 		#pg-work #gl-nav_pri li:nth-child(2) a:after,
 		#pg-me #gl-nav_pri li:nth-child(3) a:after,
-		#pg-contact #gl-nav_pri li:nth-child(4) a:after
+		#pg-contact #gl-nav_pri li:nth-child(4) a:after,
+		#gl-section_title:after
 		{content:" ";background:#fff;width:20px;height:20px;display:block;position:absolute;bottom:-40px;left:50%;margin-left:-10px;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);border:1px dashed rgba(1,1,1,.8);border-bottom:none;border-right:none;}
 
 		#pg-work #gl-nav_pri li:nth-child(2) a:after{bottom:-45px;}
@@ -318,7 +319,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-me #gl-header_pri{background:#CCFF00;}
 		#pg-contact #gl-header_pri{background:#FFFF00;}
 
-		#gl-section_title{border:1px solid rgba(1,1,1,.1);border-top:none;margin:0 auto 0.90em auto;padding:0.5em 0;background:#fff;text-align:center;border-radius:0 0 0.25em 0.25em;-moz-border-radius:0 0 0.25em 0.25em;-webkit-border-radius:0 0 0.25em 0.25em;-o-border-radius:0 0 0.25em 0.25em;width:98%;color:#666;}
+		#gl-section_title{border:1px solid rgba(1,1,1,.1);border-top:none;margin:0 auto 0.90em auto;padding:0.5em 0;background:#fff;text-align:center;border-radius:0 0 0.25em 0.25em;-moz-border-radius:0 0 0.25em 0.25em;-webkit-border-radius:0 0 0.25em 0.25em;-o-border-radius:0 0 0.25em 0.25em;width:98%;color:#666;position:relative;}
+			#gl-section_title:after{border:1px solid rgba(1,1,1,.1);border-top:none;border-left:none;bottom:-10px;}
 
 /*========
 [=5:Section-specific layout styles]                                                          
