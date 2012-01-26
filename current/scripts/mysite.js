@@ -87,8 +87,11 @@
 			},
 			workpage: function(){
 				$(".state-slider").flexslider({
-					directionNav:false
+					directionNav:false,
+					animation: "slide"
 				});
+				var stateslider_navwidth = $(".flex-control-nav").width();
+				$(".flex-control-nav").css("width",stateslider_navwidth).addClass("state-nofloat");
 			}
 		},
 		mobile:{

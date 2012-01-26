@@ -74,12 +74,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
 				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Set font famillies for all applicable elements*/
-				.app-page_title,
-				.flex-control-nav
+				.app-page_title
 				{font-family: 'Ostrich-bold',Arial,sans-serif;}
 				h1,
 				h2,
-				.app-button
+				.app-button,
+				.flex-control-nav,
+				figcaption
 				{font-family: 'Ostrich-black',Arial,sans-serif;}
 			/*Block elements*/   
 				p{margin:0 0 1em 0;line-height:1.5em;}
@@ -137,7 +138,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Within a figure tag*/
 			figure{margin:0 0 1em 0;}
 				figure img{margin:0 0 0.21em 0;}
-				figure figcaption{font-size:0.85em;margin:0;text-align:right;}
+				figure figcaption{margin:0;text-align:right;color:#666;}
 	/*--[=2d:Forms]--*/
 		/*Set global constants*/
 			form{margin:0 0 1em 0;}
@@ -278,6 +279,20 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.mod-listitem.state-tweet blockquote{margin:0;padding:0;}
 				.mod-listitem.state-tweet blockquote p{margin:0 0 1em 0;}
 				.mod-listitem.state-tweet blockquote footer p{margin:0;}
+
+	/*--[=3f: Image slider]--*/
+		.state-slider{position:relative;margin:0 0 1.5em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 2px 0 rgba(1,1,1,.09);}
+			.slides{padding:0;margin:0;list-style:none;}
+				.slides figure{margin:0;}
+				.slides figcaption{margin-right:2%;}
+			.flex-control-nav{clear:both;padding:0;margin:0 auto;list-style:none;display:block;float:left;}
+				.flex-control-nav.state-nofloat{float:none;}
+				.flex-control-nav li{display:inline;}
+				.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;}
+					.flex-control-nav a:hover{cursor:pointer;}
+					.flex-control-nav li:last-child a{margin-right:0;}
+					.flex-control-nav .active{background:#666;color:#fff;text-shadow:0 -1px 0 #111;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:1em;}
+
 /*========
 [=4:Global layout styles]
 ======== */
@@ -345,13 +360,6 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*--Listing page--*/
 			/*Work listitem (extends mod-listitem)*/
 		/*--Detail page--*/	
-			.state-slider{position:relative;}
-				.slides{padding:0;margin:0;list-style:none;}
-				.flex-control-nav{position:absolute;bottom:1.5em;left:0;padding:0;margin:0;list-style:none;}
-					.flex-control-nav li{display:inline;}
-					.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;}
-						.flex-control-nav a:hover{cursor:pointer;}
-						.flex-control-nav .active{background:#111;color:#fff;border-radius:0 0 0.5em 0.5em;}
 	/*--[5: Articles]--*/
 		/*--Post page--*/
 
@@ -388,6 +396,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
+		.flex-control-nav,figcaption{font-size:16px;}
 		#gl-nav_pri li:nth-child(1) a{left:10%;}
 		#gl-nav_pri li:nth-child(2) a{left:20%;}
 		#gl-nav_pri li:nth-child(3) a{right:20%;}
