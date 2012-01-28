@@ -187,7 +187,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 	      			twttr.anywhere(function (T) {
 	        			T("#gl-tweetbox").tweetBox({
 	        				label:"",
-	        				defaultContent: "An article by @jackarmley",
+	        				defaultContent: "Hey, I've just read this article by @jackarmley",
 	        				width:tweetbox_width,
 	        				height:tweetbox_height
 	        			});
