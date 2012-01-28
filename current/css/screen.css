@@ -437,6 +437,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}	
 		
 		#gl-page_footer{border-bottom:none;padding-left:5%;padding-right:5%;}
+		#gl-page_footer section:first-child{border-bottom:1px dashed rgba(1,1,1,.4);margin:0 0 2em 0;padding:0 0 1em 0;}
+		#gl-page_footer .icons li{margin:0;clear:both;width:100%;}
+			#gl-page_footer .icons a{float:left;display:block;padding:1em 0;border-bottom:1px dashed rgba(1,1,1,.4);width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+			#gl-page_footer .icons li:last-child a{border-bottom:none;}
 		
 		#pg-home .app-page_title{font-family:Georgia,times,serif;text-transform:none;font-size:1.2em;font-style:italic;padding-bottom:2em;}		
 	}
