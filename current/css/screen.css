@@ -432,6 +432,12 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-button{width:100%;display:block;padding-left:0;padding-right:0;}
 		.app-setcol{-moz-column-count:1;-webkit-column-count:1;-o-column-count:1;column-count:1;}
 		body{width:100%;background:transparent;padding-bottom:0;}
+		
+		.app-grid_listing article:nth-child(2),
+		.app-grid_listing article:nth-child(3)
+		{border-top:1px dashed rgba(1,1,1,.4);}
+		.app-grid_listing .app-button{position:relative;top:0;left:0;}	
+		.app-grid_listing .ext-center{left:0;margin-left:0;}
 
 		#gl-wrapper_page{padding-right:0;padding-left:0;border:none;border-bottom:1px solid rgba(1,1,1,.3);}
 

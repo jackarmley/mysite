@@ -160,13 +160,17 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				};
 								
 				function clearheights(){
-					griditem_heights.length = 0;
-					
-					griditemheights_length = 0
-					console.log(griditemheights_length);
+					$(window).resize(function(){
+						var canvas_width = $(window).width();
+						console.log(canvas_width);
+						if (canvas_width <= 600){
+							$(".app-grid_listing article").css("height","auto");
+						}
+					});
 				}
 				
 				setheights();
+				clearheights();
 			}	
 		},
 		modules:{
