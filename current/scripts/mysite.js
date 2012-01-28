@@ -92,15 +92,15 @@
 				});	
 			},
 			navhover: function(){
-				var site_title = $("#gl-header_pri h1").text();
+				var site_title = $("#gl-header_pri h1 a").text();
 				$("#gl-nav_pri li a").each(function(){
 					var nav_title = $(this).text();
 					$(this).hover(
 						function(){
-							$("#gl-header_pri h1").text(nav_title);
+							$("#gl-header_pri h1 a").text(nav_title);
 						},
 						function(){
-							$("#gl-header_pri h1").text(site_title);
+							$("#gl-header_pri h1 a").text(site_title);
 						}
 					);
 				});
