@@ -74,7 +74,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
 				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Set font famillies for all applicable elements*/
-				.app-pagetitle_subinfo
+				.app-pagetitle_subinfo,
+				.app-button.ext-receessive
 				{font-family:Georgia,times,serif;}
 				.app-page_title
 				{font-family: 'Ostrich-bold',Arial,sans-serif;}
@@ -288,6 +289,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			
 			.ext-center{margin-left:auto;margin-right:auto;width:100px;display:block;clear:both;}
 				.ext-center.app-ico{width:130px;}
+			
+			.ext-receessive{font-size:0.85em;font-style:italic;padding:0.5em 1em;}		
 
 		.app-division{border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}
 		
@@ -304,6 +307,16 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
 			.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
 			.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}
+			
+		.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 2em 0;margin-bottom:0;}
+			.app-grid_listing article:nth-child(1),
+			.app-grid_listing article:nth-child(2),
+			.app-grid_listing article:nth-child(3)
+			{border-top:none;}
+			.app-grid_listing article h1{margin-top:0;}
+			.app-grid_listing .app-button{position:absolute;bottom:1.5em;left:0;margin:0;}	
+			.app-grid_listing .ext-center{left:50%;margin-left:-50px;}
+			
 	/*--[=3e: Classes for listing content]--*/
 		.mod-listitem{margin:0 0 1em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
 			.mod-listitem:last-child{border-bottom:0;padding-bottom:0;}
@@ -398,6 +411,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-home_intro h1:before{padding:0 0.5em 0 0;}
 		#pg-home_intro p{margin:0 0 0.5em 0;font-style:italic;color:#666;}
 		#pg-home .state-tweet blockquote{padding-top:0;}	
+			#pg-home .state-tweet blockquote p{padding-left:0;}
 	/*--[5: About page]--*/
 
 	/*--[5: Work]--*/

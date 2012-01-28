@@ -127,6 +127,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 			},
 			navhover: function(){
 				var site_title = $("#gl-header_pri h1 a").text();
+				
 				$("#gl-nav_pri li a").each(function(){
 					var nav_title = $(this).text();
 					$(this).hover(
@@ -138,6 +139,34 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 						}
 					);
 				});
+			},
+			gridlisting: function(){
+				var griditem_heights = new Array();
+				var griditemheights_length = "";
+				
+				Array.max = function( array ){
+					return Math.max.apply( Math, array );
+				}; 
+				
+				function setheights(){
+					$(".app-grid_listing article").each(function(){
+						griditem_heights.push($(this).height());
+										
+						var griditem_height = Array.max(griditem_heights);
+						var griditem_btmpad = $(".app-button",this).height();
+						
+						$(this).css("height",griditem_height+griditem_btmpad+30+"px");
+					});
+				};
+								
+				function clearheights(){
+					griditem_heights.length = 0;
+					
+					griditemheights_length = 0
+					console.log(griditemheights_length);
+				}
+				
+				setheights();
 			}	
 		},
 		modules:{
@@ -233,6 +262,7 @@ $(document).ready(function() {
 		if(mobile==0){
 			sitescripts.ui.addicons()
 			sitescripts.ui.navhover()
+			sitescripts.ui.gridlisting()
 			$(window)._scrollable();
 		}
 			
