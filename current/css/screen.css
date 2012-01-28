@@ -394,10 +394,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.p-work_detail article p:first-of-type{border-bottom:none;padding-bottom:0;}
 
 	/*--[5: Home page]--*/
-		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;}
+		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;text-align:center;font-style:normal;}
 		#pg-home_intro h1:before{padding:0 0.5em 0 0;}
 		#pg-home_intro p{margin:0 0 0.5em 0;font-style:italic;color:#666;}
-		#pg-home_intro .app-page_title{text-align:center;font-size:4em;font-style:normal;}
 		#pg-home .state-tweet blockquote{padding-top:0;}	
 	/*--[5: About page]--*/
 
@@ -437,7 +436,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-section_title{display:none;}			
 		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}	
 		
-		#gl-page_footer{border-bottom:none;padding-left:5%;padding-right:5%;}		
+		#gl-page_footer{border-bottom:none;padding-left:5%;padding-right:5%;}
+		
+		#pg-home .app-page_title{font-family:Georgia,times,serif;text-transform:none;font-size:1.2em;font-style:italic;padding-bottom:2em;}		
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
