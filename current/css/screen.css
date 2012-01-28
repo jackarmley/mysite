@@ -81,7 +81,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				h1,
 				h2,
 				.app-button,
-				.flex-control-nav,
+				.flex-control-nav
 				figcaption
 				{font-family: 'Ostrich-black',Arial,sans-serif;}
 			/*Block elements*/   
@@ -235,6 +235,22 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-ico.ico_speedo:before{content:"y";}  
 		.app-ico.ico_tangentsnowball:before{content:"z";}
 		
+		.app-ico.ico_link:before,
+		.app-ico.ico_fill_down:before,
+		.app-ico.ico_fill_up:before, 
+		.app-ico.ico_fill_right:before, 
+		.app-ico.ico_fill_left:before,
+		.app-ico.ico_facebook:before, 
+		.app-ico.ico_twitter:before,
+		.app-ico.ico_googleplus:before,
+		.app-ico.ico_blacklist:before, 
+		.app-ico.ico_twitter_bird:before,
+		.app-ico.ico_twitter_plain:before, 
+		.app-ico.ico_tag:before,
+		.app-ico.ico_speedo:before, 
+		.app-ico.ico_tangentsnowball:before{text-transform:lowercase;}
+		
+		
 	/*--[=3b: Lists]--*/
 		/*Plain list*/			
 			.plain{list-style:none;margin-left:0;padding-top:0;}
@@ -373,6 +389,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 ======== */
 	/*--[5: Home page]--*/
 		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;}
+		#pg-home_intro h1:before{padding:0 0.5em 0 0;}
+		#pg-home_intro p{margin:0 0 0.5em 0;font-style:italic;color:#666;}
+		#pg-home_intro .app-page_title{text-align:center;font-size:4em;font-style:normal;}
+		#pg-home .state-tweet blockquote{padding-top:0;}	
 	/*--[5: About page]--*/
 
 	/*--[5: Work]--*/
@@ -411,7 +431,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-section_title{display:none;}			
 		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}	
 		
-		#gl-page_footer{border-bottom:none;}		
+		#gl-page_footer{border-bottom:none;padding-left:5%;padding-right:5%;}		
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
