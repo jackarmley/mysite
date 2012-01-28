@@ -1,3 +1,183 @@
+@import url(http://fonts.googleapis.com/css?family=Podkova:400,700);
+/*================
+Screen styles
+Version 1.0
+Author: Tangent Snowball FED team
+Created: 12.19.2011
+Last revised: --
+--
+Contents:
+--
+Tools:
+http://mistupid.com/math/percents.htm (percentage calculator)
+==================*/ 
+
+/*========
+[=0: Set font-face rules]
+========*/
+
+/*========
+[=1: html5doctor.com reset]
+v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
+(jack.armley@tangentsnowball.com: Some lines have been modified, to remove unneccesary styles that will be immediately overridden by the base styles)
+========*/
+	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+	article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{ display:block;}
+	nav ul{list-style:none;margin-left:0;}
+	blockquote,q{quotes:none;}
+	blockquote:before,blockquote:after,
+	q:before,q:after{content:'';content:none;}
+	a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+	del{text-decoration:line-through;}
+	abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+	table{border-collapse:collapse;border-spacing:0;}
+	input,select{vertical-align:middle;}
+	ins{text-decoration:none;}
+	hr{display:block;height:1px;border:0;padding:0;}
+
+/*========
+[=2:Base globally-available styles]
+======== */
+	/*--[=2a:Typography]--*/	
+		/*-Set webfont stacks for all applicable elements-*/            
+			@font-face {
+			    font-family: 'SnowconeRegular';
+			    src: url('../assets/fonts/snowcone/snowcone-regular-webfont.eot');
+			    src: url('../assets/fonts/snowcone/snowcone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+			         url('../assets/fonts/snowcone/snowcone-regular-webfont.woff') format('woff'),
+			         url('../assets/fonts/snowcone/snowcone-regular-webfont.ttf') format('truetype'),
+			         url('../assets/fonts/snowcone/snowcone-regular-webfont.svg#SnowconeRegular') format('svg');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+			@font-face {
+			    font-family: 'Ostrich-bold';
+			    src: url('../assets/fonts/ostrichsans/ostrich-bold-webfont.eot');
+			    src: url('../assets/fonts/ostrichsans/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			         url('../assets/fonts/ostrichsans/ostrich-bold-webfont.woff') format('woff'),
+			         url('../assets/fonts/ostrichsans/ostrich-bold-webfont.ttf') format('truetype'),
+			         url('../assets/fonts/ostrichsans/ostrich-bold-webfont.svg#SnowconeRegular') format('svg');
+			    font-weight: bold;
+			    font-style: normal;
+			}
+			@font-face {
+			    font-family: 'Ostrich-black';
+			    src: url('../assets/fonts/ostrichsans/ostrich-black-webfont.eot');
+			    src: url('../assets/fonts/ostrichsans/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
+			         url('../assets/fonts/ostrichsans/ostrich-black-webfont.woff') format('woff'),
+			         url('../assets/fonts/ostrichsans/ostrich-black-webfont.ttf') format('truetype'),
+			         url('../assets/fonts/ostrichsans/ostrich-black-webfont.svg#SnowconeRegular') format('svg');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+		/*-Set base rules for all typographic elements*/
+			/*Set base font-family/line-height and declare the px size of an em unit*/    
+				body{font:16px/1.5em Georgia,times,serif;color:#111;}
+			/*Set font famillies for all applicable elements*/
+				.app-pagetitle_subinfo,
+				.app-button.ext-receessive
+				{font-family:Georgia,times,serif;}
+				.app-page_title
+				{font-family: 'Ostrich-bold',Arial,sans-serif;}
+				h1,
+				h2,
+				.app-button,
+				.flex-control-nav
+				figcaption
+				{font-family: 'Ostrich-black',Arial,sans-serif;}
+			/*Block elements*/   
+				p{margin:0 0 1em 0;line-height:1.5em;}
+				hgroup{position:relative;}
+				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#333;}
+					h1{font-size:1.5em;text-transform:uppercase;}
+				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
+						ul li,ol li{margin:0 0 0.41em 0;}
+					ul{list-style:disc outside;}
+						ul ul{margin:0.25em 0 0.5em 1em;}
+					ol{list-style:decimal outside;}
+						ol ol{margin:0.25em 0 0.5em 1.4em;list-style-type:lower-roman;}
+					dl{padding:0;}
+						dt{font-weight:bold;margin:0 0 0.41em 0;padding:1.1em 0 0 0;}
+						dd{margin:0 0 0.41em 0;}
+				blockquote{margin:0 0 2.5em 0;padding:1.1em 0 0 0;font-style:italic;}
+					blockquote p{color:#666;padding:0 1em;}
+					blockquote footer{display:block;margin:-0.41em 0 0 0;}
+				hr{border-top:1px dotted #ccc;padding:1.1em 0;margin:2.1em 0 0 0;}	
+				pre{white-space:pre;width:100%;overflow:auto;margin:2em 0 2em 0;padding:1em 4%;border:1px dashed rgba(1,1,1,0.4);border-left:none;border-right:none;background:rgba(1,1,1,.03);box-shadow:inset 0 2px 0 rgba(1,1,1,.04),inset 0 -2px 0 rgba(1,1,1,.04);}
+					p pre{margin:0;padding:0;border:none;}
+			/*Inline elements*/
+				/*Superscript/subscript*/
+					sup,sub{position:relative;height:0;line-height:0.1em;}
+						sup{bottom:1ex;}
+						sub{top:.5ex;}
+				/*For marking up content relevency/edits and highlighting content*/		  
+					ins{background-color:#B8EEE1;}
+					del{text-decoration:line-through;}
+					s{color:#666;text-decoration:line-through;}
+					mark{background-color:#B8EEE1;color:inherit;font-weight:normal;}
+				/*Inline quotes / small print*/	
+					q{font-style:italic;color:#1AAB8A;}
+					cite{font-style:italic;}
+					small{font-weight:normal;font-style:normal;}
+				/*phrase tags*/
+					strong,b{font-weight:bold;}
+					em,i{font-style:italic;}
+					dfn,abbr{font-style:inherit;}
+					code,samp,kbd{font-family:monospace,courier;}
+					var{font-style:italic;font-weight:bold;}
+	/*--[=2b:Links]--*/
+		:focus{outline:none;}
+		/*-Inline links-*/
+			a{color:#111;text-decoration:none;}
+				a:link{color:#111;text-decoration:none;}
+				a:visited{color:#111;text-decoration:none;}
+				a:hover{color:#111;text-decoration:none;}
+				a:active{color:#111;text-decoration:none;}		
+		/*-Linked images-*/
+			a img{border:none;}
+	/*--[=2c:Images]--*/
+		/*Standalone*/
+			img{margin:0 0 1em 0;padding:0.14em 0 0 0;max-width:100%;}
+		/*Within a figure tag*/
+			figure{margin:0 0 1em 0;}
+				figure img{margin:0 0 0.21em 0;}
+				figure figcaption{margin:0;text-align:right;color:#666;}
+	/*--[=2d:Forms]--*/
+		/*Set global constants*/
+			form{margin:0 0 1em 0;}
+				legend{margin:0 0 0.25em 0;}
+				label{display:block;margin:0 0 0.25em 0;}
+				button{font-family:Georgia,times,serif;}
+					button:hover{cursor:pointer;}
+		/*Set styles for full forms (sets of inputs/labels should always be encased in an ordered list for example)*/  
+				form ol{margin:0;list-style:none;}
+				form li{position:relative;}
+				input,textarea{display:block;width:auto;margin:0 0 0.78em 0;padding:1.25em 20px;border:1px solid #D1D1D1;font:italic 1em/1.5em Georgia,times,serif;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;color:#111;}
+					input:focus,textarea:focus{border-radius:0.5em;border-color:#111;}
+					.state-error:after{content:"B";font-family:"SnowconeRegular";position:absolute;top:50%;right:-40px;z-index:1;width:30px;line-height:30px;margin:-15px 0 0 0;border-radius:30px;text-align:center;background:#aa0101;color:#fff;}
+					.state-error input,.state-error textarea{border-radius:0.5em;border-width:3px;border-color:#aa0101;color:#aa0101;}
+				input[type="radio"],input[type="checkbox"]{width:auto;border:none;}
+				legend{display:none;} 
+	/*--[=2e:Tables]--*/
+		table{margin:0 0 1em 0;width:100%;border:1px solid #ccc;}
+			caption{text-align:left;padding:0 0 0.5em 0;}
+			td,th{padding:0.35em 1em;text-align:left;border:1px dotted #ccc;}
+			thead{border-bottom:2px solid #ccc;font-weight:bold;}
+				thead th{border-style:solid;background:#eee;text-shadow:0 1px 1px #fff;}
+			tfoot{font-style:italic;}
+	/*--[=2d:Display modifiers]--*/
+		/*Hide an element*/
+			.inv{text-indent:-90000px;height:0;position:absolute;}
+		/* Universal clear */
+			.clear{clear:both;display:block;overflow:hidden;}
+		/* Enhanced Universal Clearfix hack */
+			.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+			.clearfix{display:inline-block;}
+			/* Start commented backslash hack \*/
+				* html .clearfix{height:1%;}
+				.clearfix{display:block;}
+			/* Close commented backslash hack */
+
 .mod-gridunit{width:100%;margin-right:0;float:none;}
 		.app-page_title{font-size:3em;}
 		.app-button{width:100%;display:block;padding-left:0;padding-right:0;}
