@@ -409,7 +409,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	/*--[5: Home page]--*/
 		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;text-align:center;font-style:normal;}
 		#pg-home_intro h1:before{padding:0 0.5em 0 0;}
-		#pg-home_intro p{margin:0 0 0.5em 0;font-style:italic;color:#666;}
+		#pg-home_intro p{margin:0 0 1em 0;font-style:italic;color:#666;}
 		#pg-home .state-tweet blockquote{padding-top:0;}	
 			#pg-home .state-tweet blockquote p{padding-left:0;}
 	/*--[5: About page]--*/
