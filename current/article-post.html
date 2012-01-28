@@ -49,11 +49,18 @@
 							<p>It only does what it's told, and wants to make sure it's got each rule right, so for every rule it goes through a qualification process.</p>
 	
 							<p>Take for example, the following:</p>
-							<p><code>html body div#wrapper article p{font-family:arial,sans-serif;margin:0 0 1em 0;}</code></p>
+							<p>
+<pre class="prettyprint">html body div#wrapper article p{
+font-family:arial,sans-serif;
+margin:0 0 1em 0;
+}</pre>
+							</p>
 							<p>In this example, in applying a style to the paragraph, the browser will (in reading from right to left) look inside the curly braces to find what rules are to be applied, then it will move on to the element(s) after the braces to figure out what to apply them too. It sees the first "p" in the stack (which looks like the last item to human eyes) and knows to apply the rule to that "p". However, before settling on this decision it checks if the rule for this "p" tag has been made any more specific. It goes up the chain of selectors, and for each one checks if the rule is still valid until it gets to the end if the stack.</p>
 							<p>It will then read upwards in the stylesheet, to check if any additional rules add properties to this "p" element, or override them.</p>
 							<p>Of course, this all happens pretty quick so the idea would never be to have one rule per element, with no descendence or inheritance. It does    however, bring home the importance of thinking through each rule, and what selectors are necessary to make it work. For example, this would be deemed an "over-qualified" rule:</p>
-							<p><code>div#main-content{...}</code></p>
+							<p>
+<pre class="prettyprint">div#main-content{...}</pre>							
+							</p>
 	
 							<p>Why make the browser work harder to ensure the ID selector is applied to a DIV element. Also, why give the rule 1 more <a href="http://www.quora.com/Whats-the-difference-between-a-CSS-Class-and-ID/answer/Jack-Armley">point of specifity?</a> You're just adding more complexity to the cascade.</p>
 							<p>This same concept potentially knocks some of the shine off CSS resets. Whilst they are useful to ensure you always start with a clean, consistent base they do add more rules that get constantly overridden, and that subsequently mean the browser has to check them against any rules it's applying to the same element, further down the stylesheet.</p>
