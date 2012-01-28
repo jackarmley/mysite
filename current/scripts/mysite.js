@@ -182,12 +182,24 @@ window.sitescripts = sitescripts;
 	
 
 $(document).ready(function() {
-	//Run globals
+	//Establish devices
+		var mobile = 0;
+		var canvas_width = $(window).width();
+		if(canvas_width<=600){
+			mobile = 1;
+		}
 	
-		sitescripts.ui.addicons()
-		sitescripts.ui.navhover()
-		sitescripts.mobile.hideurlbar()
-		$(window)._scrollable();
+	//Run mobile only scripts
+		if(mobile==1){
+			sitescripts.mobile.hideurlbar()
+		}		
+		
+	//Run globals
+		if(mobile==0){
+			sitescripts.ui.addicons()
+			sitescripts.ui.navhover()
+			$(window)._scrollable();
+		}
 			
 	//section specific
 	
@@ -207,11 +219,17 @@ $(document).ready(function() {
 		if(subpage=="p-article_post"){
 			//sitescripts.modules.disqus()
 			sitescripts.modules.tweetbox()
-			sitescripts.ui.scrolltop()
-			//sitescripts.ui.skipheader()
+			
+			if(mobile==0){
+				sitescripts.ui.scrolltop()
+				sitescripts.ui.skipheader()
+			}
 		}
 		
 		if(subpage=="p-work_detail"){
-			//sitescripts.ui.skipheader()
+			
+			if(mobile==0){
+				sitescripts.ui.skipheader()
+			}
 		}			 
 });
