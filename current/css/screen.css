@@ -319,7 +319,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			
 	/*--[=3e: Classes for listing content]--*/
 		.mod-listitem{margin:0 0 1em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
-			.mod-listitem:last-child{border-bottom:0;padding-bottom:0;}
+			.mod-listitem:last-child{border-bottom:0;box-shadow:none;padding-bottom:0;}
 			.mod-listitem h1{margin-top:0;}		
 
 		/*Tweet subset*/
@@ -404,7 +404,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.p-article_post article p:first-of-type,
 		.p-work_detail article p:first-of-type
 		{font-size:1.2em;font-style:italic;color:#666;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;margin:0 0 1.5em 0;}
-		.p-work_detail article p:first-of-type{border-bottom:none;padding-bottom:0;}
+		.p-work_detail article p:first-of-type{border-bottom:none;box-shadow:none;padding-bottom:0;}
 
 	/*--[5: Home page]--*/
 		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;text-align:center;font-style:normal;}
