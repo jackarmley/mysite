@@ -141,7 +141,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Within a figure tag*/
 			figure{margin:0 0 1em 0;}
 				figure img{margin:0 0 0.21em 0;}
-				figure figcaption{margin:0;text-align:right;color:#666;}
+				figure figcaption{margin:0;text-align:right;color:#666;font-style:italic;font-size:0.85em;}
 	/*--[=2d:Forms]--*/
 		/*Set global constants*/
 			form{margin:0 0 1em 0;}
@@ -254,10 +254,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		
 	/*--[=3b: Lists]--*/
 		/*Plain list*/			
-			.plain{list-style:none;margin-left:0;padding-top:0;}
-		/*Icon list (extends plain)*/		
-			.icons li{margin-bottom:0;}
-				.icons .app-ico:before{padding-right:0.5em;}
+			.app-plainlist{list-style:none;margin-left:0;padding-top:0;}
+		/*Icon list (extends app-plainlist)*/		
+			.ext-icons li{margin-bottom:0;}
+				.ext-icons .app-ico:before{padding-right:0.5em;}
 	/*--[=3c: Add transitions to relevent elements]--*/
 		button,
 		input,
@@ -279,53 +279,67 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-page_title{font-size:4em;margin:0 0 0.35em 5px;text-transform:uppercase;color:#111;}
 		.app-pagetitle_subinfo{font-size:0.85em;font-style:italic;margin:-2em 0 1.6em 0;}
 			.app-pagetitle_subinfo:before{content:"- ";}
-
-		.app-button{background:#ccc;padding:1em;font-size:1.2em;display:inline-block;text-align:center;clear:both;margin-bottom:1em;border:1px solid #fff;text-shadow:0 1px 0 #fff;box-shadow:inset 0 0 3px rgba(1,1,1,.2);color:#333;}
-			.app-button:link,.app-button:visited{color:#333;}
-			.app-button:hover{cursor:pointer;background:#999;box-shadow:inset 0 0 3px rgba(1,1,1,.5);color:#111;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;}
-			.app-button:active{color:#111;}
-			
+	
+	/*--[=3d: Set elements as buttons]--*/	
+	
+		/*Initial setup*/	
+			.app-button{background:#ccc;padding:1em;font-size:1.2em;display:inline-block;text-align:center;clear:both;margin-bottom:1em;border:1px solid #fff;text-shadow:0 1px 0 #fff;box-shadow:inset 0 0 3px rgba(1,1,1,.2);color:#333;}
+				.app-button:link,.app-button:visited{color:#333;}
+				.app-button:hover{cursor:pointer;background:#999;box-shadow:inset 0 0 3px rgba(1,1,1,.5);color:#111;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;}
+				.app-button:active{color:#111;}
+		
+		/*Button with icon (extends app-button)*/		
 			.app-button.app-ico:before{padding-right:0.5em;}
-			
+		/*Centralized button (extends app-button)**/		
 			.ext-center{margin-left:auto;margin-right:auto;width:100px;display:block;clear:both;}
 				.ext-center.app-ico{width:130px;}
-			
+		/*Recessive buton (extends app-button)**/	
 			.ext-receessive{font-size:0.85em;font-style:italic;padding:0.5em 1em;}		
 
-		.app-division{border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}
-		
-		.app-panel{background:#DDD;padding:1em 1em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;color:#333;text-shadow:0 1px 0 #fff;}	
-			.app-panel a,.app-panel a:link,.app-panel a:visited{color:#333;}
-			.app-panel a:hover{color:#111;}
-			.app-panel a:active{color:#333;}
-			ul.app-panel,ol.app-panel{padding:0;overflow:hidden;}
-				ul.app-panel li,ol.app-panel li{display:block;}
-				ul.app-panel a,ol.app-panel a{border-bottom:1px solid #fff;box-shadow:inset 0 1px 1px rgba(1,1,1,.1);margin:0;padding:0.75em 1em;display:block;}
-				ul.app-panel a:hover,ol.app-panel a:hover{background:rgba(1,1,1,.1);box-shadow:inset 0 1px 1px rgba(1,1,1,.3);}
-				ul.app-panel li:last-child a,ol.app-panel li:last-child a{border-bottom:none;}
-
-		.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
-			.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
-			.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}
+	/*--[=3e: Styles for manipulating block content]--*/
+	
+		/*Set a block element as a visual division (not a semantic one, like <hr />*/
+			.app-division{border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}
 			
-		.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 2em 0;margin-bottom:0;}
-			.app-grid_listing article:nth-child(1),
-			.app-grid_listing article:nth-child(2),
-			.app-grid_listing article:nth-child(3)
-			{border-top:none;}
-			.app-grid_listing article h1{margin-top:0;}
-			.app-grid_listing .app-button{position:absolute;bottom:1.5em;left:0;margin:0;}	
-			.app-grid_listing .ext-center{left:50%;margin-left:-50px;}
+		/*Set a block element to be a panel*/
+			.app-panel{background:#DDD;padding:1em 1em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;color:#333;text-shadow:0 1px 0 #fff;}	
+				.app-panel a,.app-panel a:link,.app-panel a:visited{color:#333;}
+				.app-panel a:hover{color:#111;}
+				.app-panel a:active{color:#333;}
+			
+			/*When element is a ul or ol, adjust accordingly (extends app-panel)**/
+				ul.app-panel,ol.app-panel{padding:0;overflow:hidden;}
+					ul.app-panel li,ol.app-panel li{display:block;}
+					ul.app-panel a,ol.app-panel a{border-bottom:1px solid #fff;box-shadow:inset 0 1px 1px rgba(1,1,1,.1);margin:0;padding:0.75em 1em;display:block;}
+					ul.app-panel a:hover,ol.app-panel a:hover{background:rgba(1,1,1,.1);box-shadow:inset 0 1px 1px rgba(1,1,1,.3);}
+					ul.app-panel li:last-child a,ol.app-panel li:last-child a{border-bottom:none;}
+		
+		/*Set block-level text in columns*/			
+			.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
+				.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
+				.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}	
 			
 	/*--[=3e: Classes for listing content]--*/
-		.mod-listitem{margin:0 0 1em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
-			.mod-listitem:last-child{border-bottom:0;box-shadow:none;padding-bottom:0;}
-			.mod-listitem h1{margin-top:0;}		
+		
+		/*For listing items horizontally*/
+			.mod-listitem{margin:0 0 1em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
+				.mod-listitem:last-child{border-bottom:0;box-shadow:none;padding-bottom:0;}
+				.mod-listitem h1{margin-top:0;}		
 
-		/*Tweet subset*/
-			.mod-listitem.state-tweet blockquote{margin:0;padding:0;}
-				.mod-listitem.state-tweet blockquote p{margin:0 0 1em 0;}
-				.mod-listitem.state-tweet blockquote footer p{margin:0;}
+		/*Tweet subset (extends mod-listitem)**/
+			.ext-tweet blockquote{margin:0;padding:0;}
+				.ext-tweet blockquote p{margin:0 0 1em 0;}
+				.ext-tweet blockquote footer p{margin:0;}
+		
+		/*For listing items in a grid*/				
+			.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 2em 0;margin-bottom:0;}
+				.app-grid_listing article:nth-child(1),
+				.app-grid_listing article:nth-child(2),
+				.app-grid_listing article:nth-child(3)
+				{border-top:none;}
+				.app-grid_listing article h1{margin-top:0;}
+				.app-grid_listing .app-button{position:absolute;bottom:1.5em;left:0;margin:0;}	
+				.app-grid_listing .ext-center{left:50%;margin-left:-50px;}
 
 	/*--[=3f: Image slider]--*/
 		.state-slider{position:relative;margin:0 0 1.5em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 2px 0 rgba(1,1,1,.09);}
@@ -344,7 +358,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 [=4:Global layout styles]
 ======== */
 	html{height:100%;background:#ececec;}
-	body{max-width:1000px;min-width:320px;width:90%;margin:0 auto;position:relative;padding-bottom:2em;}
+	body{max-width:1000px;min-width:260px;width:90%;margin:0 auto;position:relative;padding-bottom:2em;}
 
 	#gl-wrapper_page{padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;border-bottom:1px solid rgba(1,1,1,.3);background:rgba(255,255,255,.3);}
 
@@ -410,8 +424,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;text-align:center;font-style:normal;}
 		#pg-home_intro h1:before{padding:0 0.5em 0 0;}
 		#pg-home_intro p{margin:0 0 1em 0;font-style:italic;color:#666;}
-		#pg-home .state-tweet blockquote{padding-top:0;}	
-			#pg-home .state-tweet blockquote p{padding-left:0;}
+		#pg-home .ext-tweet blockquote{padding-top:0;}	
+			#pg-home .ext-tweet blockquote p{padding-left:0;}
 	/*--[5: About page]--*/
 
 	/*--[5: Work]--*/

@@ -1,3 +1,7 @@
+//======================
+//Add dependancies
+//======================
+
 /*
  * jQuery FlexSlider v1.8
  * http://flex.madebymufffin.com
@@ -100,7 +104,10 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 })(jQuery);
 
 
-//Functions
+//======================
+//Set custom functions
+//======================
+
 (function(window,undefined ) {
 	var sitescripts = {
 		ui:{
@@ -305,8 +312,12 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 	} 
 window.sitescripts = sitescripts;
 })(window);	  
-	
 
+
+//======================
+//Call custom functions
+//======================
+	
 $(document).ready(function() {
 		
 	//Establish devices
