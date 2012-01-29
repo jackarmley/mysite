@@ -134,7 +134,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				a:active{color:#111;text-decoration:none;}	
 			p a{border-bottom:1px dashed #666;box-shadow:0 1px 0 #fff;position:relative;}		
 				p a:hover{border-bottom:1px solid #F8D074;box-shadow:0 -1px 0 #F8D074,inset 0 1px 0 #fff;background:rgba(251,247,168,.7);text-shadow:0 1px 0 #fff;}
-				p a:hover:after{content:"a";width:1.5em;line-height:1.5em;text-align:center;background:#fff;position:absolute;top:-1.2em;right:-1.2em;border-radius:1em;-webkit-border-radius:1em;-moz-border-radius:1em;-o-border-radius:1em;box-shadow:0 -1px 0 rgba(1,1,1,.3),0 0 4px rgba(1,1,1,.5);border:1px solid #666;font-family:"SnowconeRegular";font-style:normal;font-weight:normal;text-transform:none;}
+				p a:hover:after,
+				#gl-page_footer a:hover:after
+				{content:"a";width:1.5em;line-height:1.5em;text-align:center;background:#fff;position:absolute;top:-1.2em;right:-1.2em;border-radius:1em;-webkit-border-radius:1em;-moz-border-radius:1em;-o-border-radius:1em;box-shadow:0 -1px 0 rgba(1,1,1,.3),0 0 4px rgba(1,1,1,.5);border:1px solid #666;font-family:"SnowconeRegular";font-style:normal;font-weight:normal;text-transform:none;}
 		/*-Linked images-*/
 			a img{border:none;}
 	/*--[=2c:Images]--*/
@@ -143,7 +145,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Within a figure tag*/
 			figure{margin:0 0 1em 0;}
 				figure img{margin:0 0 0.21em 0;}
-				figure figcaption{margin:-0.5em 0 0 0;text-align:right;color:#666;font-style:italic;font-size:0.85em;padding:0 2%;}
+				figure figcaption{margin:-0.35em 0 0 0;text-align:right;color:#666;font-style:italic;font-size:0.85em;padding:0 2%;}
 	/*--[=2d:Forms]--*/
 		/*Set global constants*/
 			form{margin:0 0 1em 0;}
@@ -171,7 +173,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Hide an element*/
 			.inv{text-indent:-90000px;height:0;position:absolute;}
 		/* Universal clear */
-			.clear{clear:both;display:block;overflow:hidden;}
+			.clear{clear:both;display:block;overflow:hidden;height:1px;width:100%;}
 		/* Enhanced Universal Clearfix hack */
 			.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
 			.clearfix{display:inline-block;}
@@ -281,6 +283,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-page_title{font-size:4em;margin:0 0 0.35em 5px;text-transform:uppercase;color:#111;}
 		.app-pagetitle_subinfo{font-size:0.85em;font-style:italic;margin:-2em 0 1.6em 0;text-transform:none;}
 			.app-pagetitle_subinfo:before{content:"- ";}
+			
+		.app-border{outline:solid 1px #ccc;}	
 	
 	/*--[=3d: Set elements as buttons]--*/	
 	
@@ -321,6 +325,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
 				.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}	
 			
+		/*Set primary image for a featured post or detail page*/
+			.app-imgwithfig_pri{text-align:center;}		
+				.app-imgwithfig_pri figcaption{text-align:right;}
 	/*--[=3e: Classes for listing content]--*/
 		
 		/*For listing items horizontally*/
@@ -334,7 +341,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				.ext-tweet blockquote footer p{margin:0;}
 		
 		/*For listing items in a grid*/				
-			.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 2em 0;margin-bottom:0;}
+			.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 0 0;margin-bottom:0;min-height:390px;}
 				.app-grid_listing article:nth-child(1),
 				.app-grid_listing article:nth-child(2),
 				.app-grid_listing article:nth-child(3)
@@ -346,7 +353,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	/*--[=3f: Image slider]--*/
 		.state-slider{position:relative;margin:0 0 1.5em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 2px 0 rgba(1,1,1,.09);}
 			.slides{padding:0;margin:0;list-style:none;}
-				.slides figure{margin:0;}
+				.slides figure{margin:0;text-align:center;}
+				.slides figcaption{text-align:right;}
 			.flex-control-nav{clear:both;padding:0;margin:0 auto;list-style:none;display:block;float:left;font-family:arial;font-weight:bold;}
 				.flex-control-nav.state-nofloat{float:none;}
 				.flex-control-nav li{display:inline;}
@@ -410,14 +418,15 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-page_footer{background:rgba(1,1,1,.06);clear:both;padding:1.5em 2% 1em 2%;color:#666;text-shadow:0 1px 0 rgba(255,255,255,.7);font-size:0.85em;border:1px dashed rgba(1,1,1,.1);border-top:none;}	
 			#gl-page_footer h1{color:#666;text-shadow:0 1px 0 #fff;margin-bottom:0.42em;}
 			#gl-page_footer p{line-height:1.7em;}
-			#gl-page_footer a{color:#666;}
+			#gl-page_footer a{color:#666;position:relative;}
 				#gl-page_footer a:hover{color:#333;text-shadow:0 1px 0 rgba(255,255,255,1);}
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */
 	/*--[5: Applicable to multiple sections]--*/
 		.p-article_post article p:first-of-type,
-		.p-work_detail article p:first-of-type
+		.p-work_detail article p:first-of-type,
+		.p-thanks_page section[role="main"] p:first-of-type
 		{font-size:1.2em;font-style:italic;color:#666;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;margin:0 0 1.5em 0;}
 		.p-work_detail article p:first-of-type{border-bottom:none;box-shadow:none;padding-bottom:0;}
 		
@@ -438,9 +447,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 	/*--[5: Work]--*/
 		/*--Listing page--*/
-			/*Work listitem (extends mod-listitem)*/
 		/*--Detail page--*/	
 	/*--[5: Articles]--*/
+		#pg-articles .app-grid_listing article{min-height:200px;}
 		/*--Post page--*/
 
 	/*--[5: Contact page]--*/
@@ -460,6 +469,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		{border-top:1px dashed rgba(1,1,1,.4);}
 		.app-grid_listing .app-button{position:relative;top:0;left:0;}	
 		.app-grid_listing .ext-center{left:0;margin-left:0;}
+		.app-grid_listing article{height:auto;min-height:1px;}
 
 		#gl-wrapper_page{padding-right:0;padding-left:0;border:none;border-bottom:1px solid rgba(1,1,1,.3);}
 

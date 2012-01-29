@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<!--[if lte IE 6]>
+			<meta http-equiv="refresh" content="0; url=/hi_there_ie6_user.html" />
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			window.top.location = '/hi_there_ie6_user.html';
+			/* ]]> */
+			</script>
+		<![endif]-->
+		<meta charset="utf-8"/>
+		<title>Jack Armley | Thanks for getting in touch</title>
+		<link rel="icon" href="{site_url}favicon.ico" type="image/x-icon" />
+		<meta name='description' content='My name&#x27;s Jack; I&#x27;m a web designer' />
+		<link rel="stylesheet" href="{site_url}css/screen.css" media="screen"/>
+		<script src="http://www.google.com/jsapi"></script>
+		<script>
+			google.load("jquery", "1.5.2");
+			google.load("jqueryui", "1.8.11");
+		</script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="{site_url}scripts/selectivizr.js"></script>
+		<![endif]-->
+		<script src="{site_url}scripts/script_functions.js"></script>
+	</head>
+	<body id="tg_contact" class="t_index">
+		<div id="site_wrapper" class="clearfix">
+			<header role="banner" class="unit float five">
+				<h1 class="replaced"><a href="{site_url}" title="Back home then?">Jack Armley</a></h1>
+				<nav role="navigation">
+					<ul>
+						<li>
+							<a class="replaced" href="{path="blog"}" title="Putting what's in my head, to virtual paper">
+								<span>Blog</span>
+							</a>
+						</li>
+						<li>
+							<a class="replaced" href="{path="work"}" title="Web stuff made with my own two hands">
+								<span>Work</span>
+							</a>
+						</li>
+						<li>
+							<a class="replaced" href="{path="about"}" title="What makes me tick?">
+								<span>About</span>
+							</a>
+						</li>
+						<li class="current">
+							<a class="replaced" href="{path="contact"}" title="A word in my ear?">
+								<span>Contact</span>
+							</a>
+						</li>
+					</ul>	
+				</nav>
+			</header>
+{exp:channel:entries channel="whyilove" disable="categories|custom_fields|member_data|pagination" status="open" limit="1" sort="desc" orderby="random" dynamic="no"}			
+			<a id="whyilove" href="{title_permalink="ilove"}" title="Why do I love {title}?">I&#x27;m a web designer and I <span class="replaced">love</span> {title}</a>
+			<script>
+				$(document).ready(function() {
+					$("#whyilove").click(function() {
+ 						$("body").prepend("<iframe src='{title_permalink="ilove"}' width='100%' height='100%' id='whyilove_iframe'></iframe>");
+ 						setTimeout(function() {$('#whyilove+#close').fadeIn(100);},2000);
+					});	
+				});
+			</script>
+{/exp:channel:entries}	
+			<div id="content_wrapper" class="unit float seventeen">	
+				<section role="main">
+					<h1>Thanks for getting in touch</h1>
+					<div class="standfirst">
+						<p>I'll get back to you as soon as I can. <a href="{path="contact"}" title="Go back to the contact page">Go back to the contact page.</a></p>
+					</div>
+					<iframe title="YouTube video player" width="336" height="273" src="http://www.youtube.com/embed/xGje5EbNuvw" frameborder="0" allowfullscreen></iframe>
+				</section>		
+			</div>
+		</div>
+		{globalvar-footer}
+	</body>		
+</html>

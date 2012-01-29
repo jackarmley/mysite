@@ -340,7 +340,7 @@ $(document).ready(function() {
 		if(mobile==0){
 			sitescripts.ui.addicons()
 			sitescripts.ui.navhover()
-			sitescripts.ui.gridlisting()
+			//sitescripts.ui.gridlisting()
 			$(window)._scrollable();
 		}
 			

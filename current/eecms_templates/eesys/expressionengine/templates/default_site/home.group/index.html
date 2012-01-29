@@ -1,69 +1,62 @@
-<!DOCTYPE html>
-<html lang="en-gb">
+<!doctype HTML>
+<!--[if lt IE 9]><html class="noscript oldie" id="pg-home" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="noscript" id="pg-home" lang="en" manifest="jackarmley.appcache?v=1"><!--<![endif]-->
 	<head>
-		<!--[if lte IE 6]>
-			<meta http-equiv="refresh" content="0; url=/hi_there_ie6_user.html" />
-			<script type="text/javascript">
-			/* <![CDATA[ */
-			window.top.location = '/hi_there_ie6_user.html';
-			/* ]]> */
-			</script>
-		<![endif]-->
-		<meta charset="utf-8"/>
-		<title>Jack Armley: Web designer, Expression Engine lover and webfonts geek</title>
-		<link rel="icon" href="{site_url}favicon.ico" type="image/x-icon" />
-		<meta name='description' content='My name is Jack; I am a web designer, Expression Engine lover and webfonts geek.' />
-		<link rel="stylesheet" href="{site_url}css/screen.css" media="screen"/>
-		<script src="http://www.google.com/jsapi"></script>
-		<script type="text/javascript">
-			google.load("jquery", "1.5.2");
-			google.load("jqueryui", "1.8.11");
-		</script>
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="{site_url}scripts/selectivizr.js"></script>
-		<![endif]-->
-		<script src="{site_url}scripts/script_functions.js"></script>
+		<meta charset="utf-8" /> 
+		<title>{site_name}</title>
+		{sn-head_meta}
 	</head>
-	<body id="tg_home" class="t_index">
-		<section role="main">
-			<h1>Jack Armley</h1>
-			<h2>My name&#x27;s Jack; I'm a web designer</h2>
-			<nav role="navigation">
-				<ul>
-					<li>
-						<a class="replaced" href="{path="blog"}" title="Putting what's in my head, to virtual paper">
-							<span>Blog</span>
-						</a>
-					</li>
-					<li>
-						<a class="replaced" href="{path="work"}" title="Web stuff made with my own two hands">
-							<span>Work</span>
-						</a>
-					</li>
-					<li>
-						<a class="replaced" href="{path="about"}" title="What makes me tick?">
-							<span>About</span>
-						</a>
-					</li>
-					<li>
-						<a class="replaced" href="{path="contact"}" title="A word in my ear?">
-							<span>Contact</span>
-						</a>
-					</li>
-				</ul>	
-			</nav>
-		</section>	
-				<script type="text/javascript">
-			  var _gaq = _gaq || [];
-			  _gaq.push(['_setAccount', 'UA-19743700-1']);
-			  _gaq.push(['_trackPageview']);
-			
-			  (function() {
-			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			  })();
-		</script>
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title">My name's Jack; I'm a web designer</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<div id="pg-home_intro">
+					<p class="app-page_title app-division">My idea of a good time is writing a nice bit of semantic markup, or some extensible <abbr title="Cascading Style Sheets">CSS</abbr></p>
+					<div class="app-division clearfix">
+						<article class="mod-gridunit gu-float gu-three">
+							{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="Featured" sort="desc" limit="1" dynamic="no" show_future_entries="yes"}
+								<h1 class="app-ico ico_view">{title}</h1>
+								{work-thumb limit="1"}
+									<img src="{-matrix-work-thumb_image}" alt="{-matrix-work-thumb_alt}" />
+								{/work-thumb}
+								{work-summary}
+								<a class="app-button ext-receessive" href="{title_permalink='work/detail'}">Read more</a>
+							{/exp:channel:entries}
+						</article>
+						<article class="mod-gridunit gu-float gu-last gu-three">
+							{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="1" sort="desc" show_future_entries="yes"}
+								<h1 class="app-ico ico_edit">{title}</h1>
+								{blog-thumb limit="1"}
+									<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
+								{/blog-thumb}
+								{blog-summary}
+								<a class="app-button ext-receessive" href="{title_permalink='articles/post'}">Read more</a>
+							{/exp:channel:entries}
+						</article>
+					</div>
+					<section class="mod-gridunit gu-float gu-two">
+						<h1 class="app-ico ico_heart">I'm loving</h1>
+						<p><a href="http://gridpak.com/">Gridpak</a> by Erskine design, <a href="http://flipboard.com/">Flipboard</a> for iPhone and <a href="http://www.google.com/landing/chrome/beta/">Chrome beta's</a> user&ndash; agent string switcher.</p>
+					</section>
+					<section class="mod-gridunit gu-float gu-two">
+						<h1 class="app-ico ico_settings">I'm using</h1>
+						<p>The principles from <a href="http://smacss.com/">SMACSS</a> by Jonathan Snook, <a href="http://www.mozilla.org/en-US/firefox/aurora/">Firefox Aurora's</a> developer tools and <a href="http://tangentsnowball.github.com/Snowcone/index.html">Snowcone</a>, an icon font I've been working on with the Tangent Snowball team.</p>
+					</section>
+					<article class="ext-tweet mod-gridunit gu-last gu-float gu-two">
+						<h1 class="app-ico ico_twitter">From the twitter</h1>
+						{exp:twitter_timeline screen_name="jackarmley" limit="1" twitter_refresh="30" use_stale_cache="no" create_links="user_mentions|hashtags|urls"}
+							<blockquote>
+								<p>&quot;{text}&quot;</p>
+								<footer>
+									<p>{status_relative_date} ago</p>
+								</footer>					
+							</blockquote>
+						{/exp:twitter_timeline}
+					</article>
+				</div>		
+			</div>
+		</div>
+		{sn-page_footer}
 	</body>		
 </html>

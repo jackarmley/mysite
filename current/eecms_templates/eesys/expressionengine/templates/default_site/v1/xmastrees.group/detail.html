@@ -1,0 +1,40 @@
+<!doctype HTML>
+<!--[if IE 7 ]>    <html class="noscript oldie ie7 pg-work_home " id="pg-work" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="noscript oldie ie8 pg-work_home" id="pg-work" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript pg-work_home" id="pg-work" lang="en"><!--<![endif]-->
+	<head>
+		<title>Jack Armley | Work</title>
+		{snpt-meta}
+	</head>
+	<body class="clearfix">
+		{snpt-header}
+		{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="open|Featured" limit="1" show_future_entries="yes"}
+		<article id="gl-content_wrapper">
+			<div class="mod-img_pri state-slider clearfix">
+				<ul class="slides">
+					{work-slides}
+					<li>
+						<figure>
+							<img src="{-matrix-work-slides_image}" alt="{-matrix-work-slides_alt}">
+							<figcaption>Image of a website</figcaption>
+						</figure>
+					</li>
+					{/work-slides}
+				</ul>
+			</div>
+			<h1 class="app-page_title">{title}</h1>	
+			<div id="gl-content-pri">
+				{work-summary}
+			</div>
+			<aside id="gl-content-sec">
+				<h1 class="inv">Work details</h1>
+				{if work-url}
+				<ul class="plain icons">
+					<li class="app-ico ico_link"><a id="visit_website" href="{work-url}" title="Visit {title} website">Visit website</a></li>
+				</ul>
+				{/if}
+			</aside>
+		</article>
+		{/exp:channel:entries}
+	</body>		
+</html>

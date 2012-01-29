@@ -1,106 +1,44 @@
-<!DOCTYPE html>
-<html lang="en-gb">
+<!doctype HTML>
+<!--[if lt IE 9]><html class="noscript oldie" id="pg-contact" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-contact" lang="en"  manifest="jackarmley.appcache?v=1"><!--<![endif]-->
 	<head>
-		<!--[if lte IE 6]>
-			<meta http-equiv="refresh" content="0; url=/hi_there_ie6_user.html" />
-			<script type="text/javascript">
-			/* <![CDATA[ */
-			window.top.location = '/hi_there_ie6_user.html';
-			/* ]]> */
-			</script>
-		<![endif]-->
-		<meta charset="utf-8"/>
-		<title>Jack Armley | A word in my ear?</title>
-		<link rel="icon" href="{site_url}favicon.ico" type="image/x-icon" />
-		<meta name='description' content='My name&#x27;s Jack; I&#x27;m a web designer &amp; can be contacted via the details on this page' />
-		<link rel="stylesheet" href="{site_url}css/screen.css" media="screen"/>
-		<script src="http://www.google.com/jsapi"></script>
-		<script>
-			google.load("jquery", "1.5.2");
-			google.load("jqueryui", "1.8.11");
-		</script>
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="{site_url}scripts/selectivizr.js"></script>
-		<![endif]-->
-		<script src="{site_url}scripts/script_functions.js"></script>
+		<meta charset="utf-8" />
+		<title>A word in my ear? : {site_name}</title>
+		{sn-head_meta}
 	</head>
-	<body id="tg_contact" class="t_index">
-		<div id="site_wrapper" class="clearfix">
-			<header role="banner" class="unit float five">
-				<h1 class="replaced"><a href="{site_url}" title="Back home then?">Jack Armley</a></h1>
-				<nav role="navigation">
-					<ul>
-						<li>
-							<a class="replaced" href="{path="blog"}" title="Putting what's in my head, to virtual paper">
-								<span>Blog</span>
-							</a>
-						</li>
-						<li>
-							<a class="replaced" href="{path="work"}" title="Web stuff made with my own two hands">
-								<span>Work</span>
-							</a>
-						</li>
-						<li>
-							<a class="replaced" href="{path="about"}" title="What makes me tick?">
-								<span>About</span>
-							</a>
-						</li>
-						<li class="current">
-							<a class="replaced" href="{path="contact"}" title="A word in my ear?">
-								<span>Contact</span>
-							</a>
-						</li>
-					</ul>	
-				</nav>
-			</header>
-{exp:channel:entries channel="whyilove" disable="categories|custom_fields|member_data|pagination" status="open" limit="1" sort="desc" orderby="random" dynamic="no"}			
-			<a id="whyilove" href="{title_permalink="ilove"}" title="Why do I love {title}?">I&#x27;m a web designer and I <span class="replaced">love</span> {title}</a>
-			<script>
-				$(document).ready(function() {
-					$("#whyilove").click(function() {
- 						$("body").prepend("<iframe src='{title_permalink="ilove"}' width='100%' height='100%' id='whyilove_iframe'></iframe>");
- 						setTimeout(function() {$('#whyilove+#close').fadeIn(100);},2000);
-					});	
-				});
-			</script>
-{/exp:channel:entries}	
-			<div id="content_wrapper" class="unit float seventeen">	
-				<section role="main">
-{exp:channel:entries channel="page" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" entry_id="30"}							<h1>{title}</h1>
-					{if page-standfirst}
-					<div class="standfirst">
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title">Contact me</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<section class="clearfix mod-gridunit gu-center gu-four" id="pg-contact_form">
+					{exp:channel:entries channel="page" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" entry_id="30"}
+						<h1 class="app-page_title">{title}</h1>
 						{page-standfirst}
-					</div>
-					{/if}
-					{page-body}
-{/exp:channel:entries}					
-					{exp:freeform:form collection="Contact form" required="name|email|message" return="contact/thanks_a_bunch" send_user_email="no" template="contact_adminnotification" user_email_template="contact_userautoresponse" require_ip="yes" notify="aloha@jackarmley.com" form:class="round_5px" form:id="contact_form"}		
+						{page-body}
+					{/exp:channel:entries}
+					{exp:freeform:form collection="Contact form" required="name|email|message" return="contact/ta_muchly" send_user_email="no" template="contact_adminnotification" user_email_template="contact_userautoresponse" require_ip="yes" notify="aloha@jackarmley.com" form:id="contact_form"}
 						<fieldset>
-							<p>{current_time format="%F %j%S, %Y"}</p>
-							<legend>Add your contact details and message here</legend>
-							<div class="clearfix">
-								<label for="name" class="inv">Your name</label>
-								<input type="text" name="name" id="name" placeholder="My name is" />
-							</div>
-							<div class="clearfix">
-								<label for="email" class="inv">Your email address</label>
-								<input type="text" name="email" id="email" placeholder="My email address is" />
-							</div>
-							<div class="clearfix">
-								<label for="message" class="inv">Your message</label>
-								<textarea name="message" id="message">I'd like to say...</textarea>
-							</div>
+							<legend class="inv">Add your contact details and message here</legend>
+							<ol>
+								<li>
+									<label for="name" class="inv">Your name</label>
+									<input type="text" name="name" id="name" placeholder="Your name please?" />
+								</li>
+								<li>
+									<label for="email" class="inv">Your email address</label>
+									<input type="email" name="email" id="email" placeholder="Your electronic mail address" />
+								</li>
+									<label for="message" class="inv">Your message</label>
+									<textarea name="message" id="message">Go ahead, say something</textarea>
+								</li>
+							</ol>	
 						</fieldset>	
-						<button name="submit" id="submit" class="replaced">Send me!</button>	
-						<div id="to_address">
-							<p>To</p>
-							<p>Aloha@jackarmley.com</p>
-						</div>
+						<button name="submit" id="submit" class="app-button"><span>Send me</span></button>	
 					{/exp:freeform:form}
-				</section>		
+				</section>	
 			</div>
 		</div>
-		{globalvar-footer}
+		{sn-page_footer}
 	</body>		
 </html>

@@ -1,0 +1,38 @@
+<!doctype HTML>
+<!--[if lt IE 9]><html class="noscript oldie" id="pg-me" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-me" lang="en"  manifest="jackarmley.appcache?v=1"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>About me : {site_name}</title>
+		{sn-head_meta}
+	</head>
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title">It's all about me</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				{exp:channel:entries channel="page" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" entry_id="12"}		
+					<h1 class="app-page_title">My name is Jack;<br />I’m a web designer</h1>
+					<article class="mod-gridunit gu-float gu-four">
+						{page-standfirst}
+						{page-body}		
+					</article>
+				{/exp:channel:entries}		
+				<aside class="mod-gridunit gu-float_rt gu-last gu-two" id="gl-content_sec">
+					<h1 class="app-shavetopmargin">Recently, on the twitter&hellip;</h1>
+					{exp:twitter_timeline screen_name="jackarmley" limit="3" twitter_refresh="30" use_stale_cache="no" create_links="user_mentions|hashtags|urls"}
+						<article class="mod-listitem ext-tweet">
+							<blockquote>
+								<p>&quot;{text}&quot;</p>
+								<footer>
+									<p>{status_relative_date} ago</p>
+								</footer>					
+							</blockquote>
+						</article>
+					{/exp:twitter_timeline}
+				</aside>
+			</div>
+		</div>
+		{sn-page_footer}
+	</body>		
+</html>
