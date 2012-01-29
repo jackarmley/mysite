@@ -141,7 +141,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Within a figure tag*/
 			figure{margin:0 0 1em 0;}
 				figure img{margin:0 0 0.21em 0;}
-				figure figcaption{margin:0;text-align:right;color:#666;font-style:italic;font-size:0.85em;}
+				figure figcaption{margin:-0.5em 0 0 0;text-align:right;color:#666;font-style:italic;font-size:0.85em;padding:0 2%;}
 	/*--[=2d:Forms]--*/
 		/*Set global constants*/
 			form{margin:0 0 1em 0;}
@@ -345,14 +345,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.state-slider{position:relative;margin:0 0 1.5em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 2px 0 rgba(1,1,1,.09);}
 			.slides{padding:0;margin:0;list-style:none;}
 				.slides figure{margin:0;}
-				.slides figcaption{margin-right:2%;}
-			.flex-control-nav{clear:both;padding:0;margin:0 auto;list-style:none;display:block;float:left;}
+			.flex-control-nav{clear:both;padding:0;margin:0 auto;list-style:none;display:block;float:left;font-family:arial;font-weight:bold;}
 				.flex-control-nav.state-nofloat{float:none;}
 				.flex-control-nav li{display:inline;}
-				.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;}
+				.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;color:#666;}
 					.flex-control-nav a:hover{cursor:pointer;}
 					.flex-control-nav li:last-child a{margin-right:0;}
-					.flex-control-nav .active{background:#666;color:#fff;text-shadow:0 -1px 0 #111;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;}
+					.flex-control-nav .active{background:#ddd;color:#333;text-shadow:0 1px 0 #fff;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;}
 
 /*========
 [=4:Global layout styles]
