@@ -37,6 +37,7 @@ pre{border:1px dotted #999;border-left:0;border-right:0;background:#eee;}
 		body{width:960px;border:1px solid #ccc;border-top:none;border-bottom:none;}
 		
 		#gl-ie_message{background:#F7F49D;padding:2em 10% 1.5em 10%;color:#666;font-family:arial,helvetica,sans-serif;border-bottom:1px solid #ccc;}
+			.state-closed{display:none;}
 			#gl-ie_message p{margin:0 0 0.5em 0;line-height:1.6em;}
 			#gl-ie_message a{color:#333;border-bottom:1px dashed #666;}
 				#gl-ie_message a:link,

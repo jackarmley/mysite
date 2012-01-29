@@ -50,6 +50,55 @@ hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,rege
 250):a&&a()}for(var e=[document.getElementsByTagName("pre"),document.getElementsByTagName("code"),document.getElementsByTagName("xmp")],h=[],k=0;k<e.length;++k)for(var t=0,s=e[k].length;t<s;++t)h.push(e[k][t]);var e=q,l=Date;l.now||(l={now:function(){return+new Date}});var p=0,d,g=/\blang(?:uage)?-([\w.]+)(?!\S)/;m()};window.PR={createSimpleLexer:x,registerLangHandler:k,sourceDecorator:u,PR_ATTRIB_NAME:"atn",PR_ATTRIB_VALUE:"atv",PR_COMMENT:"com",PR_DECLARATION:"dec",PR_KEYWORD:"kwd",PR_LITERAL:"lit",
 PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ"}})();
 
+/**
+* jQuery Cookie plugin
+*
+* Copyright (c) 2010 Klaus Hartl (stilbuero.de)
+* Dual licensed under the MIT and GPL licenses:
+* http://www.opensource.org/licenses/mit-license.php
+* http://www.gnu.org/licenses/gpl.html
+* src: https://github.com/carhartl/jquery-cookie
+*
+*/
+(function($) {
+    $.cookie = function(key, value, options) {
+
+        // key and at least value given, set cookie...
+        if (arguments.length > 1 && (!/Object/.test(Object.prototype.toString.call(value)) || value === null || value === undefined)) {
+            options = $.extend({}, options);
+
+            if (value === null || value === undefined) {
+                options.expires = -1;
+            }
+
+            if (typeof options.expires === 'number') {
+                var days = options.expires, t = options.expires = new Date();
+                t.setDate(t.getDate() + days);
+            }
+
+            value = String(value);
+
+            return (document.cookie = [
+                encodeURIComponent(key), '=', options.raw ? value : encodeURIComponent(value),
+                options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+                options.path ? '; path=' + options.path : '',
+                options.domain ? '; domain=' + options.domain : '',
+                options.secure ? '; secure' : ''
+            ].join(''));
+        }
+
+        // key and possibly options given, get cookie...
+        options = value || {};
+        var decode = options.raw ? function(s) { return s; } : decodeURIComponent;
+
+        var pairs = document.cookie.split('; ');
+        for (var i = 0, pair; pair = pairs[i] && pairs[i].split('='); i++) {
+            if (decode(pair[0]) === key) return decode(pair[1] || ''); // IE saves cookies with empty string as "c; ", e.g. without "=" as opposed to EOMB, thus pair[1] may be undefined
+        }
+        return null;
+    };
+})(jQuery);
+
 
 //Functions
 (function(window,undefined ) {
@@ -179,8 +228,9 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 					"<p class='app-emphasised'><strong>Hey there! I notice you're using an old version of Internet Explorer (which I class as below version 9).</strong></p>"+
 					"<p>As I've decided to use new and shiny web&ndash;design techniques on my site, I've served you up a more basic set of styles (pretty much the same ones I set for mobile devices). This is so I'm not hampered by IE's poor support for modern web standards. You can of course, <a href='http://www.browserchoice.eu' title='Visit browser choice for the full selection of popular browsers'>upgrade or change your browser</a> if you wish but if not, feel free to enjoy this simplified site.</p>"+
 					"</div>"
+					
 				$("body").prepend(iemessage);
-			}	
+			}
 		},
 		modules:{
 			disqus: function(){
@@ -293,7 +343,7 @@ $(document).ready(function() {
 		}
 		
 	//vendor specific
-		
+	
 		if(subpage_classstack[1]=="oldie"){
 			sitescripts.ui.iemessage()
 		}
