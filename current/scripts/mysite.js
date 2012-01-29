@@ -173,6 +173,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				clearheights();
 			},
 			iemessage: function(){
+				
 				var iemessage = 
 					"<div id='gl-ie_message'>"+
 					"<p class='app-emphasised'><strong>Hey there! I notice you're using an old version of Internet Explorer (which I class as below version 9).</strong></p>"+
