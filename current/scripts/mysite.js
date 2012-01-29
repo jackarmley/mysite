@@ -177,7 +177,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				var iemessage = 
 					"<div id='gl-ie_message'>"+
 					"<p class='app-emphasised'><strong>Hey there! I notice you're using an old version of Internet Explorer (which I class as below version 9).</strong></p>"+
-					"<p>As I've decided to use new and shiny web&ndash;design techniques on my site, I've served you up a more basic set of styles. This is so I'm not hampered by IE's poor support for modern web standards. You can of course, <a href='http://www.browserchoice.eu' title='Visit browser choice for the full selection of popular browsers'>upgrade or change your browser</a> if you wish but if not, feel free to enjoy this simplified site.</p>"+
+					"<p>As I've decided to use new and shiny web&ndash;design techniques on my site, I've served you up a more basic set of styles (pretty much the same ones I set for mobile devices). This is so I'm not hampered by IE's poor support for modern web standards. You can of course, <a href='http://www.browserchoice.eu' title='Visit browser choice for the full selection of popular browsers'>upgrade or change your browser</a> if you wish but if not, feel free to enjoy this simplified site.</p>"+
 					"</div>"
 				$("body").prepend(iemessage);
 			}	
