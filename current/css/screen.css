@@ -498,6 +498,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-nav_pri li:nth-child(2) a{left:20%;}
 		#gl-nav_pri li:nth-child(3) a{right:20%;}
 		#gl-nav_pri li:nth-child(4) a{right:10%;}
+		
+		#pg-contact_form{width:80%;}
 
 	} 
 	@media screen and (min-width:1025px) and (max-width:1400px){	
