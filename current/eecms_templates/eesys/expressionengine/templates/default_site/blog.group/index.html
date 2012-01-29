@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<!--[if lte IE 6]>
+			<meta http-equiv="refresh" content="0; url=/hi_there_ie6_user.html" />
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			window.top.location = '/hi_there_ie6_user.html';
+			/* ]]> */
+			</script>
+		<![endif]-->
+		<meta charset="utf-8"/>
+		<title>Jack Armley | Putting what's in my head, to virtual paper</title>
+		<link rel="icon" href="{site_url}favicon.ico" type="image/x-icon" />
+		<meta name='description' content='My name&#x27;s Jack; I&#x27;m a web designer &amp; I love to put what&#x27;s on my head, to virtual paper.' />
+		<link rel="stylesheet" href="{site_url}css/screen.css" media="screen"/>
+		<script src="http://www.google.com/jsapi"></script>
+		<script>
+			google.load("jquery", "1.5.2");
+			google.load("jqueryui", "1.8.11");
+		</script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="{site_url}scripts/selectivizr.js"></script>
+		<![endif]-->
+		<script src="{site_url}scripts/script_functions.js"></script>
+	</head>
+	<body id="tg_blog" class="t_index">
+		<div id="site_wrapper" class="clearfix">
+			<header role="banner" class="unit float five">
+				<h1 class="replaced"><a href="{site_url}" title="Back home then?">Jack Armley</a></h1>
+				<nav role="navigation">
+					<ul>
+						<li class="current">
+							<a class="replaced" href="{path="blog"}" title="Putting what's in my head, to virtual paper">
+								<span>Blog</span>
+							</a>
+						</li>
+						<li>
+							<a class="replaced" href="{path="work"}" title="Web stuff made with my own two hands">
+								<span>Work</span>
+							</a>
+						</li>
+						<li>
+							<a class="replaced" href="{path="about"}" title="What makes me tick?">
+								<span>About</span>
+							</a>
+						</li>
+						<li>
+							<a class="replaced" href="{path="contact"}" title="A word in my ear?">
+								<span>Contact</span>
+							</a>
+						</li>
+					</ul>	
+				</nav>
+			</header>
+{exp:channel:entries channel="whyilove" disable="categories|custom_fields|member_data|pagination" status="open" limit="1" sort="desc" orderby="random" dynamic="no"}			
+			<a id="whyilove" href="{title_permalink="ilove"}" title="Why do I love {title}?">I&#x27;m a web designer and I <span class="replaced">love</span> {title}</a>
+			<script>
+				$(document).ready(function() {
+					$("#whyilove").click(function() {
+ 						$("body").prepend("<iframe src='{title_permalink="ilove"}' width='100%' height='100%' id='whyilove_iframe' class='{whyilove-colour}'></iframe>");
+ 						setTimeout(function() {$('#whyilove+#close').fadeIn(100);},2000);
+					});	
+				});
+			</script>
+{/exp:channel:entries}			
+			<div id="content_wrapper" class="unit float last nineteen">	
+				<section role="main" class="unit clearfix last eighteen">
+{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="1" sort="desc" show_future_entries="yes"}
+					<article>
+						<h1><a href="{title_permalink="blog/article"}" title="Read more about{title}">{title}</a></h1>
+						<div class="standfirst">
+							{blog-standfirst}
+						</div>	
+						<div class="body">
+							{blog-body}
+						</div>
+						{if blog-extended}
+							<p><a href="{title_permalink="blog/article"}" title="Read more about {title}, and add a comment">Read more</p>
+						{/if}		
+					</article>	
+{/exp:channel:entries}
+				</section>
+{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="12" offset="1" sort="desc" show_future_entries="yes" dynamic="no"}	
+				{if "{count}"==1}
+				<section id="secondary" class="clearfix">
+					<h1 class="listing_title">Older articles</h1>
+				{/if}
+					<article class="unit float {switch="||last"} six">
+						<h1><a href="{title_permalink="blog/article"}" title="Read more about {title}, and add a comment">{title}</a></h1>
+						<p>{entry_date format="%F %j%S, %Y"}</p>
+						{blog-summary}
+					</article>
+					{switch="||<div class='clear'></div>"}	
+				{if "{count}"=="{total_results}"}	
+				</section>	
+				{/if}
+{/exp:channel:entries} 
+{exp:channel:entries channel="note" disable="categories|member_data|pagination" status="open" limit="12" sort="desc" show_future_entries="yes" show_expired="yes" dynamic="no"}	
+				{if "{count}"==1}
+				<section id="tertiary" class="clearfix">
+					<h1 class="listing_title">Quick notes</h1>
+				{/if}
+					<article class="unit float {switch="||last"} six">
+						<h1><a href="{title_permalink="blog/note"}" title="Read more about {title}, and add a comment">{title}</a></h1>
+						<p>{entry_date format="%F %j%S, %Y"}</p>
+						{note-summary}
+					</article>
+					{switch="||<div class='clear'></div>"}	
+				{if "{count}"=="{total_results}"}	
+				</section>	
+				{/if}
+{/exp:channel:entries}
+			</div>
+		</div>
+		{globalvar-footer}
+	</body>		
+</html>
