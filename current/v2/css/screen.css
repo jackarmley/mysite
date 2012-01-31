@@ -272,7 +272,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		nav a,
 		.app-button,
 		.state-workitem a img,
-		#gl-header_pri h1 a
+		#gl-header_pri h1 a,
+		.app-grid_listing article
 			{
 				-webkit-transition: all .2s ease-in-out;
 				-moz-transition: all .2s ease-in-out;
@@ -288,16 +289,16 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.app-pagetitle_subinfo:before{content:"- ";}       
 			
 	   	.fancyabbr{font:italic normal 14px/30px georgia,times,serif;color:#666;text-transform:none;position:absolute;top:-40px;left:0;display:block;float:left;white-space:pre;z-index:2;background:#fff;padding:0 0.5em;border-radius:0.25em;-webkit-border-radius:0.25em;-moz-border-radius:0.25em;-o-border-radius:0.25em;box-shadow:0 0 4px rgba(1,1,1,.5);border:1px solid #999;display:none;}
-	   		.fancyabbr:after{content:" ";width:10px;height:10px;display:block;background:#fff;position:absolute;bottom:-6px;left:10px;-moz-transform:rotate(45deg);border:1px solid #999;border-top:none;border-left:none;box-shadow:2px 2px 2px rgba(1,1,1,.3);}
+	   		.fancyabbr:after{content:" ";width:10px;height:10px;display:block;background:#fff;position:absolute;bottom:-6px;left:10px;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);border:1px solid #999;border-top:none;border-left:none;box-shadow:2px 2px 2px rgba(1,1,1,.3);}
 			
 		.app-border{outline:solid 1px #ccc;padding:0;}	
 	
 	/*--[=3d: Set elements as buttons]--*/	
 	
 		/*Initial setup*/	
-			.app-button{background:#ccc;padding:1em;font-size:1.2em;display:inline-block;text-align:center;clear:both;margin-bottom:1em;border:1px solid #fff;text-shadow:0 1px 0 rgba(255,255,255,.6);color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.6);border-radius:0.5em;-moz-border-radius:0.5em;-webkit-border-radius:0.5em;-o-border-radius:0.5em;}
+			.app-button{background:#5DCECE;padding:1em;font-size:1.2em;display:inline-block;text-align:center;clear:both;margin-bottom:1em;border:1px solid #fff;text-shadow:0 1px 0 rgba(255,255,255,.6);color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.3);border-radius:0.5em;-moz-border-radius:0.5em;-webkit-border-radius:0.5em;-o-border-radius:0.5em;}
 				.app-button:link,.app-button:visited{color:#fff;}
-				.app-button:hover{cursor:pointer;background:#999;box-shadow:inset 0 0 3px rgba(1,1,1,.5);color:#fff;border-radius:1em;-moz-border-radius:1em;-webkit-border-radius:1em;-o-border-radius:1em;}
+				.app-button:hover{cursor:pointer;box-shadow:inset 0 0 3px rgba(1,1,1,.5);color:#fff;border-radius:1em;-moz-border-radius:1em;-webkit-border-radius:1em;-o-border-radius:1em;}
 				.app-button:active{color:#fff;}	
 		
 		/*Button with icon (extends app-button)*/		
@@ -355,7 +356,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				.app-grid_listing article h1{margin-top:0;}
 				.app-grid_listing .app-button{position:absolute;bottom:1.5em;left:0;margin:0;}	
 				.app-grid_listing .ext-center{left:50%;margin-left:-50px;}
-
+					
 	/*--[=3f: Image slider]--*/
 		.state-slider{position:relative;margin:0 0 1.5em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 2px 0 rgba(1,1,1,.09);}
 			.slides{padding:0;margin:0;list-style:none;}
