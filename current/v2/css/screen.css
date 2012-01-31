@@ -123,6 +123,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					dfn,abbr{font-style:inherit;position:relative;}
 					code,samp,kbd{font-family:monospace,courier;}
 					var{font-style:italic;font-weight:bold;}
+				/*pseudo classes*/
+					::selection{color:#fff;background:#5DCECE;}
+					::-moz-selection{color:#fff;background:#5DCECE;}
+						
 	/*--[=2b:Links]--*/
 		:focus{outline:none;}
 		/*-Inline links-*/
@@ -438,6 +442,16 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-work .app-button{background:#00A0C6;}
 		#pg-me .app-button{background:#CCFF00;}
 		#pg-contact .app-button{background:#F9A60B;}
+		
+		#pg-articles ::selection{background:#FF4000;}
+		#pg-articles ::-moz-selection{background:#FF4000;}
+		#pg-work ::selection{background:#00A0C6;}
+		#pg-work ::-moz-selection{background:#00A0C6;}
+		#pg-me ::selection{background:#CCFF00;}
+		#pg-me ::-moz-selection{background:#CCFF00;}
+		#pg-contact ::selection{background:#F9A60B;}
+		#pg-contact ::-moz-selection{background:#F9A60B;}
+
 
 	/*--[5: Home page]--*/
 		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;text-align:center;font-style:normal;}
