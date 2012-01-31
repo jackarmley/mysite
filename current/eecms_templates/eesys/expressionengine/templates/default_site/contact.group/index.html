@@ -17,20 +17,20 @@
 						{page-standfirst}
 						{page-body}
 					{/exp:channel:entries}
-					{exp:freeform:form collection="Contact form" required="name|email|message" return="contact/ta_muchly" send_user_email="no" template="contact_adminnotification" user_email_template="contact_userautoresponse" require_ip="yes" notify="aloha@jackarmley.com" form:id="contact_form"}
+					{exp:freeform:form collection="Contact form" required="name|email|message" return="contact/ta_muchly" send_user_email="no" template="contact_adminnotification" user_email_template="contact_userautoresponse" require_ip="yes" notify="aloha@jackarmley.com" form:id="pg-contact_form"}
 						<fieldset>
 							<legend class="inv">Add your contact details and message here</legend>
 							<ol>
 								<li>
 									<label for="name" class="inv">Your name</label>
-									<input type="text" name="name" id="name" placeholder="Your name please?" />
+									<input type="text" name="name" id="name" placeholder="Your name please?" required="required" />
 								</li>
 								<li>
 									<label for="email" class="inv">Your email address</label>
-									<input type="email" name="email" id="email" placeholder="Your electronic mail address" />
+									<input type="email" name="email" id="email" placeholder="Your electronic mail address" required="required" />
 								</li>
 									<label for="message" class="inv">Your message</label>
-									<textarea name="message" id="message">Go ahead, say something</textarea>
+									<textarea name="message" id="message" required="required">Go ahead, say something</textarea>
 								</li>
 							</ol>	
 						</fieldset>	

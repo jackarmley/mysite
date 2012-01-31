@@ -182,16 +182,16 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				});	
 			},
 			navhover: function(){
-				var site_title = $("#gl-header_pri h1 a").text();
+				var site_title = $("#gl-header_pri h1 span").text();
 				
 				$("#gl-nav_pri li a").each(function(){
 					var nav_title = $(this).text();
 					$(this).hover(
 						function(){
-							$("#gl-header_pri h1 a").text(nav_title);
+							$("#gl-header_pri h1 span").text(nav_title);
 						},
 						function(){
-							$("#gl-header_pri h1 a").text(site_title);
+							$("#gl-header_pri h1 span").text(site_title);
 						}
 					);
 				});

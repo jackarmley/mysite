@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Podkova:400,700);
 /*================
 Screen styles
 Version 1.0
@@ -284,7 +283,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-pagetitle_subinfo{font-size:0.85em;font-style:italic;margin:-2em 0 1.6em 0;text-transform:none;}
 			.app-pagetitle_subinfo:before{content:"- ";}
 			
-		.app-border{outline:solid 1px #ccc;}	
+		.app-border{outline:solid 1px #ccc;padding:0;}	
 	
 	/*--[=3d: Set elements as buttons]--*/	
 	
@@ -341,7 +340,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				.ext-tweet blockquote footer p{margin:0;}
 		
 		/*For listing items in a grid*/				
-			.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 0 0;margin-bottom:0;min-height:390px;}
+			.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 0 0;margin-bottom:0;min-height:410px;height:410px;}
 				.app-grid_listing article:nth-child(1),
 				.app-grid_listing article:nth-child(2),
 				.app-grid_listing article:nth-child(3)
@@ -355,6 +354,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.slides{padding:0;margin:0;list-style:none;}
 				.slides figure{margin:0;text-align:center;}
 				.slides figcaption{text-align:right;}
+				.slides .app-border{outline:none;border:1px solid #ddd;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
 			.flex-control-nav{clear:both;padding:0;margin:0 auto;list-style:none;display:block;float:left;font-family:arial;font-weight:bold;}
 				.flex-control-nav.state-nofloat{float:none;}
 				.flex-control-nav li{display:inline;}
@@ -447,13 +447,15 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 	/*--[5: Work]--*/
 		/*--Listing page--*/
+			#pg-work .setcol-three{margin-bottom:1.5em;}
 		/*--Detail page--*/	
 	/*--[5: Articles]--*/
-		#pg-articles .app-grid_listing article{min-height:200px;}
+		#pg-articles .app-grid_listing article{min-height:220px;height:220px;}
+		#pg-articles .setcol-two{margin-bottom:1.5em;}
 		/*--Post page--*/
 
 	/*--[5: Contact page]--*/
-	
+		#pg-contact_form textarea{height:300px;}
 /*========
 [=6:Media queries]
 ======== */
@@ -467,7 +469,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-grid_listing article:nth-child(2),
 		.app-grid_listing article:nth-child(3)
 		{border-top:1px dashed rgba(1,1,1,.4);}
-		.app-grid_listing .app-button{position:relative;top:0;left:0;}	
+		.app-grid_listing .app-button{position:relative;top:0;left:0;margin-bottom:1.5em;}	
 		.app-grid_listing .ext-center{left:0;margin-left:0;}
 		.app-grid_listing article{height:auto;min-height:1px;}
 
@@ -509,6 +511,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#gl-nav_pri li:nth-child(4) a{right:10%;}
 		
 		#pg-contact_form{width:80%;}
+		#pg-contact_form textarea{height:120px;}
 
 	} 
 	@media screen and (min-width:1025px) and (max-width:1400px){	
