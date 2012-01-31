@@ -235,7 +235,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 			fancyabbr: function(){
 				$("abbr").each(function(){
 					var abbrcontent = $(this).attr("title");
-					$(this).append("<span class='fancyabbr'>Short for: <strong>"+abbrcontent+"</strong></span>"); 
+					$(this).append("<span class='fancyabbr'>Short for: <strong>&quot;"+abbrcontent+"&quot;</strong></span>"); 
 					if (abbrcontent!=""){
 						$(this).attr("title","");
 					}  

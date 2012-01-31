@@ -287,7 +287,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-pagetitle_subinfo{font-size:0.85em;font-style:italic;margin:-2em 0 1.6em 0;text-transform:none;}
 			.app-pagetitle_subinfo:before{content:"- ";}       
 			
-	   	 #gl-content_wrapper .fancyabbr{font:italic normal 14px/30px georgia,times,serif;color:#666;text-transform:none;position:absolute;top:-32px;left:50%;display:block;float:left;white-space:pre;z-index:2;background:#fff;padding:0 0.5em;border-radius:0.25em;-webkit-border-radius:0.25em;-moz-border-radius:0.25em;-o-border-radius:0.25em;box-shadow:0 0 4px rgba(1,1,1,.5);border:1px solid #999;display:none;}
+	   	.fancyabbr{font:italic normal 14px/30px georgia,times,serif;color:#666;text-transform:none;position:absolute;top:-40px;left:0;display:block;float:left;white-space:pre;z-index:2;background:#fff;padding:0 0.5em;border-radius:0.25em;-webkit-border-radius:0.25em;-moz-border-radius:0.25em;-o-border-radius:0.25em;box-shadow:0 0 4px rgba(1,1,1,.5);border:1px solid #999;display:none;}
+	   		.fancyabbr:after{content:" ";width:10px;height:10px;display:block;background:#fff;position:absolute;bottom:-6px;left:10px;-moz-transform:rotate(45deg);border:1px solid #999;border-top:none;border-left:none;box-shadow:2px 2px 2px rgba(1,1,1,.3);}
 			
 		.app-border{outline:solid 1px #ccc;padding:0;}	
 	
