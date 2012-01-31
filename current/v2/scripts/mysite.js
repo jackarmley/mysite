@@ -232,6 +232,24 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 					$(this).wrap("<pre class='prettyprint'/>");
 				});
 			},
+			fancyabbr: function(){
+				$("abbr").each(function(){
+					var abbrcontent = $(this).attr("title");
+					$(this).append("<span class='fancyabbr'>Short for: <strong>"+abbrcontent+"</strong></span>"); 
+					if (abbrcontent!=""){
+						$(this).attr("title","");
+					}  
+					$(this).hover(  
+						function(){
+							$("span",this).fadeIn(400);
+						},
+						function(){
+						   $("span",this).fadeOut(200); 
+						}
+					);
+				});
+				
+			},
 			iemessage: function(){
 				
 				var iemessage = 
@@ -339,7 +357,8 @@ $(document).ready(function() {
 	//Run globals
 		if(mobile==0){
 			sitescripts.ui.addicons()
-			sitescripts.ui.navhover()
+			sitescripts.ui.navhover() 
+			sitescripts.ui.fancyabbr()
 			//sitescripts.ui.gridlisting()
 			$(window)._scrollable();
 		}
