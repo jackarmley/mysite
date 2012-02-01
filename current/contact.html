@@ -7,29 +7,33 @@
 		<meta name="viewport" content="width=device-width,user-scalable=no, scale=1, maximum-scale=1.0" /> 
 		<title>Jack Armley | A word in my ear?</title>
 		<!--[if lt IE 9]>
-			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<link rel="stylesheet" href="v2/css/screen.css" media="screen" />
+			<link rel="stylesheet" href="v2/css/mobile.css" media="screen" />
 		<![endif]-->
-		<link rel="stylesheet" href="css/screen.css" media="screen" />
+		<!--[if (gte IE 9)|!(IE)]><!--> 
+			<link rel="stylesheet" href="v2/css/screen.css" media="screen" />
+		<!--<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="scripts/mysite.js"></script>
+		<script src="v2/scripts/mysite.js"></script>
 	</head>
 	<body>
-		<header id="gl-header_pri" role="banner" class="clearfix">
-			<h1><a href="index.html">Jack Armley</a></h1>
-			<nav role="navigation" id="gl-nav_pri">
-				<ul>
-					<li><a href="articles.html" title="">Articles</a></li>
-					<li><a href="work.html" title="">Work</a></li>
-					<li><a href="is.html" title="">Me</a></li>
-					<li><a href="contact.html" title="">Contact</a></li>
-				</ul>
-			</nav>	
-		</header>
-		<h1 id="gl-section_title">Contact me</h1>
-		<div id="gl-content_wrapper" class="clearfix">
-			<section class="clearfix">
-				<h1 class="app-page_title">A word in my ear?</h1>
-				<div class="mod-gridunit gu-float gu-four">
+		<div id="gl-wrapper_page">
+			<header id="gl-header_pri" role="banner" class="clearfix">
+				<h1><a href="index.html">Jack Armley</a></h1>
+				<nav role="navigation" id="gl-nav_pri">
+					<ul>
+						<li><a href="articles.html" title="">Articles</a></li>
+						<li><a href="work.html" title="">Work</a></li>
+						<li><a href="is.html" title="">Me</a></li>
+						<li><a href="contact.html" title="">Contact</a></li>
+					</ul>
+				</nav>	
+			</header>
+			<h1 id="gl-section_title">Contact me</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<section class="clearfix mod-gridunit gu-center gu-four" id="pg-contact_form">
+					<h1 class="app-page_title">A word in my ear?</h1>
 					<p>If you’ve an aversion to the multiple places I post on the web,
 feel free to get in touch here!</p>
 					<form action=".">
@@ -51,17 +55,25 @@ feel free to get in touch here!</p>
 						</fieldset>	
 						<button name="submit" id="submit" class="app-button"><span>Send me</span></button>	
 					</form>
-				</div>
-				<aside class="mod-gridunit gu-float_rt gu-last gu-two">
-					<h1>Find me elsewhere</h1>
-					<ul class="plain icons">
-						<li class="app-ico ico_twitter"><a href="" title="">Twitter</a></li>
-						<li class="app-ico ico_link"><a href="" title="">Foursquare</a></li>
-						<li class="app-ico ico_link"><a href="" title="">Github</a></li>
-						<li class="app-ico ico_link"><a href="" title="">Oink</a></li>
-					</ul>
-				</aside>
-			</section>	
+				</section>	
+			</div>
 		</div>
+		<footer id="gl-page_footer" class="clearfix">
+			<section class="mod-gridunit gu-float gu-four">
+				<h1 class="app-shavetopmargin">Colophon</h1>
+				<div class="app-setcol setcol-two">
+					<p>Headings are set in Ostrich Sans, from the League of Movable Type. Body copy is Podkova, from Google Fonts. UI icons are from Snowcone, a scalable @font-face icon set developed by myself and the lovely folks at Tangent Snowball. The flexible grid system is inspired by an article by the great Elliot Jay Stocks, and the site is powered by Expression Engine.</p>
+				</div>
+			</section>
+			<section class="mod-gridunit gu-float_rt gu-last gu-two">
+				<h1 class="app-shavetopmargin">Let's socialize</h1>
+				<ul class="app-plainlist ext-icons">
+					<li><a class="app-ico ico_link" href="http://www.twitter.com/jackarmley" title="Find me on Twitter">Find me on Twitter</a></li>
+					<li><a class="app-ico ico_link" href="http://foursquare.com/jackarmley" title="Follow me on Foursquare">Follow me on Foursquare</a></li>
+					<li><a class="app-ico ico_link" href="http://github.com/jackarmley" title="Fork me on Github">Fork me on Github</a></li>
+					<li><a class="app-ico ico_link" href="http://pinterest.com/jackalope/" title="Repin me on Pinterest">Repin me on Pinterest</a></li>
+				</ul>
+			</section>
+		</footer>
 	</body>		
 </html>

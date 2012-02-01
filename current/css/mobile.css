@@ -1,0 +1,66 @@
+/*================
+Screen styles for IE6-8
+Version 1.0
+Author: Jack Armley
+Created: 28.01.2012
+Last revised: --
+--
+Contents:
+--
+==================*/ 
+
+pre{border:1px dotted #999;border-left:0;border-right:0;background:#eee;}
+
+.mod-gridunit{width:100%;margin-right:0;float:none;}
+		.app-page_title{font-size:3em;}
+		#gl-wrapper_page .app-button{width:60%;display:block;padding:1em 0;margin-left:auto;margin-right:auto;}
+		.app-setcol{-moz-column-count:1;-webkit-column-count:1;-o-column-count:1;column-count:1;}
+		body{width:100%;background:transparent;padding-bottom:0;}
+		
+		.app-division{border-bottom:1px dashed #999;}
+		
+		.app-grid_listing article{border-top:none;border-bottom:1px dashed #999;}
+		.app-grid_listing article:nth-child(2),
+		.app-grid_listing article:nth-child(3)
+		{border-top:none;}
+		.app-grid_listing .app-button{position:relative;top:0;left:0;}	
+		.app-grid_listing .ext-center{left:0;margin-left:0;}
+		
+			/*--[=3f: Image slider]--*/
+		.state-slider{position:relative;margin:0 0 2em 0;border-bottom:1px dashed #999;}
+			.slides{padding:0;margin:0;list-style:none;}
+				.slides li{float:left;width:45%;margin:0 5% 1em 0;}
+				.slides figure{margin:0;}
+				.slides figcaption{margin-right:2%;}
+		
+		html{background:#eee;}
+		body{width:960px;border:1px solid #ccc;border-top:none;border-bottom:none;}
+		
+		#gl-ie_message{background:#F7F49D;padding:2em 10% 1.5em 10%;color:#666;font-family:arial,helvetica,sans-serif;border-bottom:1px solid #ccc;}
+			.state-closed{display:none;}
+			#gl-ie_message p{margin:0 0 0.5em 0;line-height:1.6em;}
+			#gl-ie_message a{color:#333;border-bottom:1px dashed #666;}
+				#gl-ie_message a:link,
+				#gl-ie_message a:visited{color:#333;}
+				#gl-ie_message a:hover{border-bottom-style:solid;color:#111;}
+				#gl-ie_message a:active{color:#333;}
+
+		#gl-wrapper_page{padding-right:0;padding-left:0;border:none;border-bottom:1px solid #ccc);background:#fff;width:960px;}
+
+		#gl-header_pri{height:auto;margin:0;}
+			#gl-header_pri h1{line-height:1.2em;padding:0.5em 0 0.25em 0;margin:0;background:rgba(1,1,1,.2);border-bottom:none;}
+			#gl-nav_pri{width:100%;font-family: 'Ostrich-black',Arial,sans-serif;border-top:none;}
+			#gl-nav_pri li{width:25%;text-align:center;display:block;float:left;margin:0;}
+				#gl-header_pri #gl-nav_pri a{width:100%;display:block;position:relative;float:left;top:0;left:0;margin:0;text-indent:0;background:none;height:auto;padding:1em 0;color:#ccc;font-size:1.2em;border-left:none;border-right:none;background:#333;}
+					#gl-header_pri #gl-nav_pri a:after{display:none;}
+					#gl-header_pri #gl-nav_pri a:hover{color:#fff;background:#111;}
+
+		#gl-section_title{border-bottom:1px dashed #999;padding:1em 0;}			
+		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}	
+		
+		#gl-page_footer{border-bottom:none;padding-left:5%;padding-right:5%;background:#ccc;margin:0 auto;}
+		#gl-page_footer section:first-child{border-bottom:1px dashed rgba(1,1,1,.4);margin:0 0 2em 0;padding:0 0 1em 0;}
+		#gl-page_footer .icons li{margin:0;clear:both;width:100%;}
+			#gl-page_footer .icons a{float:left;display:block;padding:1em 0;border-bottom:1px dashed rgba(1,1,1,.4);width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+			#gl-page_footer .icons li:last-child a{border-bottom:none;}
+		

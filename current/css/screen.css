@@ -1,7 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Podkova:400,700);
 /*================
 Screen styles
 Version 1.0
-Author: Tangent Snowball FED team
+Author: Jack Armley
 Created: 12.19.2011
 Last revised: --
 --
@@ -68,24 +69,26 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			         url('../assets/fonts/ostrichsans/ostrich-black-webfont.svg#SnowconeRegular') format('svg');
 			    font-weight: normal;
 			    font-style: normal;
-			}    
+			}
 		/*-Set base rules for all typographic elements*/
 			/*Set base font-family/line-height and declare the px size of an em unit*/    
 				body{font:16px/1.5em Georgia,times,serif;color:#111;}
 			/*Set font famillies for all applicable elements*/
+				.app-pagetitle_subinfo,
+				.app-button.ext-receessive
+				{font-family:Georgia,times,serif;}
+				.app-page_title
+				{font-family: 'Ostrich-bold',Arial,sans-serif;}
 				h1,
 				h2,
-				.app-page_title,
+				.app-button,
 				.flex-control-nav
-				{font-family: 'Ostrich-bold',Arial,sans-serif;}
-				#gl-header_pri h1,
-				#gl-section_title,
-				.app-button
+				figcaption
 				{font-family: 'Ostrich-black',Arial,sans-serif;}
 			/*Block elements*/   
 				p{margin:0 0 1em 0;line-height:1.5em;}
 				hgroup{position:relative;}
-				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#111;}
+				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#333;}
 					h1{font-size:1.5em;text-transform:uppercase;}
 				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
 						ul li,ol li{margin:0 0 0.41em 0;}
@@ -97,10 +100,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 						dt{font-weight:bold;margin:0 0 0.41em 0;padding:1.1em 0 0 0;}
 						dd{margin:0 0 0.41em 0;}
 				blockquote{margin:0 0 2.5em 0;padding:1.1em 0 0 0;font-style:italic;}
-					blockquote p{color:#1AAB8A;padding:0 1em;}
+					blockquote p{color:#666;padding:0 1em;}
 					blockquote footer{display:block;margin:-0.41em 0 0 0;}
 				hr{border-top:1px dotted #ccc;padding:1.1em 0;margin:2.1em 0 0 0;}	
-				pre{white-space:pre;width:100%;overflow:auto;margin:1.1em 0;padding:0.82em 0;border:1px dotted #ccc;border-left:none;border-right:none;}
+				pre{white-space:pre;width:100%;overflow:auto;margin:2em 0 2em 0;padding:1em 4%;border:1px dashed rgba(1,1,1,0.4);border-left:none;border-right:none;background:rgba(1,1,1,.03);box-shadow:inset 0 2px 0 rgba(1,1,1,.04),inset 0 -2px 0 rgba(1,1,1,.04);}
 					p pre{margin:0;padding:0;border:none;}
 			/*Inline elements*/
 				/*Superscript/subscript*/
@@ -129,7 +132,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				a:link{color:#111;text-decoration:none;}
 				a:visited{color:#111;text-decoration:none;}
 				a:hover{color:#111;text-decoration:none;}
-				a:active{color:#111;text-decoration:none;}		
+				a:active{color:#111;text-decoration:none;}	
+			p a{border-bottom:1px dashed #666;box-shadow:0 1px 0 #fff;position:relative;}		
+				p a:hover{border-bottom:1px solid #F8D074;box-shadow:0 -1px 0 #F8D074,inset 0 1px 0 #fff;background:rgba(251,247,168,.7);text-shadow:0 1px 0 #fff;}
+				p a:hover:after{content:"a";width:1.5em;line-height:1.5em;text-align:center;background:#fff;position:absolute;top:-1.2em;right:-1.2em;border-radius:1em;-webkit-border-radius:1em;-moz-border-radius:1em;-o-border-radius:1em;box-shadow:0 -1px 0 rgba(1,1,1,.3),0 0 4px rgba(1,1,1,.5);border:1px solid #666;font-family:"SnowconeRegular";font-style:normal;font-weight:normal;text-transform:none;}
 		/*-Linked images-*/
 			a img{border:none;}
 	/*--[=2c:Images]--*/
@@ -138,7 +144,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		/*Within a figure tag*/
 			figure{margin:0 0 1em 0;}
 				figure img{margin:0 0 0.21em 0;}
-				figure figcaption{font-size:0.85em;margin:0;text-align:right;}
+				figure figcaption{margin:-0.5em 0 0 0;text-align:right;color:#666;font-style:italic;font-size:0.85em;padding:0 2%;}
 	/*--[=2d:Forms]--*/
 		/*Set global constants*/
 			form{margin:0 0 1em 0;}
@@ -185,6 +191,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.gu-last{margin-right:0;}
 			.gu-float{float:left;}
 			.gu-float_rt{float:right;}
+			.gu-center{margin-left:auto;margin-right:auto;}
 			.gu-one{width:15%;}
 			.gu-two{width:32%;}
 			.gu-three{width:49%;}
@@ -232,12 +239,28 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-ico.ico_speedo:before{content:"y";}  
 		.app-ico.ico_tangentsnowball:before{content:"z";}
 		
+		.app-ico.ico_link:before,
+		.app-ico.ico_fill_down:before,
+		.app-ico.ico_fill_up:before, 
+		.app-ico.ico_fill_right:before, 
+		.app-ico.ico_fill_left:before,
+		.app-ico.ico_facebook:before, 
+		.app-ico.ico_twitter:before,
+		.app-ico.ico_googleplus:before,
+		.app-ico.ico_blacklist:before, 
+		.app-ico.ico_twitter_bird:before,
+		.app-ico.ico_twitter_plain:before, 
+		.app-ico.ico_tag:before,
+		.app-ico.ico_speedo:before, 
+		.app-ico.ico_tangentsnowball:before{text-transform:lowercase;}
+		
+		
 	/*--[=3b: Lists]--*/
 		/*Plain list*/			
-			.plain{list-style:none;margin-left:0;padding-top:0;}
-		/*Icon list (extends plain)*/		
-			.icons li{margin-bottom:0;}
-				.icons li:before{padding-right:0.5em;}
+			.app-plainlist{list-style:none;margin-left:0;padding-top:0;}
+		/*Icon list (extends app-plainlist)*/		
+			.ext-icons li{margin-bottom:0;}
+				.ext-icons .app-ico:before{padding-right:0.5em;}
 	/*--[=3c: Add transitions to relevent elements]--*/
 		button,
 		input,
@@ -254,32 +277,95 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				transition: all .2s ease-in-out;
 			}			
 	/*--[=3d: Swappable global type styles]--*/
-		.app-shavetopmargin{margin-top:0;}	
+		.app-shavetopmargin{margin-top:0;}
+		.app-setflushwithparagraph{margin-top:0.35em;}
+		.app-page_title{font-size:4em;margin:0 0 0.35em 5px;text-transform:uppercase;color:#111;}
+		.app-pagetitle_subinfo{font-size:0.85em;font-style:italic;margin:-2em 0 1.6em 0;}
+			.app-pagetitle_subinfo:before{content:"- ";}
+	
+	/*--[=3d: Set elements as buttons]--*/	
+	
+		/*Initial setup*/	
+			.app-button{background:#ccc;padding:1em;font-size:1.2em;display:inline-block;text-align:center;clear:both;margin-bottom:1em;border:1px solid #fff;text-shadow:0 1px 0 rgba(255,255,255,.6);color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.6);border-radius:0.5em;-moz-border-radius:0.5em;-webkit-border-radius:0.5em;-o-border-radius:0.5em;}
+				.app-button:link,.app-button:visited{color:#fff;}
+				.app-button:hover{cursor:pointer;background:#999;box-shadow:inset 0 0 3px rgba(1,1,1,.5);color:#fff;border-radius:1em;-moz-border-radius:1em;-webkit-border-radius:1em;-o-border-radius:1em;}
+				.app-button:active{color:#fff;}	
+		
+		/*Button with icon (extends app-button)*/		
+			.app-button.app-ico:before{padding-right:0.5em;}
+		/*Centralized button (extends app-button)**/		
+			.ext-center{margin-left:auto;margin-right:auto;width:100px;display:block;clear:both;}
+				.ext-center.app-ico{width:130px;}
+		/*Recessive buton (extends app-button)**/	
+			.ext-receessive{font-size:0.85em;font-style:italic;padding:0.5em 1em;}		
 
-		.app-page_title{font-size:4em;margin:0 0 0.35em 5px;text-transform:uppercase;}
-
-		.app-button{background:#ccc;padding:1em;font-size:1.2em;display:inline-block;text-align:center;clear:both;margin-bottom:1em;border:1px solid #fff;text-shadow:1px 1px 0 #111;box-shadow:inset 0 0 3px rgba(1,1,1,.2);color:#fff;}
-			.app-button:hover{cursor:pointer;background:#999;box-shadow:inset 0 0 3px rgba(1,1,1,.5);border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;}
-			#pg-work .app-button{background:#00A0C6;}
-				#pg-work .app-button:hover{background:#008BAE;text-shadow:-1px -1px 0 rgba(1,1,1,.5);color:#fff;}
-			.st-center{margin-left:auto;margin-right:auto;width:100px;display:block;}
-
-		.app-division{border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
-
-		.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
-			.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
-			.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}
+	/*--[=3e: Styles for manipulating block content]--*/
+	
+		/*Set a block element as a visual division (not a semantic one, like <hr />*/
+			.app-division{border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}
+			
+		/*Set a block element to be a panel*/
+			.app-panel{background:#DDD;padding:1em 1em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;color:#333;text-shadow:0 1px 0 #fff;}	
+				.app-panel a,.app-panel a:link,.app-panel a:visited{color:#333;}
+				.app-panel a:hover{color:#111;}
+				.app-panel a:active{color:#333;}
+			
+			/*When element is a ul or ol, adjust accordingly (extends app-panel)**/
+				ul.app-panel,ol.app-panel{padding:0;overflow:hidden;}
+					ul.app-panel li,ol.app-panel li{display:block;}
+					ul.app-panel a,ol.app-panel a{border-bottom:1px solid #fff;box-shadow:inset 0 1px 1px rgba(1,1,1,.1);margin:0;padding:0.75em 1em;display:block;}
+					ul.app-panel a:hover,ol.app-panel a:hover{background:rgba(1,1,1,.1);box-shadow:inset 0 1px 1px rgba(1,1,1,.3);}
+					ul.app-panel li:last-child a,ol.app-panel li:last-child a{border-bottom:none;}
+		
+		/*Set block-level text in columns*/			
+			.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
+				.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
+				.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}	
+			
 	/*--[=3e: Classes for listing content]--*/
-		.mod-listitem{margin:0 0 2em 0;}	
-			.mod-listitem h1{text-transform:uppercase;font-size:1.5em;margin:0 0 0.25em 0;}		
+		
+		/*For listing items horizontally*/
+			.mod-listitem{margin:0 0 1em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;}	
+				.mod-listitem:last-child{border-bottom:0;box-shadow:none;padding-bottom:0;}
+				.mod-listitem h1{margin-top:0;}		
+
+		/*Tweet subset (extends mod-listitem)**/
+			.ext-tweet blockquote{margin:0;padding:0;}
+				.ext-tweet blockquote p{margin:0 0 1em 0;}
+				.ext-tweet blockquote footer p{margin:0;}
+		
+		/*For listing items in a grid*/				
+			.app-grid_listing article{position:relative;border-top:1px dashed rgba(1,1,1,.4);padding:1.5em 0 2em 0;margin-bottom:0;}
+				.app-grid_listing article:nth-child(1),
+				.app-grid_listing article:nth-child(2),
+				.app-grid_listing article:nth-child(3)
+				{border-top:none;}
+				.app-grid_listing article h1{margin-top:0;}
+				.app-grid_listing .app-button{position:absolute;bottom:1.5em;left:0;margin:0;}	
+				.app-grid_listing .ext-center{left:50%;margin-left:-50px;}
+
+	/*--[=3f: Image slider]--*/
+		.state-slider{position:relative;margin:0 0 1.5em 0;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 2px 0 rgba(1,1,1,.09);}
+			.slides{padding:0;margin:0;list-style:none;}
+				.slides figure{margin:0;}
+			.flex-control-nav{clear:both;padding:0;margin:0 auto;list-style:none;display:block;float:left;font-family:arial;font-weight:bold;}
+				.flex-control-nav.state-nofloat{float:none;}
+				.flex-control-nav li{display:inline;}
+				.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;color:#666;}
+					.flex-control-nav a:hover{cursor:pointer;}
+					.flex-control-nav li:last-child a{margin-right:0;}
+					.flex-control-nav .active{background:#ddd;color:#333;text-shadow:0 1px 0 #fff;border-radius:0.25em;-moz-border-radius:0.25em;-webkit-border-radius:0.25em;-o-border-radius:0.25em;}
+
 /*========
 [=4:Global layout styles]
 ======== */
 	html{height:100%;background:#ececec;}
-	body{max-width:1000px;min-width:320px;width:90%;margin:0 auto;position:relative;padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;background:rgba(255,255,255,.3);}
+	body{max-width:1000px;min-width:260px;width:90%;margin:0 auto;position:relative;padding-bottom:2em;}
+
+	#gl-wrapper_page{padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;border-bottom:1px solid rgba(1,1,1,.3);background:rgba(255,255,255,.3);}
 
 	#gl-header_pri{position:relative;border-bottom:1px dashed rgba(1,1,1,.6);height:100px;background:#5DCECE;box-shadow:0 2px 2px rgba(1,1,1,.2);}
-		#gl-header_pri h1{color:#fff;font-size:3em;line-height:100px;text-align:center;margin:0;text-shadow:3px 3px 0 rgba(1,1,1,.2);}
+		#gl-header_pri h1{color:#fff;font-size:3em;line-height:100px;text-align:center;margin:0;text-shadow:0 -1px 0 rgba(1,1,1,.7);}
 			#gl-header_pri h1 a{color:#fff;}
 			#gl-header_pri h1 a:hover{-moz-transform:scale(1.2);-o-transform:scale(1.2);-webkit-transform:scale(1.2);transform:scale(1.2);}
 
@@ -306,7 +392,8 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-articles #gl-nav_pri li:nth-child(1) a:after,
 		#pg-work #gl-nav_pri li:nth-child(2) a:after,
 		#pg-me #gl-nav_pri li:nth-child(3) a:after,
-		#pg-contact #gl-nav_pri li:nth-child(4) a:after
+		#pg-contact #gl-nav_pri li:nth-child(4) a:after,
+		#gl-section_title:after
 		{content:" ";background:#fff;width:20px;height:20px;display:block;position:absolute;bottom:-40px;left:50%;margin-left:-10px;-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);border:1px dashed rgba(1,1,1,.8);border-bottom:none;border-right:none;}
 
 		#pg-work #gl-nav_pri li:nth-child(2) a:after{bottom:-45px;}
@@ -316,27 +403,44 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-articles #gl-header_pri{background:#FF4000;}
 		#pg-work #gl-header_pri{background:#00A0C6;}
 		#pg-me #gl-header_pri{background:#CCFF00;}
-		#pg-contact #gl-header_pri{background:#FFFF00;}
+		#pg-contact #gl-header_pri{background:#F9A60B;}
 
-		#gl-section_title{border:1px solid rgba(1,1,1,.1);border-top:none;margin:0 auto 0.90em auto;padding:0.5em 0;background:#fff;text-align:center;border-radius:0 0 0.25em 0.25em;-moz-border-radius:0 0 0.25em 0.25em;-webkit-border-radius:0 0 0.25em 0.25em;-o-border-radius:0 0 0.25em 0.25em;width:98%;color:#666;}
-
+		#gl-section_title{border:1px solid rgba(1,1,1,.1);border-top:none;margin:0 auto 0.90em auto;padding:0.5em 0;background:#fff;text-align:center;border-radius:0 0 0.25em 0.25em;-moz-border-radius:0 0 0.25em 0.25em;-webkit-border-radius:0 0 0.25em 0.25em;-o-border-radius:0 0 0.25em 0.25em;width:98%;color:#666;position:relative;}
+			#gl-section_title:after{border:1px solid rgba(1,1,1,.1);border-top:none;border-left:none;bottom:-10px;}
+		
+		#gl-page_footer{background:rgba(1,1,1,.06);clear:both;padding:1.5em 2% 1em 2%;color:#666;text-shadow:0 1px 0 rgba(255,255,255,.7);font-size:0.85em;border:1px dashed rgba(1,1,1,.1);border-top:none;}	
+			#gl-page_footer h1{color:#666;text-shadow:0 1px 0 #fff;margin-bottom:0.42em;}
+			#gl-page_footer p{line-height:1.7em;}
+			#gl-page_footer a{color:#666;}
+				#gl-page_footer a:hover{color:#333;text-shadow:0 1px 0 rgba(255,255,255,1);}
 /*========
 [=5:Section-specific layout styles]                                                          
 ======== */
+	/*--[5: Applicable to multiple sections]--*/
+		.p-article_post article p:first-of-type,
+		.p-work_detail article p:first-of-type
+		{font-size:1.2em;font-style:italic;color:#666;border-bottom:1px dashed rgba(1,1,1,.4);padding:0 0 1em 0;box-shadow:0 1px 0 #fff;margin:0 0 1.5em 0;}
+		.p-work_detail article p:first-of-type{border-bottom:none;box-shadow:none;padding-bottom:0;}
+		
+	/*--[5: Color-scheme overrides]--*/	
+		#pg-home .app-button{background:#5DCECE;text-shadow:0 -1px 0 rgba(1,1,1,.3);}
+		#pg-articles .app-button{background:#FF4000;}
+		#pg-work .app-button{background:#00A0C6;}
+		#pg-me .app-button{background:#CCFF00;}
+		#pg-contact .app-button{background:#F9A60B;}
+
 	/*--[5: Home page]--*/
-		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;}
+		#pg-home .app-page_title{margin:0;padding:0 0 0.5em 0;text-align:center;font-style:normal;}
+		#pg-home_intro h1:before{padding:0 0.5em 0 0;}
+		#pg-home_intro p{margin:0 0 1em 0;font-style:italic;color:#666;}
+		#pg-home .ext-tweet blockquote{padding-top:0;}	
+			#pg-home .ext-tweet blockquote p{padding-left:0;}
 	/*--[5: About page]--*/
+
 	/*--[5: Work]--*/
 		/*--Listing page--*/
 			/*Work listitem (extends mod-listitem)*/
 		/*--Detail page--*/	
-			.state-slider{position:relative;}
-				.slides{padding:0;margin:0;list-style:none;}
-				.flex-control-nav{position:absolute;bottom:1.5em;left:0;padding:0;margin:0;list-style:none;}
-					.flex-control-nav li{display:inline;}
-					.flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;}
-						.flex-control-nav a:hover{cursor:pointer;}
-						.flex-control-nav .active{background:#111;color:#fff;border-radius:0 0 0.5em 0.5em;}
 	/*--[5: Articles]--*/
 		/*--Post page--*/
 
@@ -350,12 +454,21 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.app-page_title{font-size:3em;}
 		.app-button{width:100%;display:block;padding-left:0;padding-right:0;}
 		.app-setcol{-moz-column-count:1;-webkit-column-count:1;-o-column-count:1;column-count:1;}
-		body{width:100%;padding-right:0;padding-left:0;border:none;background:transparent;}
+		body{width:100%;background:transparent;padding-bottom:0;}
+		
+		.app-grid_listing article:nth-child(2),
+		.app-grid_listing article:nth-child(3)
+		{border-top:1px dashed rgba(1,1,1,.4);}
+		.app-grid_listing .app-button{position:relative;top:0;left:0;}	
+		.app-grid_listing .ext-center{left:0;margin-left:0;}
+
+		#gl-wrapper_page{padding-right:0;padding-left:0;border:none;border-bottom:1px solid rgba(1,1,1,.3);}
+
 		#gl-header_pri{height:auto;margin:0 0 1.6em 0;box-shadow:none;}
 			#gl-header_pri h1{line-height:1.2em;padding:0.5em 0 0.25em 0;background:rgba(1,1,1,.2);}
 			#gl-nav_pri{width:100%;font-family: 'Ostrich-black',Arial,sans-serif;border-top:1px solid rgba(1,1,1,.3);}
 			#gl-nav_pri li{width:25%;text-align:center;display:block;float:left;margin:0;}
-				#gl-header_pri #gl-nav_pri a{width:100%;display:block;position:relative;float:left;top:0;left:0;margin:0;text-indent:0;background:none;height:auto;padding:1em 0;color:#333;font-size:1.2em;text-shadow:0 1px 0 #fff;border-left:1px solid rgba(255,255,255,.2);border-right:1px solid rgba(1,1,1,.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+				#gl-header_pri #gl-nav_pri a{width:100%;display:block;position:relative;float:left;top:0;left:0;margin:0;text-indent:0;background:none;height:auto;padding:1em 0;color:#fff;font-size:1.2em;text-shadow:0 -1px 0 rgba(1,1,1,.5);border-left:1px solid rgba(255,255,255,.2);border-right:1px solid rgba(1,1,1,.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
 					#gl-header_pri #gl-nav_pri li:last-child a{border-right:none;}
 					#pg-articles #gl-nav_pri li:nth-child(1) a:after,
 					#pg-work #gl-nav_pri li:nth-child(2) a:after,
@@ -363,21 +476,30 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					#pg-contact #gl-nav_pri li:nth-child(4) a:after,
 					#gl-header_pri #gl-nav_pri a:after{bottom:-10px;background:#ECECEC;border-top:1px solid #666;border-left:1px solid #666;}
 
-		#pg-articles #gl-nav_pri li:nth-child(1) a, 
-		#pg-work #gl-nav_pri li:nth-child(2) a,
-		#pg-me #gl-nav_pri li:nth-child(3) a,
-		#pg-contact #gl-nav_pri li:nth-child(4) a
-		{color:#fff;text-shadow:3px 3px 0 rgba(1,1,1,.2);}
-
 		#gl-section_title{display:none;}			
-		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}			
+		#gl-content_wrapper{width:90%;margin-left:auto;margin-right:auto;}	
+		
+		#gl-page_footer{border-bottom:none;padding-left:5%;padding-right:5%;}
+		#gl-page_footer section:first-child{border-bottom:1px dashed rgba(1,1,1,.4);margin:0 0 2em 0;padding:0 0 1em 0;}
+		#gl-page_footer .icons li{margin:0;clear:both;width:100%;}
+			#gl-page_footer .icons a{float:left;display:block;padding:1em 0;border-bottom:1px dashed rgba(1,1,1,.4);width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+			#gl-page_footer .icons li:last-child a{border-bottom:none;}
+		
+		#pg-home .app-page_title{font-family:Georgia,times,serif;text-transform:none;font-size:1.2em;font-style:italic;padding-bottom:2em;}	
+		
+		.p-article_post article p:first-of-type,
+		.p-work_detail article p:first-of-type
+		{font-size:1em;}	
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
+		.flex-control-nav,figcaption{font-size:16px;}
 		#gl-nav_pri li:nth-child(1) a{left:10%;}
 		#gl-nav_pri li:nth-child(2) a{left:20%;}
 		#gl-nav_pri li:nth-child(3) a{right:20%;}
 		#gl-nav_pri li:nth-child(4) a{right:10%;}
+		
+		#pg-contact_form{width:80%;}
 
 	} 
 	@media screen and (min-width:1025px) and (max-width:1400px){	
@@ -386,7 +508,38 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	
 /*========
 [=7:Third-party styles]
-======== */		 
+======== */	
+	/*--[=7a: Prettify JS]--*/
+	.pln{color:#000}
+	@media screen{
+		.str{color:#080}
+		.kwd{color:#008}
+		.com{color:#800}
+		.typ{color:#606}
+		.lit{color:#066}
+		.pun,.opn,.clo{color:#660}
+		.tag{color:#008}
+		.atn{color:#606}
+		.atv{color:#080}
+		.dec,.var{color:#606}
+		.fun{color:red}
+	}
+	@media print,projection{
+		.str{color:#060}
+		.kwd{color:#006;font-weight:bold}
+		.com{color:#600;font-style:italic}
+		.typ{color:#404;font-weight:bold}
+		.lit{color:#044}
+		.pun,.opn,.clo{color:#440}
+		.tag{color:#006;font-weight:bold}
+		.atn{color:#404}
+		.atv{color:#060}
+		
+	}
+	pre.prettyprint{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+	ol.linenums{margin-top:0;margin-bottom:0}
+	li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}
+	li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}	 
 
 /*========
 [=8:Vendor-specific styles]

@@ -1,0 +1,44 @@
+<!doctype HTML>
+<!--[if lt IE 9]><html class="noscript oldie" id="pg-contact" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-contact" lang="en"  manifest="jackarmley.appcache?v=1"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>A word in my ear? : {site_name}</title>
+		{sn-head_meta}
+	</head>
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title">Contact me</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<section class="clearfix mod-gridunit gu-center gu-four" id="pg-contact_form">
+					{exp:channel:entries channel="page" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" entry_id="30"}
+						<h1 class="app-page_title">{title}</h1>
+						{page-standfirst}
+						{page-body}
+					{/exp:channel:entries}
+					{exp:freeform:form collection="Contact form" required="name|email|message" return="contact/ta_muchly" send_user_email="no" template="contact_adminnotification" user_email_template="contact_userautoresponse" require_ip="yes" notify="aloha@jackarmley.com" form:id="pg-contact_form"}
+						<fieldset>
+							<legend class="inv">Add your contact details and message here</legend>
+							<ol>
+								<li>
+									<label for="name" class="inv">Your name</label>
+									<input type="text" name="name" id="name" placeholder="Your name please?" required="required" />
+								</li>
+								<li>
+									<label for="email" class="inv">Your email address</label>
+									<input type="email" name="email" id="email" placeholder="Your electronic mail address" required="required" />
+								</li>
+									<label for="message" class="inv">Your message</label>
+									<textarea name="message" id="message" required="required">Go ahead, say something</textarea>
+								</li>
+							</ol>	
+						</fieldset>	
+						<button name="submit" id="submit" class="app-button"><span>Send me</span></button>	
+					{/exp:freeform:form}
+				</section>	
+			</div>
+		</div>
+		{sn-page_footer}
+	</body>		
+</html>
