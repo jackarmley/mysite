@@ -13,18 +13,28 @@
 			<div id="gl-content_wrapper" class="clearfix">
 				{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="Open|Featured" limit="1" show_future_entries="yes"}
 					<article class="clearfix">
-						<div class="state-slider clearfix">
-							<ul class="slides">
-								{work-slides}
-									<li>
-										<figure>
-											<img src="{-matrix-work-slides_image}" alt="{-matrix-work-slides_alt}" {if -matrix-work-slides_border == "yes" }class="app-border"{/if} />
-											<figcaption>{-matrix-work-slides_caption}</figcaption>
-										</figure>
-									</li>
-								{/work-slides}
-							</ul>
-						</div>
+						{if work-slides AND work-screencast==""}
+							<div class="state-slider clearfix">
+								<ul class="slides">
+									{work-slides}
+										<li>
+											<figure>
+												<img src="{-matrix-work-slides_image}" alt="{-matrix-work-slides_alt}" {if -matrix-work-slides_border == "yes" }class="app-border"{/if} />
+												<figcaption>{-matrix-work-slides_caption}</figcaption>
+											</figure>
+										</li>
+									{/work-slides}
+								</ul>
+							</div>
+						{/if}
+						{if work-screencast}
+							<figure class="app-imgwithfig_pri ext-video app-division">
+								<div class="extvideo-wrapper">
+									{work-screencast}
+								</div>
+								<figcaption>A screencast from {title}</figcaption>
+							</figure>
+						{/if}
 						<h1 class="app-page_title">{title}</h1>
 						<div class="mod-gridunit gu-float gu-four">
 							{work-standfirst}
