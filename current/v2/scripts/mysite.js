@@ -305,8 +305,8 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				clearheights();
 			},
 			setprettifyclass: function(){
-				$("article code").each(function(){
-					$(this).wrap("<pre class='prettyprint'/>");
+				$("article code,article pre").each(function(){
+					$(this).addClass("prettyprint");
 				});
 			},
 			fancyabbr: function(){

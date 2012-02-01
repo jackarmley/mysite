@@ -12,10 +12,10 @@
 			<link rel="stylesheet" href="v2/css/mobile.css" media="screen" />
 		<![endif]-->
 		<!--[if (gte IE 9)|!(IE)]><!--> 
-			<link rel="stylesheet" href="css/screen.css" media="screen" />
+			<link rel="stylesheet" href="v2/css/screen.css" media="screen" />
 		<!--<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="scripts/mysite.js"></script>
+		<script src="v2/scripts/mysite.js"></script>
 		<script src="http://platform.twitter.com/anywhere.js?id=xJT0yI00uwLJDo4DJFtXg&amp;v=1" type="text/javascript"></script>
 		<script>
 			var disqus_identifier = '47';
@@ -45,23 +45,34 @@
 						</hgroup>
 						<div class="app-division">
 							<figure class="app-imgwithfig_pri app-division">
-								<img src="assets/sample_content/insites_image.jpg" />
+								<img src="v2/assets/sample_content/insites_image.jpg" />
 								<figcaption>Caption</figcaption>
 							</figure>
 							<p>Principles like descendent selection and inheritance are what makes CSS so powerful, but used a little more wisely your stylesheet can be that little bit more efficient</p>
-							<p>When <a href="" title="">considering performance,</a> CSS is often the last thing to be combed through; it's so tiny, what impact can it make on the speed of the site?</p>
+							<p>Some inline code <code>append()</code> and <code>wrapInner()</code>. When <a href="" title="">considering performance,</a> CSS is often the last thing to be combed through; it's so tiny, what impact can it make on the speed of the site?</p>
 							<p>True, a stylesheet (in comparison to the countless images, <a href="" title="">webfonts and video</a> you're asking a user to download) is pretty small, but it's surprising what a difference can be made from understanding how a browser reads it.</p>
 							<p>The browser reads your stylesheet from the bottom up, and each rule from right to left.</p>
 							<p>It only does what it's told, and wants to make sure it's got each rule right, so for every rule it goes through a qualification process.</p>
 	
 							<p>Take for example, the following:</p>
 							<p>
-<pre class="prettyprint">html body div#wrapper article p{
+<pre>html body div#wrapper article p{
 font-family:arial,sans-serif;
 margin:0 0 1em 0;
 }</pre>
 							</p>
-							<p>In this example, in applying a style to the paragraph, the browser will (in reading from right to left) look inside the curly braces to find what rules are to be applied, then it will move on to the element(s) after the braces to figure out what to apply them too. It sees the first "p" in the stack (which looks like the last item to human eyes) and knows to apply the rule to that "p". However, before settling on this decision it checks if the rule for this "p" tag has been made any more specific. It goes up the chain of selectors, and for each one checks if the rule is still valid until it gets to the end if the stack.</p>
+							<p>In this example, in applying a style to the paragraph, some inline code <code>append()</code> and <code>wrapInner()</code> the browser will (in reading from right to left) look inside the curly braces to find what rules are to be applied, then it will move on to the element(s) after the braces to figure out what to apply them too. It sees the first "p" in the stack (which looks like the last item to human eyes) and knows to apply the rule to that "p". However, before settling on this decision it checks if the rule for this "p" tag has been made any more specific. It goes up the chain of selectors, and for each one checks if the rule is still valid until it gets to the end if the stack.</p>
+<pre>
+/*--[=6a:Mobile]--*/
+@media only screen and (min-width:300px) and (max-width:767px) {}<br />
+/*--[=6b:768px screen / iPad portrait]--*/<br />
+@media only screen and (min-width:768px) and (max-width:991px){}<br />
+/*--[=6c:1024px screen]--*/<br />
+@media only screen and (min-width:992px) and (max-width:1279px){}<br />
+/*--[=6d:Large screen]--*/<br />
+@media only screen and (min-width:1280px) and (max-width:1999px){}<br />
+/*--[=6d:Super large screen]--*/<br />
+@media only screen and (min-width:2000px){}</pre>
 							<p>It will then read upwards in the stylesheet, to check if any additional rules add properties to this "p" element, or override them.</p>
 							<p>Of course, this all happens pretty quick so the idea would never be to have one rule per element, with no descendence or inheritance. It does    however, bring home the importance of thinking through each rule, and what selectors are necessary to make it work. For example, this would be deemed an "over-qualified" rule:</p>
 							<p>
