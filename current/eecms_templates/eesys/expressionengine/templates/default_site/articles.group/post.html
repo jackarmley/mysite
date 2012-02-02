@@ -10,7 +10,7 @@
 	<body>
 		<div id="gl-wrapper_page">
 			{sn-header_pri}
-			<h1 id="gl-section_title">Articles</h1>
+			<h1 id="gl-section_title"><a href="{path='articles'}" title="Go back to the articles page">Articles</a></h1>
 			<div id="gl-content_wrapper" class="clearfix">
 				{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open"}
 					<article class="clearfix">
@@ -34,7 +34,7 @@
 							</div>
 							<footer>
 								<section class="app-division">
-									<h1>Tweet this</h1>
+									<h1 id="gl-tweetbox_h1">Tweet this</h1>
 									<div id="gl-tweetbox"></div>
 								</section>
 								<section>

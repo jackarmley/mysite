@@ -429,8 +429,13 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 		#gl-section_title{border:1px solid rgba(1,1,1,.1);border-top:none;margin:0 auto 0.90em auto;padding:0.5em 0;background:#fff;text-align:center;border-radius:0 0 0.25em 0.25em;-moz-border-radius:0 0 0.25em 0.25em;-webkit-border-radius:0 0 0.25em 0.25em;-o-border-radius:0 0 0.25em 0.25em;width:98%;color:#666;position:relative;}
 			#gl-section_title:after{border:1px solid rgba(1,1,1,.1);border-top:none;border-left:none;bottom:-10px;}
-		
-		#gl-page_footer{background:rgba(1,1,1,.06);clear:both;padding:1.5em 2% 1em 2%;color:#666;text-shadow:0 1px 0 rgba(255,255,255,.7);font-size:0.85em;border:1px dashed rgba(1,1,1,.1);border-top:none;}	
+			#gl-section_title a{border:1px solid #ccc;border-left:none;position:relative;display:inline-block;z-index:1;padding:0 0.5em;border-radius:0 0.25em 0.25em 0;box-shadow:inset 0 0 3px rgba(1,1,1,.1);background:#eee;text-shadow:0 1px 0 #fff;color:#666;}
+				#gl-section_title a:link,#gl-section_title a:visited{color:#666;}
+				#gl-section_title a:hover{color:#111;}
+				#gl-section_title a:active{color:#666;}
+				#gl-section_title a:before{content:" ";width:0.95em;height:0.95em;display:block;position:absolute;top:0.15em;left:-0.5em;-moz-transform:rotate(45deg);border:1px solid #ccc;border-top:none;border-right:none;border-radius:0 0 0 0.25em;box-shadow:inset 1px -1px 1px rgba(1,1,1,.1);background:#eee;z-index:-1;}
+			
+		#gl-page_footer{background:rgba(1,1,1,.06);clear:both;padding:1.5em 2% 1em 2%;color:#666;text-shadow:0 1px 0 rgba(255,255,255,.7);font-size:0.85em;border:1px dashed rgba(1,1,1,.05);border-top:none;}	
 			#gl-page_footer h1{color:#666;text-shadow:0 1px 0 #fff;margin-bottom:0.42em;}
 			#gl-page_footer p{line-height:1.7em;}
 			#gl-page_footer a{color:#666;position:relative;}
@@ -525,7 +530,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		
 		.p-article_post article p:first-of-type,
 		.p-work_detail article p:first-of-type
-		{font-size:1em;}	
+		{font-size:1em;}
+		
+		#gl-tweetbox,#gl-tweetbox_h1{display:none;}	
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
