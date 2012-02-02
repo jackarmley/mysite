@@ -27,7 +27,9 @@
 							{if blog-thumb}
 								{blog-thumb limit="1"}
 									<figure class="app-imgwithfig_pri">
-										<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
+										<a href="{title_permalink='articles/post'}" title="Read more">
+											<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
+										</a>
 										<figcaption>{blog-thumb_caption}</figcaption>
 									</figure>		
 								{/blog-thumb}
