@@ -15,12 +15,21 @@
 					<article class="clearfix app-division">
 						<div class="mod-gridunit gu-center gu-four">
 							<h1 class="app-page_title">{title}</h1>
-							{blog-image limit="1"}
-								<figure class="app-imgwithfig_pri">
-									<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
-									<figcaption>{blog-image_caption}</figcaption>
-								</figure>		
-							{/blog-image}
+							{if blog-image}
+								{blog-image limit="1"}
+									<figure class="app-imgwithfig_pri">
+										<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+										<figcaption>{blog-image_caption}</figcaption>
+									</figure>		
+								{/blog-image}
+							{if blog-thumb}
+								{blog-thumb limit="1"}
+									<figure class="app-imgwithfig_pri">
+										<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
+										<figcaption>{blog-thumb_caption}</figcaption>
+									</figure>		
+								{/blog-thumb}
+							{/if}
 							<div class="app-setcol setcol-two">
 								{blog-body}
 							</div>

@@ -9,7 +9,7 @@
 	<body>
 		<div id="gl-wrapper_page">
 			{sn-header_pri}
-			<h1 id="gl-section_title">Work</h1>
+			<h1 id="gl-section_title"><a href="{path='work'}" title="Go back to the work page">Work</a></h1>
 			<div id="gl-content_wrapper" class="clearfix">
 				{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="Open|Featured" limit="1" show_future_entries="yes"}
 					<article class="clearfix">
@@ -37,7 +37,9 @@
 						{/if}
 						<h1 class="app-page_title">{title}</h1>
 						<div class="mod-gridunit gu-float gu-four">
-							{work-standfirst}
+							<div class="app-standfirst">
+								{work-standfirst}
+							</div>
 							{work-body}	
 							{work-extended}			
 						</div>

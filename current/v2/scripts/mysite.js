@@ -2,6 +2,11 @@
 //Add dependancies
 //======================
 
+/* Modernizr 2.0.6 (Custom Build) | MIT & BSD
+ * Build: http://www.modernizr.com/download/#-touch-cssclasses-teststyles-prefixes
+ */
+;window.Modernizr=function(a,b,c){function z(a,b){return!!~(""+a).indexOf(b)}function y(a,b){return typeof a===b}function x(a,b){return w(n.join(a+";")+(b||""))}function w(a){k.cssText=a}var d="2.0.6",e={},f=!0,g=b.documentElement,h=b.head||b.getElementsByTagName("head")[0],i="modernizr",j=b.createElement(i),k=j.style,l,m=Object.prototype.toString,n=" -webkit- -moz- -o- -ms- -khtml- ".split(" "),o={},p={},q={},r=[],s=function(a,c,d,e){var f,h,j,k=b.createElement("div");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:i+(d+1),k.appendChild(j);f=["&shy;","<style>",a,"</style>"].join(""),k.id=i,k.innerHTML+=f,g.appendChild(k),h=c(k,a),k.parentNode.removeChild(k);return!!h},t,u={}.hasOwnProperty,v;!y(u,c)&&!y(u.call,c)?v=function(a,b){return u.call(a,b)}:v=function(a,b){return b in a&&y(a.constructor.prototype[b],c)};var A=function(c,d){var f=c.join(""),g=d.length;s(f,function(c,d){var f=b.styleSheets[b.styleSheets.length-1],h=f.cssRules&&f.cssRules[0]?f.cssRules[0].cssText:f.cssText||"",i=c.childNodes,j={};while(g--)j[i[g].id]=i[g];e.touch="ontouchstart"in a||j.touch.offsetTop===9},g,d)}([,["@media (",n.join("touch-enabled),("),i,")","{#touch{top:9px;position:absolute}}"].join("")],[,"touch"]);o.touch=function(){return e.touch};for(var B in o)v(o,B)&&(t=B.toLowerCase(),e[t]=o[B](),r.push((e[t]?"":"no-")+t));w(""),j=l=null,e._version=d,e._prefixes=n,e.testStyles=s,g.className=g.className.replace(/\bno-js\b/,"")+(f?" js "+r.join(" "):"");return e}(this,this.document);
+
 /*
  * jQuery FlexSlider v1.8
  * http://flex.madebymufffin.com
@@ -305,8 +310,8 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				clearheights();
 			},
 			setprettifyclass: function(){
-				$("article code").each(function(){
-					$(this).wrap("<pre class='prettyprint'/>");
+				$("article code,article pre").each(function(){
+					$(this).addClass("prettyprint");
 				});
 			},
 			fancyabbr: function(){
@@ -466,13 +471,13 @@ $(document).ready(function() {
 		
 		if(subpage=="p-article_post"){
 			sitescripts.modules.disqus()
-			sitescripts.modules.tweetbox()
-			
+						
 			if(mobile==0){
 				sitescripts.ui.scrolltop()
 				sitescripts.ui.skipheader()
 				sitescripts.ui.setprettifyclass()
 				$(window).load(prettyPrint);
+				sitescripts.modules.tweetbox()
 			}
 		}
 		
