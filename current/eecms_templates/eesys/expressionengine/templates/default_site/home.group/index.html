@@ -16,9 +16,11 @@
 					<div class="app-division clearfix">
 						<article class="mod-gridunit gu-float gu-three">
 							{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="Featured" sort="desc" limit="1" dynamic="no" show_future_entries="yes"}
-								<h1 class="app-ico ico_view">{title}</h1>
+								<h1 class="app-ico ico_view"><a href="{title_permalink='work/detail'}" title="Read more">{title}</a></h1>
 								{work-thumb limit="1"}
-									<img src="{-matrix-work-thumb_image}" alt="{-matrix-work-thumb_alt}" />
+									<a href="{title_permalink='work/detail'}" title="Read more">
+										<img src="{-matrix-work-thumb_image}" alt="{-matrix-work-thumb_alt}" />
+									</a>
 								{/work-thumb}
 								{work-summary}
 								<a class="app-button ext-receessive" href="{title_permalink='work/detail'}">Read more</a>
@@ -26,9 +28,11 @@
 						</article>
 						<article class="mod-gridunit gu-float gu-last gu-three">
 							{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="1" sort="desc" show_future_entries="yes"}
-								<h1 class="app-ico ico_edit">{title}</h1>
+								<h1 class="app-ico ico_edit"><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
 								{blog-thumb limit="1"}
+									<a href="{title_permalink='articles/post'}" title="Read more">
 									<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
+									</a>
 								{/blog-thumb}
 								{blog-summary}
 								<a class="app-button ext-receessive" href="{title_permalink='articles/post'}">Read more</a>

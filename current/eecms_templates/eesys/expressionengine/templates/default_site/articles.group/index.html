@@ -14,11 +14,13 @@
 				{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" sort="desc" show_future_entries="yes"}
 					<article class="clearfix app-division">
 						<div class="mod-gridunit gu-center gu-four">
-							<h1 class="app-page_title">{title}</h1>
+							<h1 class="app-page_title"><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
 							{if blog-image}
 								{blog-image limit="1"}
 									<figure class="app-imgwithfig_pri">
-										<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+										<a href="{title_permalink='articles/post'}" title="Read more">
+											<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+										</a>
 										<figcaption>{blog-image_caption}</figcaption>
 									</figure>		
 								{/blog-image}
@@ -40,7 +42,7 @@
 				<div class="app-grid_listing clearfix">
 					{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="15" offset="1" dynamic="no" sort="desc" show_future_entries="yes"}
 						<article class="mod-gridunit gu-float {switch='||gu-last'} gu-two">
-							<h1>{title}</h1>
+							<h1><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
 							{blog-summary}
 							<a class="app-button ext-receessive" href="{title_permalink='articles/post'}" title="Read more">Read more</a>
 						</article>
