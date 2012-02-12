@@ -43,6 +43,7 @@ body{
 #gl-section_title{margin-bottom:4.5em;max-width:300px;}
 #gl-page_footer{max-width:300px;margin:0 auto;background:rgba(7,73,67,.4);border-radius:1em 1em 0 0;color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.6);}
 	#gl-page_footer h1{color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.6);}	
+	#gl-page_footer section:first-child{border:none;margin:0;padding:0;}
 	#gl-page_footer p a,
 	#gl-page_footer p a:link,
 	#gl-page_footer p a:visited,
@@ -51,7 +52,7 @@ body{
 	{color:#fff;box-shadow:none;border-bottom-color:#fff;}
 	#gl-page_footer p a:hover{color:#111;}
 	#gl-page_footer p a:after{color:#333;}
-#gl-mask{width:100%;height:500px;background:transparent url("../../assets/bespoke_posts/lebowski_quotes/images/bg_texture.png") repeat top left;position:absolute;top:0;left:0;}	
+
 
 blockquote{
 	margin:0;

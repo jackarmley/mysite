@@ -477,12 +477,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 			}
 		},
 		bespokepages:{
-			lebowskiquotes: function(){
-				var docheight=$(document).height();
-				var footerheight = $("#gl-page_footer").height();
-				var totalheight = docheight + footerheight;
-				$("#gl-mask").height(totalheight);
-				
+			lebowskiquotes: function(){			
 				$("#maude_quote .line_1").fitText(0.8);
 				$("#maude_quote .line_2").fitText(0.4);
 				$("#maude_quote .line_3").fitText(0.8);

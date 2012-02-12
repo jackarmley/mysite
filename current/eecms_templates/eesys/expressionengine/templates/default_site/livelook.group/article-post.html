@@ -20,16 +20,14 @@
 								<h2 class="app-pagetitle_subinfo">Posted on {entry_date format="%F %j%S, %Y"}</h2>
 							</hgroup>
 							<div class="app-division">
-								{blog-image limit="1"}
-									{if blog-image_image}
-										<figure class="app-imgwithfig_pri">
-											<a href="{title_permalink='articles/post'}" title="Read more">
-												<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
-											</a>
+								{if blog-image}
+									{blog-image limit="1"}
+										<figure class="app-imgwithfig_pri app-division">
+											<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
 											<figcaption>{blog-image_caption}</figcaption>
-										</figure>
-									{/if}		
-								{/blog-image}
+										</figure>		
+									{/blog-image}
+								{/if}
 								<div class="app-standfirst">
 									{blog-standfirst}
 								</div>
@@ -47,7 +45,7 @@
 									</div>
 								</section>
 								<script>
-									var disqus_identifier = '{entry_id';
+									var disqus_identifier = '{entry_id}';
 									var disqus_url = '{site_url}articles/post/{url_title}';
 								</script>
 							</footer>	
