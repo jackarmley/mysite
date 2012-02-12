@@ -39,16 +39,16 @@
 				<aside id="pg-me_instagram">
 					<h1>Latest from Instagram&hellip;</h1>	
 					<ul class="app-plainlist">
-						{exp:tgl_instagram:user_feed limit="6" cache="120" username="jackarmley"}
+						{exp:magpie url="http://followgram.me/jackarmley/rss" limit="6" refresh="720"}
+							{items}
 							<li class="mod-gridunit gu-float gu-two">
-								<a href="{standard_resolution}">
-									<figure>
-										<img src="{low_resolution}" alt="{caption}">
-										<figcaption>{caption}</figcaption>
-									</figure>
-								</a>
+								<figure>
+									{description}{image_url}{/description}
+									<figcaption>{title}</figcaption>
+								</figure>
 							</li>	
-						{/exp:tgl_instagram:user_feed}
+							{/items}
+						{/exp:magpie}
 					</ul>	
 				</aside>	
 			</div>
