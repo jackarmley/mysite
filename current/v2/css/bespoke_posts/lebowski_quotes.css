@@ -103,6 +103,8 @@ blockquote{
 	
 @media screen and (min-width:300px) and (max-width:800px){
 	#gl-section_title{margin-bottom:4em;display:block;}
-	#maude_quote span{line-height:1.1em;}
+	#maude_quote span,
+	body #jeff_quote span
+	{line-height:1.1em;}
 	#maude_quote footer p{margin-bottom:20px;}
 }	
