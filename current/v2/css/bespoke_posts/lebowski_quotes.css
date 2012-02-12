@@ -107,4 +107,5 @@ blockquote{
 	body #jeff_quote span
 	{line-height:1.1em;}
 	#maude_quote footer p{margin-bottom:20px;}
+	#gl-page_footer{border-radius:0;}
 }	

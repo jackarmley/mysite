@@ -540,7 +540,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.p-work_detail article p:first-of-type
 		{font-size:1em;}
 		
-		#gl-tweetbox,#gl-tweetbox_h1{display:none;}	
+		#gl-tweetbox,#gl-tweetbox_h1{display:none;}
+		
+		.p-blankcanvas #gl-header_pri{margin-bottom:0;}
+		.p-blankcanvas #gl-section_title:hover{box-shadow:none;}
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
