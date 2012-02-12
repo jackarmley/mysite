@@ -15,25 +15,16 @@
 					<article class="clearfix app-division">
 						<div class="mod-gridunit gu-center gu-four">
 							<h1 class="app-page_title"><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
-							{if blog-image}
-								{blog-image limit="1"}
+							{blog-image limit="1"}
+								{if blog-image_image}
 									<figure class="app-imgwithfig_pri">
 										<a href="{title_permalink='articles/post'}" title="Read more">
 											<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
 										</a>
 										<figcaption>{blog-image_caption}</figcaption>
-									</figure>		
-								{/blog-image}
-							{if blog-thumb}
-								{blog-thumb limit="1"}
-									<figure class="app-imgwithfig_pri">
-										<a href="{title_permalink='articles/post'}" title="Read more">
-											<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
-										</a>
-										<figcaption>{blog-thumb_caption}</figcaption>
-									</figure>		
-								{/blog-thumb}
-							{/if}
+									</figure>
+								{/if}		
+							{/blog-image}
 							<div class="app-setcol setcol-two">
 								{blog-body}
 							</div>

@@ -488,6 +488,12 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 	/*--[5: Contact page]--*/
 		#pg-contact_form textarea{height:300px;}
+		
+	/*--[5: Blank canvas page (remove distractions)]--*/
+		.p-blankcanvas #gl-wrapper_page{border:none;background:transparent;}	
+		.p-blankcanvas #gl-header_pri{display:none;}
+		.p-blankcanvas #gl-section_title:before{position:absolute;top:0.5em;right:1em;}
+		.p-blankcanvas #gl-section_title:hover{box-shadow:0 0 50px #FFFF7D;cursor:pointer;}
 /*========
 [=6:Media queries]
 ======== */

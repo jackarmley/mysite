@@ -21,10 +21,14 @@
 							</hgroup>
 							<div class="app-division">
 								{blog-image limit="1"}
-									<figure class="app-imgwithfig_pri app-division">
-										<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
-										<figcaption>{blog-image_caption}</figcaption>
-									</figure>		
+									{if blog-image_image}
+										<figure class="app-imgwithfig_pri">
+											<a href="{title_permalink='articles/post'}" title="Read more">
+												<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+											</a>
+											<figcaption>{blog-image_caption}</figcaption>
+										</figure>
+									{/if}		
 								{/blog-image}
 								<div class="app-standfirst">
 									{blog-standfirst}

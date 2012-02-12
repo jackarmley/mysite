@@ -1,0 +1,107 @@
+/*================
+Bespoke styles for "Lebowski quotes" post
+Version 1.0
+Author: Jack Armley
+Created: 02.12.2012
+Last revised: --
+--
+Contents:
+--
+==================*/ 
+
+@font-face {
+		    font-family: 'ChunkFive';
+		    src: url('../../assets/bespoke_posts/lebowski_quotes/fonts/chunkfive/Chunkfive-webfont.eot');
+		    src: url('../../assets/bespoke_posts/lebowski_quotes/fonts/chunkfive/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../../assets/bespoke_posts/lebowski_quotes/fonts/chunkfive/Chunkfive-webfont.woff') format('woff'),
+		         url('../../assets/bespoke_posts/lebowski_quotes/fonts/chunkfive/Chunkfive-webfont.ttf') format('truetype'),
+		         url('../../assets/bespoke_posts/lebowski_quotes/fonts/chunkfive/Chunkfive-webfont.svg#SnowconeRegular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+html{
+	background-color:#074943;
+	background-image:
+	-webkit-linear-gradient(45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37), 
+	-webkit-linear-gradient(-45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37);
+	background-size:60px 60px;
+}
+body{
+	width:100%;
+	max-width:100%;
+	padding:0;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+}
+
+#gl-wrapper_page{max-width:800px;margin:0 auto;}
+#gl-section_title{margin-bottom:4.5em;max-width:300px;}
+#gl-page_footer{max-width:300px;margin:0 auto;background:rgba(7,73,67,.4);border-radius:1em 1em 0 0;color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.6);}
+	#gl-page_footer h1{color:#fff;text-shadow:0 -1px 0 rgba(1,1,1,.6);}	
+	#gl-page_footer p a,
+	#gl-page_footer p a:link,
+	#gl-page_footer p a:visited,
+	#gl-page_footer p a:hover,
+	#gl-page_footer p a:active
+	{color:#fff;box-shadow:none;border-bottom-color:#fff;}
+	#gl-page_footer p a:hover{color:#111;}
+	#gl-page_footer p a:after{color:#333;}
+#gl-mask{width:100%;height:500px;background:transparent url("../../assets/bespoke_posts/lebowski_quotes/images/bg_texture.png") repeat top left;position:absolute;top:0;left:0;}	
+
+blockquote{
+	margin:0;
+	padding:60px 0.2em;
+	background:rgba(1,1,1,.4);
+	border:1px solid #074943;
+	border-radius:1em;
+	position:relative;
+}
+	blockquote p{
+		font:normal normal 6em/1em 'ChunkFive', serif;
+		margin:0;
+		padding:0;
+		color:#BE7E3F;
+		text-align:center;
+		text-shadow:
+			0 0 2px #BE7E3F,
+			5px 5px 1px #074943,
+			-1px -1px 1px #111,
+			6px 6px 1px #111,
+			0 0 50px rgba(1,1,1,.3)
+		;
+		text-transform:uppercase;
+	}
+	blockquote p span{display:block;width:100%;}
+	blockquote footer p{text-indent:-90000px;width:100px;height:100px;margin:-115px auto 0 auto;border-radius:200px;border:1px solid #074943;padding:0;}
+
+#maude_quote{margin-bottom:1em;}
+	#maude_quote p span{line-height:1.1em;}
+	#maude_quote footer p{background:transparent url("../../assets/bespoke_posts/lebowski_quotes/images/maudelebowski.gif") no-repeat top left;margin-bottom:20px;}
+
+	#jeff_quote p{
+		color:#D9B38C;
+		text-shadow:
+			0 0 2px #D9B38C,
+			5px 5px 1px #074943,
+			-1px -1px 1px #111,
+			6px 6px 1px #111,
+			0 0 50px rgba(1,1,1,.3)
+		;
+	}
+	#jeff_quote footer p{background:transparent url("../../assets/bespoke_posts/lebowski_quotes/images/jefflebowski.gif") no-repeat top left;margin-bottom:20px;}
+	#jeff_quote .line_1{line-height:1.1em;}
+	#jeff_quote .line_2{line-height:1.1em;}
+	#jeff_quote .line_3{line-height:1.2em;}
+	#jeff_quote .line_4{line-height:1.2em;}
+	#jeff_quote .line_5{line-height:1.2em;}
+	
+@media screen and (min-width:300px) and (max-width:800px){
+	#gl-section_title{margin-bottom:4em;display:block;}
+	#maude_quote span{line-height:1.1em;}
+	#maude_quote footer p{margin-bottom:20px;}
+}	

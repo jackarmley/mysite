@@ -20,12 +20,14 @@
 								<h2 class="app-pagetitle_subinfo">Posted on {entry_date format="%F %j%S, %Y"}</h2>
 							</hgroup>
 							<div class="app-division">
-								{blog-image limit="1"}
-									<figure class="app-imgwithfig_pri app-division">
-										<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
-										<figcaption>{blog-image_caption}</figcaption>
-									</figure>		
-								{/blog-image}
+								{if blog-image}
+									{blog-image limit="1"}
+										<figure class="app-imgwithfig_pri app-division">
+											<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+											<figcaption>{blog-image_caption}</figcaption>
+										</figure>		
+									{/blog-image}
+								{/if}
 								<div class="app-standfirst">
 									{blog-standfirst}
 								</div>
