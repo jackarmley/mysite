@@ -25,6 +25,15 @@ html{
 	background-image:
 	-webkit-linear-gradient(45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37), 
 	-webkit-linear-gradient(-45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37);
+	background-image:
+	-moz-linear-gradient(45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37), 
+	-moz-linear-gradient(-45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37);
+	background-image:
+	-o-linear-gradient(45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37), 
+	-o-linear-gradient(-45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37);
+	background-image:
+	linear-gradient(45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37), 
+	linear-gradient(-45deg, #053D37 25%, transparent 25%, transparent 75%, #053D37 75%, #053D37);
 	background-size:60px 60px;
 }
 body{
@@ -63,6 +72,7 @@ blockquote{
 	position:relative;
 }
 	blockquote p{
+		position:relative;
 		font:normal normal 6em/1em 'ChunkFive', serif;
 		margin:0;
 		padding:0;
@@ -77,6 +87,11 @@ blockquote{
 		;
 		text-transform:uppercase;
 	}
+	blockquote p:before,
+	blockquote p:after
+	{content:'"';position:absolute;}
+	blockquote p:before{top:0;left:-0.25em;}
+	blockquote p:after{bottom:0;right:-0.25em;}
 	blockquote p span{display:block;width:100%;}
 	blockquote footer p{text-indent:-90000px;width:100px;height:100px;margin:-115px auto 0 auto;border-radius:200px;border:1px solid #074943;padding:0;}
 

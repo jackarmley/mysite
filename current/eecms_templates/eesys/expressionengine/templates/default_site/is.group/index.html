@@ -12,18 +12,21 @@
 			<h1 id="gl-section_title">It's all about me</h1>
 			<div id="gl-content_wrapper" class="clearfix">
 				{exp:channel:entries channel="page" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" entry_id="12"}		
-					<h1 class="app-page_title">My name is Jack;<br />I’m a web designer</h1>
-					<article class="mod-gridunit gu-float gu-four">
-						<div class="app-standfirst">
+					
+					<article class="app-division">
+						<h1 class="app-page_title">My name is Jack; I’m a web designer</h1>
+						<div class="app-standfirst mod-gridunit gu-center gu-four">
 							{page-standfirst}
 						</div>
-						{page-body}		
+						<div class="app-setcol setcol-three">
+							{page-body}		
+						</div>
 					</article>
 				{/exp:channel:entries}		
-				<aside class="mod-gridunit gu-float_rt gu-last gu-two" id="gl-content_sec">
-					<h1 class="app-shavetopmargin">Recently, on the twitter&hellip;</h1>
+				<aside id="gl-content_sec" class="clearfix app-division">
+					<h1>Recently, on the twitter&hellip;</h1>
 					{exp:twitter_timeline screen_name="jackarmley" limit="3" twitter_refresh="30" use_stale_cache="yes" create_links="user_mentions|hashtags|urls"}
-						<article class="mod-listitem ext-tweet">
+						<article class="mod-listitem ext-tweet mod-gridunit gu-float gu-two">
 							<blockquote>
 								<p>&quot;{text}&quot;</p>
 								<footer>
@@ -33,6 +36,21 @@
 						</article>
 					{/exp:twitter_timeline}
 				</aside>
+				<aside id="pg-me_instagram">
+					<h1>Latest from Instagram&hellip;</h1>	
+					<ul class="app-plainlist">
+						{exp:tgl_instagram:user_feed limit="6" cache="120" username="jackarmley"}
+							<li class="mod-gridunit gu-float gu-two">
+								<a href="{standard_resolution}">
+									<figure>
+										<img src="{low_resolution}" alt="{caption}">
+										<figcaption>{caption}</figcaption>
+									</figure>
+								</a>
+							</li>	
+						{/exp:tgl_instagram:user_feed}
+					</ul>	
+				</aside>	
 			</div>
 		</div>
 		{sn-page_footer}
