@@ -336,6 +336,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
 				.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
 				.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}	
+				.setcol-four{-moz-column-count:4;-webkit-column-count:4;-o-column-count:4;column-count:4;}	
 			
 		/*Set primary image for a featured post or detail page*/
 			.app-imgwithfig_pri{text-align:center;}		
@@ -473,9 +474,9 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 	/*--[5: About page]--*/
 		#pg-me .app-standfirst p{border-bottom:none;box-shadow:none;padding-bottom:0;}
 		#pg-me .mod-listitem{border:none;box-shadow:none;padding:0;}
-		#pg-me_instagram li:nth-child(3n+3),
-		#pg-me_instagram #gl-content_sec article:nth-child(3n+3)
-		{margin-right:0;}
+		#pg-me_instagram li:nth-child(3n+3){margin-right:0;}
+		#pg-me_pinterest p:nth-of-type(1){margin:0;}
+		#pg-me_pinterest p:nth-of-type(2){display:none;}
 
 	/*--[5: Work]--*/
 		/*--Listing page--*/
@@ -545,7 +546,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.p-work_detail article p:first-of-type
 		{font-size:1em;}
 		
-		#gl-tweetbox,#gl-tweetbox_h1{display:none;}
+		#gl-tweetbox_wrapper{display:none;}
 		
 		.p-blankcanvas #gl-header_pri{margin-bottom:0;}
 		.p-blankcanvas #gl-section_title:hover{box-shadow:none;}

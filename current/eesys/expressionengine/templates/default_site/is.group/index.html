@@ -36,21 +36,47 @@
 						</article>
 					{/exp:twitter_timeline}
 				</aside>
-				<aside id="pg-me_instagram">
+				<aside id="pg-me_instagram" class="clearfix app-division">
 					<h1>Latest from Instagram&hellip;</h1>	
 					<ul class="app-plainlist">
-						{exp:magpie url="http://followgram.me/jackarmley/rss" limit="9" refresh="720"}
+						{exp:magpie url="http://followgram.me/jackarmley/rss" limit="6" refresh="720"}
 							{items}
 							<li class="mod-gridunit gu-float gu-two">
 								<figure>
-									{description}{image_url}{/description}
-									<figcaption>{title}</figcaption>
+									{description}
+										{image_url}
+										<figcaption>{title}</figcaption>
+									{/description}
 								</figure>
 							</li>	
 							{/items}
 						{/exp:magpie}
 					</ul>	
 				</aside>	
+				<aside id="pg-me_pinterest">
+					<h1>Freshly pinned&hellip;</h1>	
+					<ul class="app-plainlist app-setcol setcol-four">
+						{exp:magpie url="http://pinterest.com/jackalope/feed.rss" limit="9" parse="inward" refresh="720"}
+							{items}
+							<li>
+								<figure>
+										{exp:low_replace find="_b.jpg|/pin/|<p><a|</p></a>" replace="_c.jpg|http://pinterest.com/pin/|<a|</a>" multiple="yes"}
+											{exp:tagstripper:tagsToSave tags="a|img|figcaption|p"}
+												{description}
+													{image_url}
+													<figcaption>
+														{title}&hellip;
+													</figcaption>	
+												{/description}
+											{/exp:tagstripper:tagsToSave}	
+										{/exp:low_replace}
+								</figure>
+							</li>	
+							{/items}
+						{/exp:magpie}
+						
+					</ul>	
+				</aside>
 			</div>
 		</div>
 		{sn-page_footer}

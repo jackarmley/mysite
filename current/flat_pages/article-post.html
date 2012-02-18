@@ -8,15 +8,15 @@
 		<title>Jack Armley | Articles: Post</title>
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<link rel="stylesheet" href="v2/css/screen.css" media="screen" />
-			<link rel="stylesheet" href="v2/css/mobile.css" media="screen" />
+			<link rel="stylesheet" href="../v2/css/screen.css" media="screen" />
+			<link rel="stylesheet" href="../v2/css/mobile.css" media="screen" />
 		<![endif]-->
 		<!--[if (gte IE 9)|!(IE)]><!--> 
-			<link rel="stylesheet" href="v2/css/screen.css" media="screen" />
+			<link rel="stylesheet" href="../v2/css/screen.css" media="screen" />
 		<!--<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="v2/scripts/mysite.js"></script>
-		<script src="http://platform.twitter.com/anywhere.js?id=xJT0yI00uwLJDo4DJFtXg&amp;v=1" type="text/javascript"></script>
+		<script src="http://platform.twitter.com/anywhere.js?id=xJT0yI00uwLJDo4DJFtXg&amp;v=1"></script>
+		<script src="../v2/scripts/mysite.js"></script>
 		<script>
 			var disqus_identifier = '47';
 			var disqus_url = 'http://www.jackarmley.com/index.php/blog/article/xmastreesinthewild';
@@ -45,7 +45,7 @@
 						</hgroup>
 						<div class="app-division">
 							<figure class="app-imgwithfig_pri app-division">
-								<img src="v2/assets/sample_content/insites_image.jpg" />
+								<img src="../v2/assets/sample_content/insites_image.jpg" />
 								<figcaption>Caption</figcaption>
 							</figure>
 							<div class="app-standfirst">
@@ -92,8 +92,10 @@ margin:0 0 1em 0;
 							<p>Of course, as stylesheets are tiny I'm in no way suggesting that resets should be dropped, and the descendence shouldn't be used. I think however, it's always good to be aware of these things so our websites can be made even better-er!</p>
 						</div>
 						<footer>
-							<h1 id="gl-tweetbox_h1">Tweet this</h1>
-							<div id="gl-tweetbox"></div>
+							<div id="gl-tweetbox_wrapper">
+								<h1>Tweet this</h1>
+								<div id="gl-tweetbox"></div>
+							</div>
 							<h1>Comment</h1>
 							<div id="disqus_thread">
 							</div>

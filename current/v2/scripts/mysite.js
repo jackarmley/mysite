@@ -441,8 +441,8 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				setbox()
 
 				$(window).resize(function(){
-					tweetbox_width = $("#gl-tweetbox").parent().width();
 					removebox()
+					tweetbox_width = $("#gl-tweetbox").parent().width();
 					setbox()
 				});
 				
