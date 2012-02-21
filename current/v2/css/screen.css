@@ -89,7 +89,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			/*Block elements*/   
 				p{margin:0 0 1em 0;line-height:1.5em;}
 				hgroup{position:relative;}
-				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#333;}
+				h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#333;position:relative;}
 					h1,h2{font-size:1.5em;text-transform:uppercase;}
 				ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
 						ul li,ol li{margin:0 0 0.41em 0;}
@@ -104,7 +104,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 					blockquote p{color:#666;padding:0 1em;}
 					blockquote footer{display:block;margin:-0.41em 0 0 0;}
 				hr{border-top:1px dotted #ccc;padding:1.1em 0;margin:2.1em 0 0 0;}	
-				pre{white-space:pre;width:100%;overflow:auto;margin:2em 0 2em 0;padding:1em 4%;border:1px dashed rgba(1,1,1,0.4);border-left:none;border-right:none;background:rgba(1,1,1,.03);box-shadow:inset 0 2px 0 rgba(1,1,1,.04),inset 0 -2px 0 rgba(1,1,1,.04);}
+				pre{white-space:pre;width:100%;overflow:auto;margin:2em 0 2em 0;padding:1em 4%;border:1px dashed rgba(1,1,1,0.4);border-left:none;border-right:none;background:rgba(1,1,1,.03);box-shadow:inset 0 2px 0 rgba(1,1,1,.04),inset 0 -2px 0 rgba(1,1,1,.04);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
 			/*Inline elements*/
 				/*Superscript/subscript*/
 					sup,sub{position:relative;height:0;line-height:0.1em;}
@@ -138,10 +138,11 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 				a:hover{color:#111;text-decoration:none;}
 				a:active{color:#111;text-decoration:none;}	
 			p a{border-bottom:1px dashed #666;box-shadow:0 1px 0 #fff;position:relative;}		
-				p a:hover{border-bottom:1px solid #F8D074;box-shadow:0 -1px 0 #F8D074,inset 0 1px 0 #fff;background:rgba(251,247,168,.7);text-shadow:0 1px 0 #fff;}
+				p a:hover
+				{border-bottom:1px solid #F8D074;box-shadow:0 -1px 0 #F8D074,inset 0 1px 0 #fff;background:rgba(251,247,168,.7);text-shadow:0 1px 0 #fff;}
 				p a:hover:after,
 				#gl-page_footer a:hover:after
-				{content:"a";width:1.5em;line-height:1.5em;text-align:center;background:#fff;position:absolute;top:-1.2em;right:-1.2em;border-radius:1em;-webkit-border-radius:1em;-moz-border-radius:1em;-o-border-radius:1em;box-shadow:0 -1px 0 rgba(1,1,1,.3),0 0 4px rgba(1,1,1,.5);border:1px solid #666;font-family:"SnowconeRegular";font-style:normal;font-weight:normal;text-transform:none;z-index:2;}
+				{content:"a";width:1.5em;text-align:center;background:#fff;position:absolute;top:-1.2em;right:-1.2em;border-radius:1em;-webkit-border-radius:1em;-moz-border-radius:1em;-o-border-radius:1em;box-shadow:0 -1px 0 rgba(1,1,1,.3),0 0 4px rgba(1,1,1,.5);border:1px solid #666;font:normal normal 16px/1.5em "SnowconeRegular";text-transform:none;z-index:2;}
 		/*-Linked images-*/
 			a img{border:none;}
 	/*--[=2c:Images]--*/
@@ -272,6 +273,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		input,
 		textarea,
 		nav a,
+		a img,
 		.app-button,
 		.state-workitem a img,
 		#gl-header_pri h1 a,
@@ -334,6 +336,7 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 			.app-setcol{-moz-column-gap:2%;-webkit-column-gap:2%;-o-column-gap:2%;column-gap:2%;}
 				.setcol-two{-moz-column-count:2;-webkit-column-count:2;-o-column-count:2;column-count:2;}
 				.setcol-three{-moz-column-count:3;-webkit-column-count:3;-o-column-count:3;column-count:3;}	
+				.setcol-four{-moz-column-count:4;-webkit-column-count:4;-o-column-count:4;column-count:4;}	
 			
 		/*Set primary image for a featured post or detail page*/
 			.app-imgwithfig_pri{text-align:center;}		
@@ -469,6 +472,11 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		#pg-home .ext-tweet blockquote{padding-top:0;}	
 			#pg-home .ext-tweet blockquote p{padding-left:0;}
 	/*--[5: About page]--*/
+		#pg-me .app-standfirst p{border-bottom:none;box-shadow:none;padding-bottom:0;}
+		#pg-me .mod-listitem{border:none;box-shadow:none;padding:0;}
+		#pg-me_instagram li:nth-child(3n+3){margin-right:0;}
+		#pg-me_pinterest p:nth-of-type(1){margin:0;}
+		#pg-me_pinterest p:nth-of-type(2){display:none;}
 
 	/*--[5: Work]--*/
 		/*--Listing page--*/
@@ -486,6 +494,12 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 
 	/*--[5: Contact page]--*/
 		#pg-contact_form textarea{height:300px;}
+		
+	/*--[5: Blank canvas page (remove distractions)]--*/
+		.p-blankcanvas #gl-wrapper_page{border:none;background:transparent;}	
+		.p-blankcanvas #gl-header_pri{display:none;}
+		.p-blankcanvas #gl-section_title:before{position:absolute;top:0.5em;right:1em;}
+		.p-blankcanvas #gl-section_title:hover{box-shadow:0 0 50px #FFFF7D;cursor:pointer;}
 /*========
 [=6:Media queries]
 ======== */
@@ -532,7 +546,10 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.p-work_detail article p:first-of-type
 		{font-size:1em;}
 		
-		#gl-tweetbox,#gl-tweetbox_h1{display:none;}	
+		#gl-tweetbox_wrapper{display:none;}
+		
+		.p-blankcanvas #gl-header_pri{margin-bottom:0;}
+		.p-blankcanvas #gl-section_title:hover{box-shadow:none;}
 	}
 	@media screen and (min-width:601px) and (max-width:1024px){
 		body{width:90%;font-size:14px;line-height:1.7em;}
@@ -580,7 +597,6 @@ v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark (richclarkdesign.com)
 		.atv{color:#060}
 		
 	}
-	pre.prettyprint{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
 	ol.linenums{margin-top:0;margin-bottom:0}
 	li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}
 	li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}	 

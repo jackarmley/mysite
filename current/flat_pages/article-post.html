@@ -1,0 +1,126 @@
+<!doctype HTML>
+<!--[if IE 7 ]>    <html class="p-article_post noscript oldie ie7" id="pg-articles" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="p-article_post noscript oldie ie8" id="pg-articles" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="p-article_post noscript" id="pg-articles" lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no, scale=1, maximum-scale=1.0" /> 
+		<title>Jack Armley | Articles: Post</title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<link rel="stylesheet" href="../v2/css/screen.css" media="screen" />
+			<link rel="stylesheet" href="../v2/css/mobile.css" media="screen" />
+		<![endif]-->
+		<!--[if (gte IE 9)|!(IE)]><!--> 
+			<link rel="stylesheet" href="../v2/css/screen.css" media="screen" />
+		<!--<![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="http://platform.twitter.com/anywhere.js?id=xJT0yI00uwLJDo4DJFtXg&amp;v=1"></script>
+		<script src="../v2/scripts/mysite.js"></script>
+		<script>
+			var disqus_identifier = '47';
+			var disqus_url = 'http://www.jackarmley.com/index.php/blog/article/xmastreesinthewild';
+		</script>
+	</head>
+	<body>
+		<div id="gl-wrapper_page">
+			<header id="gl-header_pri" role="banner" class="clearfix">
+				<h1><a href="index.html">Jack Armley</a></h1>
+				<nav role="navigation" id="gl-nav_pri">
+					<ul>
+						<li><a href="articles.html" title="">Articles</a></li>
+						<li><a href="work.html" title="">Work</a></li>
+						<li><a href="is.html" title="">Me</a></li>
+						<li><a href="contact.html" title="">Contact</a></li>
+					</ul>
+				</nav>	
+			</header>
+			<h1 id="gl-section_title"><a href="articles.html">Articles</a></h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<article class="clearfix">
+					<div class="mod-gridunit gu-center gu-four">
+						<hgroup>
+							<h1 class="app-page_title">Featured article</h1>
+							<h2 class="app-pagetitle_subinfo">Posted on 25th May 2011</h2>
+						</hgroup>
+						<div class="app-division">
+							<figure class="app-imgwithfig_pri app-division">
+								<img src="../v2/assets/sample_content/insites_image.jpg" />
+								<figcaption>Caption</figcaption>
+							</figure>
+							<div class="app-standfirst">
+								<p>Principles like descendent selection and inheritance are what makes CSS so powerful, but used a little more wisely your stylesheet can be that little bit more efficient</p>
+							</div>
+							<p>Some inline code <code>append()</code> and <code>wrapInner()</code>. When <a href="" title="">considering performance,</a> CSS is often the last thing to be combed through; it's so tiny, what impact can it make on the speed of the site?</p>
+							<blockquote>
+								<p>The browser reads your stylesheet from the bottom up, and each rule from right to left.</p>
+								<footer>
+									<p>Somebody</p>
+								</footer>	
+							</blockquote>	
+							<p>True, a stylesheet (in comparison to the countless images, <a href="" title="">webfonts and video</a> you're asking a user to download) is pretty small, but it's surprising what a difference can be made from understanding how a browser reads it.</p>
+							<p>The browser reads your stylesheet from the bottom up, and each rule from right to left.</p>
+							<p>It only does what it's told, and wants to make sure it's got each rule right, so for every rule it goes through a qualification process.</p>
+	
+							<p>Take for example, the following:</p>
+							<p>
+<pre>html body div#wrapper article p{
+font-family:arial,sans-serif;
+margin:0 0 1em 0;
+}</pre>
+							</p>
+							<p>In this example, in applying a style to the paragraph, some inline code <code>append()</code> and <code>wrapInner()</code> the browser will (in reading from right to left) look inside the curly braces to find what rules are to be applied, then it will move on to the element(s) after the braces to figure out what to apply them too. It sees the first "p" in the stack (which looks like the last item to human eyes) and knows to apply the rule to that "p". However, before settling on this decision it checks if the rule for this "p" tag has been made any more specific. It goes up the chain of selectors, and for each one checks if the rule is still valid until it gets to the end if the stack.</p>
+<pre>
+/*--[=6a:Mobile]--*/
+@media only screen and (min-width:300px) and (max-width:767px) {}<br />
+/*--[=6b:768px screen / iPad portrait]--*/<br />
+@media only screen and (min-width:768px) and (max-width:991px){}<br />
+/*--[=6c:1024px screen]--*/<br />
+@media only screen and (min-width:992px) and (max-width:1279px){}<br />
+/*--[=6d:Large screen]--*/<br />
+@media only screen and (min-width:1280px) and (max-width:1999px){}<br />
+/*--[=6d:Super large screen]--*/<br />
+@media only screen and (min-width:2000px){}</pre>
+							<p>It will then read upwards in the stylesheet, to check if any additional rules add properties to this "p" element, or override them.</p>
+							<p>Of course, this all happens pretty quick so the idea would never be to have one rule per element, with no descendence or inheritance. It does    however, bring home the importance of thinking through each rule, and what selectors are necessary to make it work. For example, this would be deemed an "over-qualified" rule:</p>
+							<p>
+<pre class="prettyprint">div#main-content{...}</pre>							
+							</p>
+	
+							<p>Why make the browser work harder to ensure the ID selector is applied to a DIV element. Also, why give the rule 1 more <a href="http://www.quora.com/Whats-the-difference-between-a-CSS-Class-and-ID/answer/Jack-Armley">point of specifity?</a> You're just adding more complexity to the cascade.</p>
+							<p>This same concept potentially knocks some of the shine off CSS resets. Whilst they are useful to ensure you always start with a clean, consistent base they do add more rules that get constantly overridden, and that subsequently mean the browser has to check them against any rules it's applying to the same element, further down the stylesheet.</p>
+							<p>Of course, as stylesheets are tiny I'm in no way suggesting that resets should be dropped, and the descendence shouldn't be used. I think however, it's always good to be aware of these things so our websites can be made even better-er!</p>
+						</div>
+						<footer>
+							<div id="gl-tweetbox_wrapper">
+								<h1>Tweet this</h1>
+								<div id="gl-tweetbox"></div>
+							</div>
+							<h1>Comment</h1>
+							<div id="disqus_thread">
+							</div>
+						</footer>	
+						<a id="gl-toplink" class="app-ico ico_outline_up app-button ext-center" href="#" title="">Back to top</a>					
+					</div>
+				</article>	
+			</div>
+		</div>
+		<footer id="gl-page_footer" class="clearfix">
+			<section class="mod-gridunit gu-float gu-four">
+				<h1 class="app-shavetopmargin">Colophon</h1>
+				<div class="app-setcol setcol-two">
+					<p>Headings are set in Ostrich Sans, from the League of Movable Type. Body copy is Podkova, from Google Fonts. UI icons are from Snowcone, a scalable @font-face icon set developed by myself and the lovely folks at Tangent Snowball. The flexible grid system is inspired by an article by the great Elliot Jay Stocks, and the site is powered by Expression Engine.</p>
+				</div>
+			</section>
+			<section class="mod-gridunit gu-float_rt gu-last gu-two">
+				<h1 class="app-shavetopmargin">Let's socialize</h1>
+				<ul class="app-plainlist ext-icons">
+					<li><a class="app-ico ico_link" href="http://www.twitter.com/jackarmley" title="Find me on Twitter">Find me on Twitter</a></li>
+					<li><a class="app-ico ico_link" href="http://foursquare.com/jackarmley" title="Follow me on Foursquare">Follow me on Foursquare</a></li>
+					<li><a class="app-ico ico_link" href="http://github.com/jackarmley" title="Fork me on Github">Fork me on Github</a></li>
+					<li><a class="app-ico ico_link" href="http://pinterest.com/jackalope/" title="Repin me on Pinterest">Repin me on Pinterest</a></li>
+				</ul>
+			</section>
+		</footer>	
+	</body>		
+</html>

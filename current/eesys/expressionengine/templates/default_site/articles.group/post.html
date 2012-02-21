@@ -1,0 +1,60 @@
+<!doctype HTML>
+<!--[if lt IE 9]><html class="p-article_post noscript oldie" id="pg-articles" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="p-article_post noscript" id="pg-articles" lang="en"  manifest="jackarmley.appcache?v=1"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open"}{title}{/exp:channel:entries} &ndash; Articles : {site_name}</title>
+		<script src="http://platform.twitter.com/anywhere.js?id=xJT0yI00uwLJDo4DJFtXg&amp;v=1"></script>
+		{sn-head_meta}
+	</head>
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title"><a href="{path='articles'}" title="Go back to the articles page">Articles</a></h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open"}
+					<article class="clearfix">
+						<div class="mod-gridunit gu-center gu-four">
+							<hgroup>
+								<h1 class="app-page_title">{title}</h1>
+								<h2 class="app-pagetitle_subinfo">Posted on {entry_date format="%F %j%S, %Y"}</h2>
+							</hgroup>
+							<div class="app-division">
+								{if blog-image}
+									{blog-image limit="1"}
+										<figure class="app-imgwithfig_pri app-division">
+											<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+											<figcaption>{blog-image_caption}</figcaption>
+										</figure>		
+									{/blog-image}
+								{/if}
+								<div class="app-standfirst">
+									{blog-standfirst}
+								</div>
+								{blog-body}
+								{blog-extended}
+							</div>
+							<footer>
+								<section class="app-division">
+									<h1 id="gl-tweetbox_h1">Tweet this</h1>
+									<div id="gl-tweetbox"></div>
+								</section>
+								<section>
+									<h1>Add a comment</h1>	
+									<div id="disqus_thread">
+									</div>
+								</section>
+								<script>
+									var disqus_identifier = '{entry_id}';
+									var disqus_url = '{site_url}articles/post/{url_title}';
+								</script>
+							</footer>	
+							<a id="gl-toplink" class="app-ico ico_outline_up app-button ext-center" href="#" title="">Back to top</a>					
+						</div>
+					</article>
+				{/exp:channel:entries}	
+			</div>
+		</div>
+		{sn-page_footer}	
+	</body>		
+</html>

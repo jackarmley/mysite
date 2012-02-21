@@ -185,6 +185,49 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
   }
 })( jQuery );
 
+/* FitText.js 1.0
+*
+* Copyright 2011, Dave Rupert http://daverupert.com
+* Released under the WTFPL license 
+* http://sam.zoy.org/wtfpl/
+*
+* Date: Thu May 05 14:23:00 2011 -0600
+*/
+
+(function( $ ){
+	
+	$.fn.fitText = function( kompressor, options ) {
+	    
+	    var settings = {
+        'minFontSize' : Number.NEGATIVE_INFINITY,
+        'maxFontSize' : Number.POSITIVE_INFINITY
+      };
+	
+			return this.each(function(){
+				var $this = $(this);              // store the object
+				var compressor = kompressor || 1; // set the compressor
+        
+        if ( options ) { 
+          $.extend( settings, options );
+        }
+        
+        // Resizer() resizes items based on the object width divided by the compressor * 10
+				var resizer = function () {
+					$this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+				};
+
+				// Call once to set.
+				resizer();
+				
+				// Call on resize. Opera debounces their resize by default. 
+      	$(window).resize(resizer);
+      	
+			});
+
+	};
+
+})( jQuery );
+
 
 //======================
 //Set custom functions
@@ -341,7 +384,32 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 					"</div>"
 					
 				$("body").prepend(iemessage);
+			},
+			blankcanvaspage: function(){
+				var sectiontitle = $("#gl-section_title").text();
+				$("#gl-section_title").click(function(){
+					$("#gl-header_pri").slideToggle("800", function(){
+						if( $("#gl-section_title").hasClass("ico_outline_down") ){
+							$("#gl-section_title").removeClass("ico_outline_down").addClass("ico_outline_up");
+						}else{
+							$("#gl-section_title").removeClass("ico_outline_up").addClass("ico_outline_down");
+						}
+					});
+				});
+				$("#gl-section_title").hover(
+					function(){
+						if( $("#gl-section_title").hasClass("ico_outline_down") ){
+							$(this).text("View menu");
+						}else{
+							$(this).text("Hide menu");
+						}
+					},
+					function(){
+						$(this).text(sectiontitle);
+					}
+				);
 			}
+
 		},
 		modules:{
 			disqus: function(){
@@ -373,8 +441,8 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				setbox()
 
 				$(window).resize(function(){
-					tweetbox_width = $("#gl-tweetbox").parent().width();
 					removebox()
+					tweetbox_width = $("#gl-tweetbox").parent().width();
 					setbox()
 				});
 				
@@ -406,6 +474,20 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				});
 				var stateslider_navwidth = $(".flex-control-nav").width();
 				$(".flex-control-nav").css("width",stateslider_navwidth).addClass("state-nofloat");
+			}
+		},
+		bespokepages:{
+			lebowskiquotes: function(){			
+				$("#maude_quote .line_1").fitText(0.8);
+				$("#maude_quote .line_2").fitText(0.4);
+				$("#maude_quote .line_3").fitText(0.8);
+				
+				$("#jeff_quote .line_1").fitText(0.9);
+				$("#jeff_quote .line_2").fitText(0.5);
+				$("#jeff_quote .line_3").fitText(0.9);
+				$("#jeff_quote .line_4").fitText(1.1);
+				$("#jeff_quote .line_5").fitText(0.3);
+				$("#jeff_quote .line_6").fitText(0.7);
 			}
 		},
 		mobile:{
@@ -461,11 +543,6 @@ $(document).ready(function() {
 			sitescripts.pagespecific.workpage()	
 		}
 		
-	//vendor specific
-	
-		if(subpage_classstack[1]=="oldie"){
-			sitescripts.ui.iemessage()
-		}
 		
 	//subsection specific	
 		
@@ -488,5 +565,24 @@ $(document).ready(function() {
 			if(mobile==0){
 				sitescripts.ui.skipheader()
 			}
-		}			 
+		}
+	//Specialist page types
+		
+		if(subpage=="p-blankcanvas"){
+			sitescripts.ui.blankcanvaspage()
+		}
+		
+	//vendor specific
+
+		if(subpage_classstack[1]=="oldie"){
+			sitescripts.ui.iemessage()
+		}
+	
+	//Beskope pages
+		
+		if(section=="bespoke-leboswkiquotes"){
+			sitescripts.bespokepages.lebowskiquotes()
+			
+		}	
+							 
 });
