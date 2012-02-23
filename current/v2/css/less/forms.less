@@ -1,0 +1,16 @@
+/*--[=2d:Forms]--*/
+	/*Set global constants*/
+		form{margin:0 0 1em 0;}
+			legend{margin:0 0 0.25em 0;}
+			label{display:block;margin:0 0 0.25em 0;}
+			button{font-family:Georgia,times,serif;}
+				button:hover{cursor:pointer;}
+	/*Set styles for full forms (sets of inputs/labels should always be encased in an ordered list for example)*/  
+			form ol{margin:0;list-style:none;}
+			form li{position:relative;}
+			input,textarea{display:block;width:auto;margin:0 0 0.78em 0;padding:1.25em 20px;border:1px solid #D1D1D1;font:italic 1em/1.5em Georgia,times,serif;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;color:#111;}
+				input:focus,textarea:focus{border-radius:0.5em;border-color:#111;}
+				.state-error:after{content:"B";font-family:"SnowconeRegular";position:absolute;top:50%;right:-40px;z-index:1;width:30px;line-height:30px;margin:-15px 0 0 0;border-radius:30px;text-align:center;background:#aa0101;color:#fff;}
+				.state-error input,.state-error textarea{border-radius:0.5em;-moz-border-radius:0.5em;-webkit-border-radius:0.5em;-o-border-radius:0.5em;border-width:3px;border-color:#aa0101;color:#aa0101;}
+			input[type="radio"],input[type="checkbox"]{width:auto;border:none;}
+			legend{display:none;} 

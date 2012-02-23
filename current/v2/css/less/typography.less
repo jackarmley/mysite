@@ -1,0 +1,59 @@
+/*-Set base rules for all typographic elements*/
+	/*Set base font-family/line-height and declare the px size of an em unit*/    
+		body{font:16px/1.5em Georgia,times,serif;color:#111;}
+	/*Set font famillies for all applicable elements*/
+		.app-pagetitle_subinfo,
+		.app-button.ext-receessive
+		{font-family:Georgia,times,serif;}
+		.app-page_title
+		{font-family: 'Ostrich-bold',Arial,sans-serif;}
+		h1,
+		h2,
+		.app-button,
+		.flex-control-nav
+		figcaption
+		{font-family: 'Ostrich-black',Arial,sans-serif;}
+		code,samp,kbd,pre
+		{font-family:courier,monospace;}
+	/*Block elements*/   
+		p{margin:0 0 1em 0;line-height:1.5em;}
+		hgroup{position:relative;}
+		h1,h2,h3,h4,h5,h6{font-size:1em;line-height:1.3em;font-weight:normal;margin:2.08em 0 0.82em 0;color:#333;position:relative;}
+			h1,h2{font-size:1.5em;text-transform:uppercase;}
+		ul,ol,dl{margin:0 0 1.1em 2.5em;padding:1.1em 0 0 0;}	
+				ul li,ol li{margin:0 0 0.41em 0;}
+			ul{list-style:disc outside;}
+				ul ul{margin:0.25em 0 0.5em 1em;}
+			ol{list-style:decimal outside;}
+				ol ol{margin:0.25em 0 0.5em 1.4em;list-style-type:lower-roman;}
+			dl{padding:0;}
+				dt{font-weight:bold;margin:0 0 0.41em 0;padding:1.1em 0 0 0;}
+				dd{margin:0 0 0.41em 0;}
+		blockquote{margin:0 0 2.5em 0;padding:1.1em 0 0 0;font-style:italic;}
+			blockquote p{color:#666;padding:0 1em;}
+			blockquote footer{display:block;margin:-0.41em 0 0 0;}
+		hr{border-top:1px dotted #ccc;padding:1.1em 0;margin:2.1em 0 0 0;}	
+		pre{white-space:pre;width:100%;overflow:auto;margin:2em 0 2em 0;padding:1em 4%;border:1px dashed rgba(1,1,1,0.4);border-left:none;border-right:none;background:rgba(1,1,1,.03);box-shadow:inset 0 2px 0 rgba(1,1,1,.04),inset 0 -2px 0 rgba(1,1,1,.04);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+	/*Inline elements*/
+		/*Superscript/subscript*/
+			sup,sub{position:relative;height:0;line-height:0.1em;}
+				sup{bottom:1ex;}
+				sub{top:.5ex;}
+		/*For marking up content relevency/edits and highlighting content*/		  
+			ins{background-color:#B8EEE1;}
+			del{text-decoration:line-through;}
+			s{color:#666;text-decoration:line-through;}
+			mark{background-color:#B8EEE1;color:inherit;font-weight:normal;}
+		/*Inline quotes / small print*/	
+			q{font-style:italic;color:#1AAB8A;}
+			cite{font-style:italic;}
+			small{font-weight:normal;font-style:normal;}
+		/*phrase tags*/
+			strong,b{font-weight:bold;}
+			em,i{font-style:italic;}
+			dfn,abbr{font-style:inherit;position:relative;}
+			code,samp,kbd{background:rgba(1,1,1,.03);box-shadow:inset 0 2px 0 rgba(1,1,1,.04),inset 0 -2px 0 rgba(1,1,1,.04);border-radius:0.25em;display:inline-block;padding:0 0.25em;border:1px dashed rgba(1,1,1,0.22);}
+			var{font-style:italic;font-weight:bold;}
+		/*pseudo classes*/
+			::selection{color:#fff;background:#5DCECE;}
+			::-moz-selection{color:#fff;background:#5DCECE;}
