@@ -25,7 +25,7 @@ Setup global constants to be used throughout all other .LESS files
 		-o-transform:scale(@amount);
 		transform:scale(@amount);
 	}
-	.transition (@properties: all .2s ease-in-out;) {
+	.transition (@properties: all .2s ease-in-out) {
 		-webkit-transition: @properties;
 		-moz-transition: @properties;
 		-o-transition: @properties;
@@ -37,6 +37,12 @@ Setup global constants to be used throughout all other .LESS files
 		-webkit-column-count: @count;
 		-o-column-count: @count;
 		column-count: @count;
+	}
+	.column-gap (@amount: 2%) {
+		-moz-column-gap: @amount;
+		-webkit-column-gap: @amount;
+		-o-column-gap: @amount;
+		column-gap: @amount;
 	}
 
 /*Define section colours*/
