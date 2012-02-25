@@ -9,12 +9,16 @@ Contents:
 --
 ==================*/ 
 
+//Set variables and mixins
+@import "less/predefined.less";
+
+//Set style overrides
 pre{border:1px dotted #999;border-left:0;border-right:0;background:#eee;}
 
 .mod-gridunit{width:100%;margin-right:0;float:none;}
 		.app-page_title{font-size:3em;}
 		#gl-wrapper_page .app-button{width:60%;display:block;padding:1em 0;margin-left:auto;margin-right:auto;}
-		.app-setcol{-moz-column-count:1;-webkit-column-count:1;-o-column-count:1;column-count:1;}
+		.app-setcol{.column-count(1);}
 		body{width:100%;background:transparent;padding-bottom:0;}
 		
 		.app-division{border-bottom:1px dashed #999;}
@@ -26,7 +30,7 @@ pre{border:1px dotted #999;border-left:0;border-right:0;background:#eee;}
 		.app-grid_listing .app-button{position:relative;top:0;left:0;}	
 		.app-grid_listing .ext-center{left:0;margin-left:0;}
 		
-			/*--[=3f: Image slider]--*/
+		/*--[=3f: Image slider]--*/
 		.state-slider{position:relative;margin:0 0 2em 0;border-bottom:1px dashed #999;}
 			.slides{padding:0;margin:0;list-style:none;}
 				.slides li{float:left;width:45%;margin:0 5% 1em 0;}
@@ -63,4 +67,3 @@ pre{border:1px dotted #999;border-left:0;border-right:0;background:#eee;}
 		#gl-page_footer .icons li{margin:0;clear:both;width:100%;}
 			#gl-page_footer .icons a{float:left;display:block;padding:1em 0;border-bottom:1px dashed rgba(1,1,1,.4);width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
 			#gl-page_footer .icons li:last-child a{border-bottom:none;}
-		

@@ -1,16 +1,51 @@
-/*--[=2b:Links]--*/
-	:focus{outline:none;}
+/*================
+Links
+==================*/
+	
+	/*-Set presentation of :focus-*/
+		:focus{outline:none;}
+	
 	/*-Inline links-*/
-		a{color:#111;text-decoration:none;}
-			a:link{color:#111;text-decoration:none;}
-			a:visited{color:#111;text-decoration:none;}
-			a:hover{color:#111;text-decoration:none;}
+		a{
+			color:#111;
+			text-decoration:none;
+		}
+			a:link,
+			a:visited,
+			a:hover,
 			a:active{color:#111;text-decoration:none;}	
-		p a{border-bottom:1px dashed #666;box-shadow:0 1px 0 #fff;position:relative;}		
-			p a:hover
-			{border-bottom:1px solid #F8D074;box-shadow:0 -1px 0 #F8D074,inset 0 1px 0 #fff;background:rgba(251,247,168,.7);text-shadow:0 1px 0 #fff;}
+		p a{
+			border-bottom:1px dashed #666;
+			box-shadow:0 1px 0 #fff;
+			position:relative;
+		}		
+			p a:hover{
+				border-bottom:1px solid #F8D074;
+				box-shadow:
+					0 -1px 0 #F8D074,
+					inset 0 1px 0 #fff;
+				background:rgba(251,247,168,.7);
+				text-shadow:0 1px 0 #fff;
+			}
 			p a:hover:after,
 			#gl-page_footer a:hover:after
-			{content:"a";width:1.5em;text-align:center;background:#fff;position:absolute;top:-1.2em;right:-1.2em;border-radius:1em;-webkit-border-radius:1em;-moz-border-radius:1em;-o-border-radius:1em;box-shadow:0 -1px 0 rgba(1,1,1,.3),0 0 4px rgba(1,1,1,.5);border:1px solid #666;font:normal normal 16px/1.5em "SnowconeRegular";text-transform:none;z-index:2;}
+			{
+				content:"a";
+				width:1.5em;
+				text-align:center;
+				background:#fff;
+				position:absolute;
+				top:-1.2em;
+				right:-1.2em;
+				.border-radius(1em);
+				box-shadow:
+					0 -1px 0 rgba(1,1,1,.3),
+					0 0 4px rgba(1,1,1,.5);
+				border:1px solid #666;
+				font:normal normal 16px/1.5em "SnowconeRegular";
+				text-transform:none;
+				z-index:2;
+			}
+			
 	/*-Linked images-*/
 		a img{border:none;}

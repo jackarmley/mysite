@@ -1,0 +1,30 @@
+/*Define mixins for commonly set properties*/
+	.box-sizing (@sizing: border-box) {
+		box-sizing:@sizing;
+		-moz-box-sizing:@sizing;
+		-webkit-box-sizing:@sizing;
+	}
+	.border-radius (@radius: 0.5em) {
+		border-radius: @radius;
+		-moz-border-radius: @radius;
+		-webkit-border-radius: @radius;
+	}
+	.rotate (@angle) {
+		-moz-transform:rotate(@angle deg);
+		-webkit-transform:rotate(@angle deg);
+		-o-transform:rotate(@angle deg);
+		transform:rotate(@angle deg);
+	}
+	.column-count (@count) {
+		-moz-column-count: @count;
+		-webkit-column-count: @count;
+		-o-column-count: @count;
+		column-count: @count;
+	}
+
+/*Define section colours*/
+	@sec_color-articles: #FF4000;
+	@sec_color-work: #00A0C6;
+	@sec_color-me: #CCFF00;
+	@sec_color-contact: #F9A60B;
+
