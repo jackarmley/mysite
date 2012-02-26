@@ -5,7 +5,7 @@ Set base rules for all typographic elements
 	/*Set base font-family/line-height and declare the px size of an em unit*/    
 		body{
 			font:16px/1.5em Georgia,times,serif;
-			color:#111;
+			color:@col-base;
 		}
 	/*Set font famillies for all applicable elements*/
 		.app-pagetitle_subinfo,
@@ -40,7 +40,7 @@ Set base rules for all typographic elements
 			position:relative;
 		}
 			h1,h2{
-				font-size:@vunit-lg_space;
+				font-size:@base-lineheight;
 				text-transform:uppercase;
 			}
 		ul,ol,dl{
@@ -75,7 +75,7 @@ Set base rules for all typographic elements
 			}
 			blockquote footer{
 				display:block;
-				margin:(@base-fontsize / 0.5) 0 0 0;
+				margin:@vunit-half_space 0 0 0;
 			}
 		hr{
 			border-top:1px dotted #ccc;
