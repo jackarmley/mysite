@@ -4,26 +4,36 @@ Set base rules for all typographic elements
 
 	/*Set base font-family/line-height and declare the px size of an em unit*/    
 		body{
-			font:16px/1.5em Georgia,times,serif;
+			font:16px/1.5em @ff-base;
 			color:@col-base;
 		}
 	/*Set font famillies for all applicable elements*/
 		.app-pagetitle_subinfo,
-		.app-button.ext-receessive
-		{font-family:Georgia,times,serif;}
+		.app-button.ext-receessive,
+		input,
+		textarea,
+		button,
+		.fancyabbr
+		{font-family:@ff-base;}
+		
+		.flex-control-nav
+		{font-family:@ff-sansserif;}
 		
 		.app-page_title
-		{font-family: 'Ostrich-bold',Arial,sans-serif;}
+		{font-family:@ff-ost_bold;}
 		
 		h1,
 		h2,
 		.app-button,
 		.flex-control-nav
 		figcaption
-		{font-family: 'Ostrich-black',Arial,sans-serif;}
+		{font-family:@ff-ost_black;}
 		
 		code,samp,kbd,pre
-		{font-family:courier,monospace;}
+		{font-family:@ff-monospace;}
+		
+		#gl-page_footer a:hover:after
+		{font-family:@ff-snowcone;}
 		
 	/*Block elements*/   
 		p{
@@ -36,7 +46,7 @@ Set base rules for all typographic elements
 			line-height:1.3em;
 			font-weight:normal;
 			margin:@vunit-dbl_space 0 @base-fontsize 0;
-			color:#333;
+			color:@col-charcol;
 			position:relative;
 		}
 			h1,h2{
@@ -70,7 +80,7 @@ Set base rules for all typographic elements
 			font-style:italic;
 		}
 			blockquote p{
-				color:#666;
+				color:@col-recessive;
 				padding:0 @base-fontsize;
 			}
 			blockquote footer{
@@ -78,7 +88,7 @@ Set base rules for all typographic elements
 				margin:@vunit-half_space 0 0 0;
 			}
 		hr{
-			border-top:1px dotted #ccc;
+			border-top:1px dotted @col-ltgrey;
 			padding:@base-fontsize 0;
 			margin:@vunit-dbl_space 0 0 0;
 		}	
@@ -107,21 +117,21 @@ Set base rules for all typographic elements
 				sup{bottom:1ex;}
 				sub{top:.5ex;}
 		/*For marking up content relevency/edits and highlighting content*/		  
-			ins{background-color:#B8EEE1;}
+			ins{background-color:@col-highlight;}
 			del{text-decoration:line-through;}
 			s{
-				color:#666;
+				color:@col-recessive;
 				text-decoration:line-through;
 			}
 			mark{
-				background-color:#B8EEE1;
+				background-color:@col-highlight;
 				color:inherit;
 				font-weight:normal;
 			}
 		/*Inline quotes / small print*/	
 			q{
 				font-style:italic;
-				color:#1AAB8A;
+				color:@col-recessive;
 			}
 			cite{font-style:italic;}
 			small{
@@ -142,7 +152,7 @@ Set base rules for all typographic elements
 					inset 0 -2px 0 rgba(1,1,1,.04);
 				.border-radius(0.25em);
 				display:inline-block;
-				padding:0 0.25em;
+				padding:0 @vunit-qtr_space;
 				border:1px dashed rgba(1,1,1,0.22);
 			}
 			var{
@@ -152,9 +162,9 @@ Set base rules for all typographic elements
 		/*pseudo classes*/
 			::selection{
 				color:#fff;
-				background:#5DCECE;
+				background:@sec_color-default;
 			}
 			::-moz-selection{
 				color:#fff;
-				background:#5DCECE;
+				background:@sec_color-default;
 			}

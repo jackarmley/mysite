@@ -6,8 +6,7 @@ Form elements
 		form{margin:0 0 @base-fontsize 0;}
 			legend{margin:0 0 @vunit-qtr_space 0;}
 			label{display:block;margin:0 0 @vunit-qtr_space 0;}
-			button{font-family:Georgia,times,serif;}
-				button:hover{cursor:pointer;}
+			button:hover{cursor:pointer;}
 	/*
 	Set styles for full forms
 	(sets of inputs/labels should always be encased in an ordered list for example)
@@ -23,14 +22,16 @@ Form elements
 				margin:0 0 @base-fontsize 0;
 				padding:@vunit-dbl_space 20px;
 				border:1px solid #D1D1D1;
-				font:italic 1em/1.5em Georgia,times,serif;
+				font-style:italic;
+				font-size: @base-fontsize;
+				line-height: @base-lineheight;
 				width:100%;
 				.box-sizing;
-				color:#111;
+				color:@col-base;
 			}
 				input:focus,textarea:focus{
 					.border-radius;
-					border-color:#111;
+					border-color:@col-base;
 				}
 				.state-error:after{
 					content:"B";
@@ -44,14 +45,14 @@ Form elements
 					margin:-@base-fontsize 0 0 0;
 					.border-radius(30px);
 					text-align:center;
-					background:#aa0101;
+					background:@col-error;
 					color:#fff;
 				}
 				.state-error input,.state-error textarea{
 					.border-radius;
 					border-width:3px;
-					border-color:#aa0101;
-					color:#aa0101;
+					border-color:@col-error;
+					color:@col-error;
 				}
 			input[type="radio"],input[type="checkbox"]{
 				width:auto;border:none;
