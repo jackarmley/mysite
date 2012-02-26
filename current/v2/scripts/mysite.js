@@ -353,7 +353,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				clearheights();
 			},
 			setprettifyclass: function(){
-				$("article code,article pre").each(function(){
+				$("article code,article pre,section code,section pre").each(function(){
 					$(this).addClass("prettyprint");
 				});
 			},
@@ -488,6 +488,17 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 				$("#jeff_quote .line_4").fitText(1.1);
 				$("#jeff_quote .line_5").fitText(0.3);
 				$("#jeff_quote .line_6").fitText(0.7);
+			},
+			styleguide: function(){
+				function createcolorswatches(){
+					var $container = $("#styleguide-colours");
+					var swatchvalue = "";
+					$("tr",$container).each(function(){
+						swatchvalue = $("td:nth-child(2)",this).text();
+						$("span",this).css("background-color",swatchvalue);
+					});
+				}
+				createcolorswatches()
 			}
 		},
 		mobile:{
@@ -554,7 +565,6 @@ $(document).ready(function() {
 				sitescripts.ui.skipheader()
 				sitescripts.ui.setprettifyclass()
 				$(window).load(prettyPrint);
-				sitescripts.modules.tweetbox()
 			}
 		}
 		
@@ -582,7 +592,11 @@ $(document).ready(function() {
 		
 		if(section=="bespoke-leboswkiquotes"){
 			sitescripts.bespokepages.lebowskiquotes()
-			
+		}
+		if(section=="bespoke-styleguide"){
+			sitescripts.bespokepages.styleguide()
+			sitescripts.ui.setprettifyclass()
+			$(window).load(prettyPrint);
 		}	
 							 
 });
