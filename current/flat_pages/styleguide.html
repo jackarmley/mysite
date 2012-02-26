@@ -36,7 +36,7 @@
 			<div id="gl-content_wrapper" class="clearfix">
 				<section>
 					<h1>Colours</h1>
-					<table border="0" cellspacing="5" cellpadding="5">
+					<table border="0" cellspacing="0" cellpadding="0" class="app-threecol">
 						<thead>
 							<th>Variable name</th>
 							<th>Hex value</th>
@@ -84,42 +84,49 @@
 				</section>
 				<section>
 					<h1>Vertical rhythm</h1>
-					<table border="0" cellspacing="5" cellpadding="5">
+					<table border="0" cellspacing="0" cellpadding="0" class="app-threecol">
 						<thead>
 							<th>Variable name</th>
 							<th>Value</th>
+							<th>Resulting Px value</th>
 						</thead>	
 						<tbody>
 							<tr>
 								<td>@base-fontsize</td>
 								<td>1em</td>
+								<td>16px</td>
 							</tr>
 							<tr>
 								<td>@base-lineheight</td>
 								<td>1.5em</td>
+								<td>24px</td>
 							</tr>
 							<tr>
 								<td>@vunit-qtr_space</td>
 								<td>0.25em</td>
+								<td>4px</td>
 							</tr>
 							<tr>
 								<td>@vunit-half_space</td>
 								<td>0.5em</td>
+								<td>8px</td>
 							</tr>
 							<tr>
 								<td>@vunit-dbl_space</td>
 								<td>2em</td>
+								<td>32px</td>
 							</tr>
 							<tr>
 								<td>@vunit-lg_space</td>
 								<td>2.5em</td>
+								<td>40px</td>
 							</tr>
 						</tbody>	
 					</table>
 				</section>
 				<section>
 					<h1>Common properties</h1>
-					<table border="0" cellspacing="5" cellpadding="5">
+					<table border="0" cellspacing="0" cellpadding="0" class="app-twocol">
 						<thead>
 							<th>Variable name</th>
 							<th>Default value</th>
@@ -156,6 +163,66 @@
 						</tbody>	
 					</table>
 				</section>
+				<section>
+					<h1>Flexible grid system</h1>
+					<p>The class stack is:</p>
+<pre>
+&lt;div class=&quot;mod-gridunit gu-[position] gu-last gu-[width]&quot;&gt;
+	&lt;p&gt;Content&lt;/p&gt;
+&lt;/div&gt;	
+</pre>	
+					<table border="0" cellspacing="0" cellpadding="0" class="app-threecol">
+						<thead>
+							<th>Class name</th>
+							<th>What it does</th>
+							<th>Value(s)</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>.mod-gridunit</td>
+								<td>
+									<ul>
+										<li>Adds a right-hand margin of 2%</li>
+										<li>Ensures the element is set to <code>display:block</code></li>
+										<li>Adds <code>box-sizing:border-box</code> to ensure borders etc&hellip; won't be included in it's width.</li>
+									</ul>
+								</td>
+								<td>.mod-gridunit</td>
+							</tr>
+							<tr>
+								<td>.gu-[position]</td>
+								<td>
+									Positions the grid unit accordingly.
+								</td>
+								<td>
+									.gu-float<br />
+									.gu-float_rt<br />
+									.gu-center<br />
+								</td>
+							</tr>
+							<tr>
+								<td>.gu-last</td>
+								<td>
+									Removes the right&ndash;hand margin.
+								</td>
+								<td>.gu-last</td>
+							</tr>
+							<tr>
+								<td>.gu-[width]</td>
+								<td>
+									Assigns a width.
+								</td>
+								<td>
+									.gu-one<br />
+									.gu-two<br />
+									.gu-three<br />
+									.gu-four<br />
+									.gu-six<br />
+								</td>
+							</tr>
+						</tbody>	
+					</table>	
+				</section>	
 			</div>	
 		</div>
 	</body>		
