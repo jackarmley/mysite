@@ -3,9 +3,9 @@ Form elements
 ==================*/ 
 
 	/*Set global constants*/
-		form{margin:0 0 1em 0;}
-			legend{margin:0 0 0.25em 0;}
-			label{display:block;margin:0 0 0.25em 0;}
+		form{margin:0 0 @base-fontsize 0;}
+			legend{margin:0 0 @vunit-qtr_space 0;}
+			label{display:block;margin:0 0 @vunit-qtr_space 0;}
 			button{font-family:Georgia,times,serif;}
 				button:hover{cursor:pointer;}
 	/*
@@ -20,8 +20,8 @@ Form elements
 			input,textarea{
 				display:block;
 				width:auto;
-				margin:0 0 0.78em 0;
-				padding:1.25em 20px;
+				margin:0 0 @base-fontsize 0;
+				padding:(@base-fontsize * 0.25) 20px;
 				border:1px solid #D1D1D1;
 				font:italic 1em/1.5em Georgia,times,serif;
 				width:100%;
@@ -41,7 +41,7 @@ Form elements
 					z-index:1;
 					width:30px;
 					line-height:30px;
-					margin:-15px 0 0 0;
+					margin:-@base-fontsize 0 0 0;
 					.border-radius(30px);
 					text-align:center;
 					background:#aa0101;

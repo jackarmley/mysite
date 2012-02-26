@@ -28,44 +28,44 @@ Set base rules for all typographic elements
 	/*Block elements*/   
 		p{
 			margin:0 0 @base-fontsize 0;
-			line-height:(@base-fontsize * 0.5);
+			line-height:@base-lineheight;
 		}
 		hgroup{position:relative;}
 		h1,h2,h3,h4,h5,h6{
 			font-size:@base-fontsize;
 			line-height:1.3em;
 			font-weight:normal;
-			margin:(@base-fontsize * 2) 0 @base-fontsize 0;
+			margin:@vunit-dbl_space 0 @base-fontsize 0;
 			color:#333;
 			position:relative;
 		}
 			h1,h2{
-				font-size:(@base-fontsize * 2.5);
+				font-size:@vunit-lg_space;
 				text-transform:uppercase;
 			}
 		ul,ol,dl{
-			margin:0 0 @base-fontsize (@base-fontsize * 2.5);
+			margin:0 0 @base-fontsize @vunit-lg_space;
 			padding:@base-fontsize 0 0 0;
 		}	
-			ul li,ol li{margin:0 0 (@base-fontsize / 2) 0;}
+			ul li,ol li{margin:0 0 @vunit-half_space 0;}
 			ul{list-style:disc outside;}
-				ul ul{margin:(@base-fontsize / 4) 0 (@base-fontsize / 2) @base-fontsize;}
+				ul ul{margin:@vunit-qtr_space 0 @vunit-half_space @base-fontsize;}
 			ol{
 				list-style:decimal outside;
 			}
 				ol ol{
-					margin:(@base-fontsize / 4) 0 (@base-fontsize / 2) (@base-fontsize * 0.5);
+					margin:@vunit-qtr_space 0 @vunit-half_space @base-lineheight;
 					list-style-type:lower-roman;
 				}
 			dl{padding:0;}
 				dt{
 					font-weight:bold;
-					margin:0 0 (@base-fontsize / 2) 0;
+					margin:0 0 @vunit-half_space 0;
 					padding:@base-fontsize 0 0 0;
 				}
-				dd{margin:0 0 (@base-fontsize / 2) 0;}
+				dd{margin:0 0 @vunit-half_space 0;}
 		blockquote{
-			margin:0 0 (@base-fontsize * 2.5) 0;
+			margin:0 0 @vunit-lg_space 0;
 			padding:@base-fontsize 0 0 0;
 			font-style:italic;
 		}
@@ -80,13 +80,13 @@ Set base rules for all typographic elements
 		hr{
 			border-top:1px dotted #ccc;
 			padding:@base-fontsize 0;
-			margin:(@base-fontsize * 2) 0 0 0;
+			margin:@vunit-dbl_space 0 0 0;
 		}	
 		pre{
 			white-space:pre;
 			width:100%;
 			overflow:auto;
-			margin:(@base-fontsize * 2) 0 (@base-fontsize * 2) 0;
+			margin:@vunit-dbl_space 0 @vunit-dbl_space 0;
 			padding:@base-fontsize 4%;
 			border:1px dashed rgba(1,1,1,0.4);
 			border-left:none;
