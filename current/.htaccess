@@ -1,3 +1,0 @@
-RewriteEngine on 
-RewriteCond $1 !^(images|eesys|themes|robots\.txt|index\.php|v2) [NC]
-RewriteRule ^(.*)$ /index.php?/$1 [L]  

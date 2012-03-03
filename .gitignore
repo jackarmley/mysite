@@ -35,5 +35,5 @@ Thumbs.db
 
 # Specific files #
 ######################
-current/v2/css/screen.css
-current/v2/css/legacy.css
+v2/css/screen.css
+v2/css/legacy.css
