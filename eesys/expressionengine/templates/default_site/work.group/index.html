@@ -17,15 +17,15 @@
 						{work-slides limit="1"}
 							<figure class="app-imgwithfig_pri">
 								<a href="{title_permalink='work/detail'}" title="Read more">
-									<img src="{-matrix-work-slides_image}" alt="{-matrix-work-slides_alt}" />
+									<img src="{-matrix-work-slides_image}" alt="{-matrix-work-slides_alt}" class="app-border"/>
 								</a>
 							</figure>
 						{/work-slides}
 						<h1 class="app-page_title"><a href="{title_permalink='work/detail'}" title="Read more">{title}</a></h1>
 						<div class="app-setcol setcol-three">
+							{work-standfirst}
 							{work-body}
 						</div>
-						<a class="app-button ext-center" href="{title_permalink='work/detail'}" title="Read more">Read more</a>
 					</article>	
 				{/exp:channel:entries}
 				<div class="app-grid_listing clearfix">
@@ -35,12 +35,11 @@
 							{work-thumb limit="1"}
 								<figure>
 									<a href="{title_permalink='work/detail'}" title="Read more">
-										<img src="{-matrix-work-thumb_image}" alt="{-matrix-work-thumb_alt}" class="app-border" />
+										<img src="{-matrix-work-thumb_image}" alt="{-matrix-work-thumb_alt}" {if entry_id!="50"}class="app-border"{/if} />
 									</a>
 								</figure>
 							{/work-thumb}
 							{work-summary}
-							<a class="app-button ext-receessive" href="{title_permalink='work/detail'}" title="Read more">Read more</a>
 						</article>
 						{switch="||<div class='clear'></div>"}
 					{/exp:channel:entries}

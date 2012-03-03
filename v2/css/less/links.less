@@ -16,7 +16,9 @@ Links
 			&:active{color:@col-link;text-decoration:none;}
 		}
 		
-		p a{
+		p a,
+		article h1 a
+		{
 			border-bottom:1px dashed @col-recessive;
 			box-shadow:0 1px 0 #fff;
 			position:relative;
@@ -29,11 +31,17 @@ Links
 				background:rgba(251,247,168,.7);
 				text-shadow:0 1px 0 #fff;
 			}
+		}
+		article h1 a{
+			border-bottom:none;
 		}		
 		
 			p a:hover:after,
+			article h1 a:hover:after,
 			#gl-page_footer a:hover:after
 			{
+				font-family:@ff-snowcone;
+				text-transform:normal;
 				content:"a";
 				width:1.5em;
 				text-align:center;
@@ -55,4 +63,17 @@ Links
 			}
 			
 	/*-Linked images-*/
-		a img{border:none;}
+		a img{
+			border:none;
+
+			&:hover{
+				.opacity(0.2);
+			}
+		}
+		figure a{
+			display:block;
+
+			&:hover{
+				background:@sec_color-default;
+			}
+		}

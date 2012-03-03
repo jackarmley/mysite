@@ -32,6 +32,10 @@ Setup global constants to be used throughout all other .LESS files
 		-ms-transition: @properties;
 		transition: @properties;
 	}
+	.opacity(@value: 0.5) {
+		opacity: @value;
+		-moz-opacity: @value;
+	}
 	.column-count (@count) {
 		-moz-column-count: @count;
 		-webkit-column-count: @count;

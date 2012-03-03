@@ -29,7 +29,6 @@
 							<div class="app-setcol setcol-two">
 								{blog-body}
 							</div>
-						<a class="app-button ext-center" href="{title_permalink='articles/post'}" title="Read more">Read more</a>
 						</div>
 					</article>	
 				{/exp:channel:entries}
@@ -37,8 +36,16 @@
 					{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="15" offset="1" dynamic="no" sort="desc" show_future_entries="yes"}
 						<article class="mod-gridunit gu-float {switch='||gu-last'} gu-two">
 							<h1><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
+							{if count==1||count==2||count==3}
+								{blog-thumb limit="1"}
+									<figure>
+										<a href="{title_permalink='articles/post'}" title="Read more">
+											<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" class="app-border" />
+										</a>
+									</figure>
+								{/blog-thumb}
+							{/if}				
 							{blog-summary}
-							<a class="app-button ext-receessive" href="{title_permalink='articles/post'}" title="Read more">Read more</a>
 						</article>
 						{switch="||<div class='clear'></div>"}
 					{/exp:channel:entries}
