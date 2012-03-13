@@ -35,6 +35,7 @@ Setup global constants to be used throughout all other .LESS files
 	.opacity(@value: 0.5) {
 		opacity: @value;
 		-moz-opacity: @value;
+		filter:alpha(opacity=5);
 	}
 	.column-count (@count) {
 		-moz-column-count: @count;
