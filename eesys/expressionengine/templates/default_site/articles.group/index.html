@@ -1,0 +1,58 @@
+<!doctype HTML>
+<!--[if lt IE 7]><html class="noscript oldie" id="pg-articles" lang="en"> <![endif]-->
+<!--[if lt IE 9]><html class="noscript ie8" id="pg-articles" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-articles" lang="en"  ><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Articles : {site_name}</title>
+		{sn-head_meta}
+	</head>
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title">Articles</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="1" dynamic="no" sort="desc" show_future_entries="yes"}
+					<article class="clearfix app-division">
+						<div class="mod-gridunit gu-center gu-four">
+							<h1 class="app-page_title"><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
+							{blog-image limit="1"}
+								{if blog-image_image}
+									<figure class="app-imgwithfig_pri">
+										<a href="{title_permalink='articles/post'}" title="Read more">
+											<img src="{blog-image_image}" alt="{blog-image_alt}" {if blog-image_border == "yes" }class="app-border"{/if} />
+										</a>
+										<figcaption>{blog-image_caption}</figcaption>
+									</figure>
+								{/if}		
+							{/blog-image}
+							<div class="app-setcol setcol-two">
+								{blog-body}
+								<p><a href="{title_permalink='articles/post'}" title="Read more">Read more&hellip;</a></p>
+							</div>
+						</div>
+					</article>	
+				{/exp:channel:entries}
+				<div class="app-grid_listing clearfix">
+					{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="15" offset="1" dynamic="no" sort="desc" show_future_entries="yes"}
+						<article class="mod-gridunit gu-float {switch='||gu-last'} gu-two">
+							<h1><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
+							{if count==1||count==2||count==3}
+								{blog-thumb limit="1"}
+									<figure>
+										<a href="{title_permalink='articles/post'}" title="Read more">
+											<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" class="app-border" />
+										</a>
+									</figure>
+								{/blog-thumb}
+							{/if}				
+							{blog-summary}
+						</article>
+						{switch="||<div class='clear'></div>"}
+					{/exp:channel:entries}
+				</div>
+			</div>
+		</div>
+		{sn-page_footer}
+	</body>		
+</html>

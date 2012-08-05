@@ -1,0 +1,356 @@
+/*--[=3b: Lists]--*/
+		/*Plain list*/			
+			.app-plainlist{
+				list-style:none;
+				margin-left:0;
+				padding-top:0;
+			}
+		/*Icon list (extends app-plainlist)*/		
+			.ext-icons li{margin-bottom:0;}
+				.ext-icons .app-ico:before{padding-right:0.5em;}
+	/*--[=3c: Add transitions to relevent elements]--*/
+		button,
+		input,
+		textarea,
+		nav a,
+		a img,
+		.app-button,
+		.state-workitem a img,
+		#gl-header_pri h1 a,
+		.app-grid_listing article{
+				.transition;
+			}			
+	/*--[=3d: Swappable global type styles]--*/
+		.app-shavetopmargin{margin-top:0;}
+		.app-setflushwithparagraph{margin-top:0.35em;}
+		.app-page_title{
+			font-size:4em;
+			margin:0 0 0.35em 5px;
+			text-transform:uppercase;
+			color:#111;
+		}
+		.app-pagetitle_subinfo{
+			font-size:0.85em;
+			font-style:italic;
+			margin:-@vunit-lg_space 0 @base-lineheight 0;
+			text-transform:none;
+			
+			&:before{
+				content:"- ";
+			}	
+		}
+		.app-standfirst p{
+			font-size:1.2em;
+			font-style:italic;
+			color:@col-recessive;
+			border-bottom:1px dashed rgba(1,1,1,.4);
+			padding:0 0 @base-fontsize 0;
+			box-shadow:0 1px 0 #fff;
+			margin:0 0 @base-lineheight 0;
+		}	     	
+	   	.fancyabbr{
+	   		font-style:italic;
+	   		font-weight:normal;
+	   		font-size:14px;
+	   		line-height:30px;
+	   		color:@col-recessive;
+	   		text-transform:none;
+	   		position:absolute;
+	   		top:-40px;
+	   		left:0;
+	   		display:block;
+	   		float:left;
+	   		white-space:pre;
+	   		z-index:2;
+	   		background:#fff;
+	   		padding:0 @vunit-half_space;
+	   		.border-radius(0.25em);
+	   		box-shadow:0 0 4px rgba(1,1,1,.5);
+	   		border:1px solid #999;
+	   		display:none;
+	   		
+	   		&:after{
+	   			content:" ";
+	   			width:10px;
+	   			height:10px;
+	   			display:block;
+	   			background:#fff;
+	   			position:absolute;
+	   			bottom:-6px;
+	   			left:10px;
+	   			.rotate(45deg);
+	   			border:1px solid #999;
+	   			border-top:none;
+	   			border-left:none;
+	   			box-shadow:2px 2px 2px rgba(1,1,1,.3);
+
+   			}
+   		}
+			
+		.app-border{
+			outline:solid 1px @col-ltgrey;
+			padding:0;
+		}	
+	
+	/*--[=3d: Set elements as buttons]--*/	
+	
+		/*Initial setup*/	
+			.app-button{
+				background:@sec_color-default;
+				padding:1em;
+				font-size:1.2em;
+				display:inline-block;
+				text-align:center;
+				clear:both;
+				margin-bottom:1em;
+				border:1px solid #fff;
+				color:#fff;
+				text-shadow:0 -1px 0 rgba(1,1,1,.3);
+				.border-radius(0.5em);
+				
+				&:link,
+				&:visited{
+					color:#fff;
+				}
+				&:hover{
+					cursor:pointer;
+					box-shadow:inset 0 0 3px rgba(1,1,1,.5);
+					color:#fff;
+					.border-radius(1em);
+				}
+				&:active{
+					color:#fff;
+				}
+			}
+		
+		/*Button with icon (extends app-button)*/		
+			.app-button.app-ico:before{padding-right:@vunit-half_space;}
+		/*Centralized button (extends app-button)**/		
+			.ext-center{
+				margin-left:auto;
+				margin-right:auto;
+				width:100px;
+				display:block;
+				clear:both;
+				
+				.app-ico{
+					width:130px;
+				}	
+			}
+		/*Recessive buton (extends app-button)**/	
+			.ext-receessive{
+				font-size:0.85em;
+				font-style:italic;
+				padding:@vunit-half_space @base-fontsize;
+			}		
+
+	/*--[=3e: Styles for manipulating block content]--*/
+	
+		/*Set a block element as a visual division (not a semantic one, like <hr />*/
+			.app-division{
+				border-bottom:1px dashed rgba(1,1,1,.4);
+				padding:0 0 @base-fontsize 0;
+				box-shadow:0 1px 0 #fff;
+			}
+			
+		/*Set a block element to be a panel*/
+			.app-panel{
+				background:#DDD;
+				padding:@base-fontsize;
+				.box-sizing;
+				.border-radius(0.25em);
+				color:@col-charcol;
+				text-shadow:0 1px 0 #fff;
+				
+				a,
+				a:link,
+				a:visited{
+					color:@col-charcol;
+				}
+				a:hover{color:#111;}
+				a:active{color:@col-charcol;}
+
+			}	
+			
+			/*When element is a ul or ol, adjust accordingly (extends app-panel)**/
+				ul.app-panel,
+				ol.app-panel{
+					padding:0;
+					overflow:hidden;
+					
+					li{
+						display:block;
+						
+						&:last-child a{
+							border-bottom:none;
+						}
+					}
+					
+					a{
+						border-bottom:1px solid #fff;
+						box-shadow:inset 0 1px 1px rgba(1,1,1,.1);
+						margin:0;
+						padding:0.75em @base-fontsize;
+						display:block;
+						
+						&:hover{
+							background:rgba(1,1,1,.1);
+							box-shadow:inset 0 1px 1px rgba(1,1,1,.3);
+						}
+					}
+
+				}
+		
+		/*Set block-level text in columns*/			
+			.app-setcol{.column-gap;}
+				.setcol-two{.column-count(2);}
+				.setcol-three{.column-count(3);}	
+				.setcol-four{.column-count(4);}	
+			
+		/*Set primary image for a featured post or detail page*/
+			.app-imgwithfig_pri{
+				
+				text-align:center;
+				
+				figcaption{
+					text-align:right;
+				}
+			}		
+			/*Set to video (extends app-imgwithfigpri)*/
+				.ext-video figcaption{
+					margin-top:0;
+					padding-top:@base-fontsize;
+				}
+				.extvideo-wrapper{
+					position:relative;
+					
+					&:after{
+					content:" ";
+					position:absolute;
+					left:0;
+					bottom:-5px;
+					width:100%;
+					height:5px;
+					background:rgba(1,1,1,.3);
+					.border-radius(20px);
+					box-shadow:
+						0 0 3px rgba(1,1,1,.3),
+						0 0 20px rgba(1,1,1,.3);
+					}
+				}
+				
+	/*--[=3e: Classes for listing content]--*/
+		
+		/*For listing items horizontally*/
+			.mod-listitem{
+				margin:0 0 @base-fontsize 0;
+				border-bottom:1px dashed rgba(1,1,1,.4);
+				padding:0 0 @base-fontsize 0;
+				box-shadow:0 1px 0 #fff;
+				
+				&:last-child{
+					border-bottom:0;
+					box-shadow:none;
+					padding-bottom:0;
+				}
+				
+				h1{
+					margin-top:0;
+				}
+			}	
+		
+
+		/*Tweet subset (extends mod-listitem)**/
+			.ext-tweet blockquote{
+				margin:0;
+				padding:0;
+				
+				p{margin:0 0 @base-fontsize 0;}
+				footer p{margin:0;}
+			}
+		
+		/*For listing items in a grid*/				
+			.app-grid_listing article{
+				position:relative;
+				border-top:1px dashed rgba(1,1,1,.4);
+				padding:@base-lineheight 0 0 0;
+				margin-bottom:0;
+				min-height:410px;
+				height:410px;
+				
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3)
+				{border-top:none;}
+				
+				h1{margin-top:0;}
+			}
+
+				.app-grid_listing .app-button{
+					position:absolute;
+					bottom:@base-lineheight;
+					left:0;
+					margin:0;
+				}	
+				.app-grid_listing .ext-center{
+					left:50%;
+					margin-left:-50px;
+				}
+					
+	/*--[=3f: Image slider]--*/
+		.state-slider{
+			position:relative;
+			margin:0 0 @base-lineheight 0;
+			border-bottom:1px dashed rgba(1,1,1,.4);
+			padding:0 0 @base-fontsize 0;
+			box-shadow:0 2px 0 rgba(1,1,1,.09);
+		}
+			.slides{
+				padding:0;
+				margin:0;
+				list-style:none;
+			}
+				.slides figure{
+					margin:0;
+					text-align:center;
+				}
+				.slides figcaption{text-align:right;}
+				.slides .app-border{
+					outline:none;
+					border:1px solid #ddd;
+					.box-sizing;
+				}
+			.flex-control-nav{
+				clear:both;
+				padding:0;
+				margin:0 auto;
+				list-style:none;
+				display:block;
+				float:left;
+				font-weight:bold;
+				
+				&.state-nofloat{float:none;}
+				
+				li{
+					display:inline;
+					
+					&:last-child a{margin-right:0;}
+				}
+				a{
+					display:block;
+					float:left;
+					margin:0 @base-fontsize 0 0;
+					width:2em;
+					line-height:@vunit-dbl_space;
+					text-align:center;
+					color:@col-recessive;
+					
+					&:hover{cursor:pointer;}
+
+					&.active{
+						color:@col-base;
+					}
+				}
+				
+			}
+			

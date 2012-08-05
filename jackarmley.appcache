@@ -1,0 +1,27 @@
+CACHE MANIFEST
+# 2012-01-29
+
+# Explicitly cached 'master entries'
+CACHE:
+index.php
+/articles/index.php
+/work/index.php
+/is/index.php
+/contact/index.php
+v2/css/screen.css
+v2/scripts/mysite.js
+v2/assets/images/graphicassets-biopic.png
+v2/assets/images/graphicassets-sprite.png
+v2/assets/images/favicon.ico
+v2/assets/fonts/snowcone/snowcone-regular-webfont.eot
+v2/assets/fonts/snowcone/snowcone-regular-webfont.woff
+v2/assets/fonts/snowcone/snowcone-regular-webfont.ttf
+v2/assets/fonts/snowcone/snowcone-regular-webfont.svg
+v2/assets/fonts/ostrichsans/ostrich-bold-webfont.eot
+v2/assets/fonts/ostrichsans/ostrich-bold-webfont.woff
+v2/assets/fonts/ostrichsans/ostrich-bold-webfont.ttf
+v2/assets/fonts/ostrichsans/ostrich-bold-webfont.svg
+v2/assets/fonts/ostrichsans/ostrich-black-webfont.eot
+v2/assets/fonts/ostrichsans/ostrich-black-webfont.woff
+v2/assets/fonts/ostrichsans/ostrich-black-webfont.ttf
+v2/assets/fonts/ostrichsans/ostrich-black-webfont.svg

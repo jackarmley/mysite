@@ -1,0 +1,65 @@
+<!doctype HTML>
+<!--[if lt IE 7]><html class="noscript oldie" id="pg-home" lang="en"> <![endif]-->
+<!--[if lt IE 9]><html class="noscript ie8" id="pg-home" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="noscript" id="pg-home" lang="en"  ><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" /> 
+		<title>{site_name}</title>
+		{sn-head_meta}
+	</head>
+	<body>
+		<div id="gl-wrapper_page">
+			{sn-header_pri}
+			<h1 id="gl-section_title">My name's Jack; I'm a web designer</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<div id="pg-home_intro">
+					<p class="app-page_title app-division">I relish the challenge of building beautiful, usable and future&ndash;proof websites that people love to use.</p>
+					<div class="app-division clearfix">
+						<article class="mod-gridunit gu-float gu-three">
+							{exp:channel:entries channel="work" disable="categories|member_data|pagination" status="Featured" sort="desc" limit="1" dynamic="no" show_future_entries="yes"}
+								<h1 class="app-ico ico_view"><a href="{title_permalink='work/detail'}" title="Read more">{title}</a></h1>
+								{work-thumb limit="1"}
+									<a href="{title_permalink='work/detail'}" title="Read more" class="home-imglink">
+										<img src="{-matrix-work-thumb_image}" alt="{-matrix-work-thumb_alt}" />
+									</a>
+								{/work-thumb}
+								{work-summary}
+							{/exp:channel:entries}
+						</article>
+						<article class="mod-gridunit gu-float gu-last gu-three">
+							{exp:channel:entries channel="blog" disable="categories|member_data|pagination" status="open" limit="1" sort="desc" show_future_entries="yes"}
+								<h1 class="app-ico ico_edit"><a href="{title_permalink='articles/post'}" title="Read more">{title}</a></h1>
+								{blog-thumb limit="1"}
+									<a href="{title_permalink='articles/post'}" title="Read more" class="home-imglink">
+										<img src="{blog-thumb_image}" alt="{blog-thumb_alt}" {if blog-thumb_border == "yes" }class="app-border"{/if} />
+									</a>
+								{/blog-thumb}
+								{blog-summary}
+							{/exp:channel:entries}
+						</article>
+					</div>
+					<section class="mod-gridunit gu-float gu-two">
+						<h1 class="app-ico ico_heart">I'm loving</h1>
+						{gv-home_loving}
+					</section>
+					<section class="mod-gridunit gu-float gu-two">
+						<h1 class="app-ico ico_settings">I'm using</h1>
+						{gv-home_using}
+					</section>
+					<article class="ext-tweet mod-gridunit gu-last gu-float gu-two">
+						<h1 class="app-ico ico_twitter">From the twitter</h1>
+						{exp:twitter_timeline screen_name="jackarmley" limit="1" twitter_refresh="30" use_stale_cache="yes" create_links="user_mentions|hashtags|urls"}
+							<blockquote>
+								<p>&quot;{text}&quot;</p>
+								<footer>
+									<p>{status_relative_date} ago</p>
+								</footer>					
+							</blockquote>
+						{/exp:twitter_timeline}
+					</article>
+				</div>		
+			</div>
+		</div>
+		{sn-page_footer}
+	</body>		
+</html>

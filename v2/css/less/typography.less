@@ -1,0 +1,172 @@
+/*================
+Set base rules for all typographic elements
+==================*/ 
+
+	/*Set base font-family/line-height and declare the px size of an em unit*/    
+		body{
+			font:16px/1.5em @ff-base;
+			color:@col-base;
+		}
+	/*Set font famillies for all applicable elements*/
+		.app-pagetitle_subinfo,
+		.app-button.ext-receessive,
+		input,
+		textarea,
+		button,
+		.fancyabbr
+		{font-family:@ff-base;}
+		
+		.flex-control-nav
+		{font-family:@ff-sansserif;}
+		
+		.app-page_title
+		{font-family:@ff-ost_bold;}
+		
+		h1,
+		h2,
+		.app-button,
+		.flex-control-nav
+		figcaption
+		{font-family:@ff-ost_black;}
+		
+		code,samp,kbd,pre
+		{font-family:@ff-monospace;}
+		
+		#gl-page_footer a:hover:after,
+		p a:hover:after
+		{font-family:@ff-snowcone;}
+		
+	/*Block elements*/   
+		p{
+			margin:0 0 @base-fontsize 0;
+			line-height:@base-lineheight;
+		}
+		hgroup{position:relative;}
+		h1,h2,h3,h4,h5,h6{
+			font-size:@base-fontsize;
+			line-height:1.3em;
+			font-weight:normal;
+			margin:@vunit-dbl_space 0 @base-fontsize 0;
+			color:@col-charcol;
+			position:relative;
+		}
+			h1,h2{
+				font-size:@base-lineheight;
+				text-transform:uppercase;
+			}
+		ul,ol,dl{
+			margin:0 0 @base-fontsize @vunit-lg_space;
+			padding:@base-fontsize 0 0 0;
+		}	
+			ul li,ol li{margin:0 0 @vunit-half_space 0;}
+			ul{list-style:disc outside;}
+				ul ul{margin:@vunit-qtr_space 0 @vunit-half_space @base-fontsize;}
+			ol{
+				list-style:decimal outside;
+			}
+				ol ol{
+					margin:@vunit-qtr_space 0 @vunit-half_space @base-lineheight;
+					list-style-type:lower-roman;
+				}
+			dl{padding:0;}
+				dt{
+					font-weight:bold;
+					margin:0 0 @vunit-half_space 0;
+					padding:@base-fontsize 0 0 0;
+				}
+				dd{margin:0 0 @vunit-half_space 0;}
+		blockquote{
+			margin:0 0 @vunit-lg_space 0;
+			padding:@base-fontsize 0 0 0;
+			font-style:italic;
+		}
+			blockquote p{
+				color:@col-recessive;
+				padding:0 @base-fontsize;
+			}
+			blockquote footer{
+				display:block;
+				margin:@vunit-half_space 0 0 0;
+			}
+		hr{
+			border-top:1px dotted @col-ltgrey;
+			padding:@base-fontsize 0;
+			margin:@vunit-dbl_space 0 0 0;
+		}	
+		pre{
+			white-space:pre;
+			width:100%;
+			overflow:auto;
+			margin:@vunit-dbl_space 0 @vunit-dbl_space 0;
+			padding:@base-fontsize 4%;
+			/*border:1px dashed rgba(1,1,1,0.4);*/
+			border:1px dashed #ccc;
+			border-left:none;
+			border-right:none;
+			background:rgba(1,1,1,.03);
+			box-shadow:
+				inset 0 2px 0 rgba(1,1,1,.04),
+				inset 0 -2px 0 rgba(1,1,1,.04);
+			.box-sizing;
+		}
+	/*Inline elements*/
+		/*Superscript/subscript*/
+			sup,sub{
+				position:relative;
+				height:0;
+				line-height:0.1em;
+			}
+				sup{bottom:1ex;}
+				sub{top:.5ex;}
+		/*For marking up content relevency/edits and highlighting content*/		  
+			ins{background-color:@col-highlight;}
+			del{text-decoration:line-through;}
+			s{
+				color:@col-recessive;
+				text-decoration:line-through;
+			}
+			mark{
+				background-color:@col-highlight;
+				color:inherit;
+				font-weight:normal;
+			}
+		/*Inline quotes / small print*/	
+			q{
+				font-style:italic;
+				color:@col-recessive;
+			}
+			cite{font-style:italic;}
+			small{
+				font-weight:normal;
+				font-style:normal;
+			}
+		/*phrase tags*/
+			strong,b{font-weight:bold;}
+			em,i{font-style:italic;}
+			dfn,abbr{
+				font-style:inherit;
+				position:relative;
+			}
+			code,samp,kbd{
+				background:rgba(1,1,1,.03);
+				box-shadow:
+					inset 0 2px 0 rgba(1,1,1,.04),
+					inset 0 -2px 0 rgba(1,1,1,.04);
+				.border-radius(0.25em);
+				display:inline-block;
+				padding:0 @vunit-qtr_space;
+				border:1px dashed rgba(1,1,1,0.22);
+			}
+			var{
+				font-style:italic;
+				font-weight:bold;
+			}
+		/*pseudo classes*/
+			::selection{
+				color:#fff;
+				background:@sec_color-default;
+			}
+			::-moz-selection{
+				color:#fff;
+				background:@sec_color-default;
+			}

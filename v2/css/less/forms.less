@@ -1,0 +1,60 @@
+/*================
+Form elements
+==================*/ 
+
+	/*Set global constants*/
+		form{margin:0 0 @base-fontsize 0;}
+			legend{margin:0 0 @vunit-qtr_space 0;}
+			label{display:block;margin:0 0 @vunit-qtr_space 0;}
+			button:hover{cursor:pointer;}
+	/*
+	Set styles for full forms
+	(sets of inputs/labels should always be encased in an ordered list for example)
+	*/  
+			form ol{
+				margin:0;
+				list-style:none;
+			}
+			form li{position:relative;}
+			input,textarea{
+				display:block;
+				width:auto;
+				margin:0 0 @base-fontsize 0;
+				padding:@vunit-dbl_space 20px;
+				border:1px solid #D1D1D1;
+				font-style:italic;
+				font-size: @base-fontsize;
+				line-height: @base-lineheight;
+				width:100%;
+				.box-sizing;
+				color:@col-base;
+			}
+				input:focus,textarea:focus{
+					.border-radius;
+					border-color:@col-base;
+				}
+				.state-error:after{
+					content:"B";
+					font-family:"SnowconeRegular";
+					position:absolute;
+					top:50%;
+					right:-40px;
+					z-index:1;
+					width:30px;
+					line-height:30px;
+					margin:-@base-fontsize 0 0 0;
+					.border-radius(30px);
+					text-align:center;
+					background:@col-error;
+					color:#fff;
+				}
+				.state-error input,.state-error textarea{
+					.border-radius;
+					border-width:3px;
+					border-color:@col-error;
+					color:@col-error;
+				}
+			input[type="radio"],input[type="checkbox"]{
+				width:auto;border:none;
+			}
+			legend{display:none;} 
