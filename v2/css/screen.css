@@ -187,7 +187,7 @@ ul.app-panel a,ol.app-panel a{border-bottom:1px solid #fff;box-shadow:inset 0 1p
 .flex-control-nav a{display:block;float:left;margin:0 1em 0 0;width:2em;line-height:2em;text-align:center;color:#666666;}.flex-control-nav a:hover{cursor:pointer;}
 .flex-control-nav a.active{color:#111111;}
 html{height:100%;background:#ececec;}
-body{max-width:1000px;min-width:260px;width:90%;margin:0 auto;position:relative;padding-bottom:2em;}
+body{max-width:1000px;min-width:260px;width:90%;margin:0 auto;position:relative;padding-bottom:2em;background:red;}
 #gl-wrapper_page{padding:0 2% 3em 2%;border:1px dashed #ccc;border-top:none;border-bottom:1px solid rgba(1, 1, 1, 0.3);background:rgba(255, 255, 255, 0.3);}
 #gl-header_pri{position:relative;border-bottom:1px dashed rgba(1, 1, 1, 0.6);height:100px;background:#5dcece;box-shadow:0 2px 2px rgba(1, 1, 1, 0.2);}
 #gl-header_pri h1{color:#fff;font-size:3em;line-height:100px;text-align:center;margin:0;text-shadow:0 -1px 0 rgba(1, 1, 1, 0.7);}
