@@ -1,0 +1,342 @@
+<!doctype HTML>
+<!--[if IE 7 ]>    <html class="p-blankcanvas noscript oldie ie7" id="bespoke-styleguide" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="p-blankcanvas noscript ie8" id="bespoke-styleguide" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="p-blankcanvas noscript" id="bespoke-styleguide" lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no, scale=1, maximum-scale=1.0" /> 
+		<title>Styleguide | Jack Armley</title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="../v2/css/screen.css" media="screen" />
+			<link rel="stylesheet" href="../v2/css/legacy.css" media="screen" />
+		<![endif]-->
+		<!--[if (gte IE 8)|!(IE)]><!--> 
+			<link rel="stylesheet" href="../v2/css/screen.css" media="screen" />
+		<!--<![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="../v2/scripts/mysite.js"></script>
+	</head>
+	<body>
+		<div id="gl-mask"></div>
+		<div id="gl-wrapper_page">
+			<header id="gl-header_pri" role="banner" class="clearfix">
+				<h1><a href="index.html">Jack Armley</a></h1>
+				<nav role="navigation" id="gl-nav_pri">
+					<ul>
+						<li class="navitem-articles"><a href="articles.html" title="">Articles</a></li>
+						<li class="navitem-work"><a href="work.html" title="">Work</a></li>
+						<li class="navitem-is"><a href="is.html" title="">Me</a></li>
+						<li class="navitem-contact"><a href="contact.html" title="">Contact</a></li>
+					</ul>
+				</nav>	
+			</header>
+			<h1 id="gl-section_title" class="app-ico ico_outline_down">Styleguide</h1>
+			<div id="gl-content_wrapper" class="clearfix">
+				<section class="app-standfirst">
+					<h1>A little context</h1>
+					<p>This is the styleguide for my website (jackarmley.com). It's purpose is to keep my styles consistent, and to help me stay on&ndash;track when making additions and amends.</p>
+				</section>	
+				<section id="styleguide-colours">
+					<h1>Colours</h1>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<thead>
+							<th>Variable name</th>
+							<th>Hex value</th>
+							<th>Swatch</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>@col-base</td>
+								<td>#111</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@col-link</td>
+								<td>#111</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@col-highlight</td>
+								<td>#FFFF97</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@col-error</td>
+								<td>#aa0101</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@col-charcol</td>
+								<td>#333</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@col-recessive</td>
+								<td>#666</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@col-ltgrey</td>
+								<td>#ccc</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@sec_color-default</td>
+								<td>#5DCECE</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@sec_color-articles</td>
+								<td>#FF4000</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@sec_color-work</td>
+								<td>#00A0C6</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@sec_color-me</td>
+								<td>#CCFF00</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td>@sec_color-contact</td>
+								<td>#F9A60B</td>
+								<td>
+									<span></span>
+								</td>
+							</tr>
+							
+						</tbody>	
+					</table>
+				</section>
+				<section>
+					<h1>Vertical rhythm</h1>
+					<table border="0" cellspacing="0" cellpadding="0" class="app-threecol">
+						<thead>
+							<th>Variable name</th>
+							<th>Value</th>
+							<th>Resulting Px value</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>@base-fontsize</td>
+								<td>1em</td>
+								<td>16px</td>
+							</tr>
+							<tr>
+								<td>@base-lineheight</td>
+								<td>1.5em</td>
+								<td>24px</td>
+							</tr>
+							<tr>
+								<td>@vunit-qtr_space</td>
+								<td>0.25em</td>
+								<td>4px</td>
+							</tr>
+							<tr>
+								<td>@vunit-half_space</td>
+								<td>0.5em</td>
+								<td>8px</td>
+							</tr>
+							<tr>
+								<td>@vunit-dbl_space</td>
+								<td>2em</td>
+								<td>32px</td>
+							</tr>
+							<tr>
+								<td>@vunit-lg_space</td>
+								<td>2.5em</td>
+								<td>40px</td>
+							</tr>
+						</tbody>	
+					</table>
+				</section>
+				<section>
+					<h1>Fonts</h1>
+					<table border="0" cellspacing="0" cellpadding="0" class="app-twocol">
+						<thead>
+							<th>Variable name</th>
+							<th>Usage</th>
+							<th>Value</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>@ff-base</td>
+								<td>Base font family</td>
+								<td>Georgia,times,serif</td>
+							</tr>
+							<tr>
+								<td>@ff-monospace</td>
+								<td>For code snippets</td>
+								<td>courier,monospace</td>
+							</tr>
+							<tr>
+								<td>@ff-sansserif</td>
+								<td>For small or instructional type</td>
+								<td>arial,sans-serif</td>
+							</tr>
+							<tr>
+								<td>@ff-snowcone</td>
+								<td>Used by the Snowcone icon set</td>
+								<td>'SnowconeRegular'</td>
+							</tr>							
+							<tr>
+								<td>@ff-ost_bold</td>
+								<td>A large, condensed display font for main headings</td>
+								<td>'Ostrich-bold',Arial,sans-serif</td>
+							</tr>
+							<tr>
+								<td>@ff-ost_black</td>
+								<td>A condensed font for headings</td>
+								<td>'Ostrich-black',Arial,sans-serif</td>
+							</tr>
+						</tbody>	
+					</table>
+				</section>		
+				<section>
+					<h1>Common properties</h1>
+					<table border="0" cellspacing="0" cellpadding="0" class="app-twocol">
+						<thead>
+							<th>Variable name</th>
+							<th>Default value</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>.box-sizing</td>
+								<td>border-box</td>
+							</tr>
+							<tr>
+								<td>.border-radius</td>
+								<td>0.5em</td>
+							</tr>
+							<tr>
+								<td>.rotate</td>
+								<td>undefined</td>
+							</tr>
+							<tr>
+								<td>.scale</td>
+								<td>undefined</td>
+							</tr>
+							<tr>
+								<td>.transition</td>
+								<td>all .2s ease-in-out</td>
+							</tr>
+							<tr>
+								<td>.column-count</td>
+								<td>undefined</td>
+							</tr>
+							<tr>
+								<td>.column-gap</td>
+								<td>undefined</td>
+							</tr>
+						</tbody>	
+					</table>
+				</section>
+				<section>
+					<h1>Flexible grid system</h1>
+					<p>The class stack is:</p>
+<pre>
+&lt;div class=&quot;mod-gridunit gu-[position] gu-last gu-[width]&quot;&gt;
+	&lt;p&gt;Content&lt;/p&gt;
+&lt;/div&gt;	
+</pre>	
+					<table border="0" cellspacing="0" cellpadding="0" class="app-threecol">
+						<thead>
+							<th>Class name</th>
+							<th>What it does</th>
+							<th>Value(s)</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>.mod-gridunit</td>
+								<td>
+									<ul>
+										<li>Adds a right-hand margin of 2%</li>
+										<li>Ensures the element is set to <code>display:block</code></li>
+										<li>Adds <code>box-sizing:border-box</code> to ensure borders etc&hellip; won't be included in it's width.</li>
+									</ul>
+								</td>
+								<td>.mod-gridunit</td>
+							</tr>
+							<tr>
+								<td>.gu-[position]</td>
+								<td>
+									Positions the grid unit accordingly.
+								</td>
+								<td>
+									.gu-float<br />
+									.gu-float_rt<br />
+									.gu-center<br />
+								</td>
+							</tr>
+							<tr>
+								<td>.gu-last</td>
+								<td>
+									Removes the right&ndash;hand margin.
+								</td>
+								<td>.gu-last</td>
+							</tr>
+							<tr>
+								<td>.gu-[width]</td>
+								<td>
+									Assigns a width.
+								</td>
+								<td>
+									.gu-one<br />
+									.gu-two<br />
+									.gu-three<br />
+									.gu-four<br />
+									.gu-six<br />
+								</td>
+							</tr>
+						</tbody>	
+					</table>	
+				</section>	
+			</div>	
+		</div>
+		<footer id="gl-page_footer" class="clearfix">
+			<section class="mod-gridunit gu-float gu-four">
+				<h1 class="app-shavetopmargin">Colophon</h1>
+				<div class="app-setcol setcol-two">
+					<p>Headings are set in Ostrich Sans, from the League of Movable Type. Body copy is Podkova, from Google Fonts. UI icons are from Snowcone, a scalable @font-face icon set developed by myself and the lovely folks at Tangent Snowball. The flexible grid system is inspired by an article by the great Elliot Jay Stocks, and the site is powered by Expression Engine.</p>
+				</div>
+			</section>
+			<section class="mod-gridunit gu-float_rt gu-last gu-two">
+				<h1 class="app-shavetopmargin">Let's socialize</h1>
+				<ul class="app-plainlist ext-icons">
+					<li><a class="app-ico ico_link" href="http://www.twitter.com/jackarmley" title="Find me on Twitter">Find me on Twitter</a></li>
+					<li><a class="app-ico ico_link" href="http://foursquare.com/jackarmley" title="Follow me on Foursquare">Follow me on Foursquare</a></li>
+					<li><a class="app-ico ico_link" href="http://github.com/jackarmley" title="Fork me on Github">Fork me on Github</a></li>
+					<li><a class="app-ico ico_link" href="http://pinterest.com/jackalope/" title="Repin me on Pinterest">Repin me on Pinterest</a></li>
+				</ul>
+			</section>
+		</footer>
+	</body>		
+</html>
