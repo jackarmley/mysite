@@ -1,0 +1,18 @@
+# Required
+scheme: ftp
+host: nitti.dreamhost.com
+username: jackarmley16
+password: g9oSnQHF
+
+# Optional
+path: jackarmley.com/
+exclude:
+    - .gitignore
+    - dandelion.yml
+    - eecms_templates/
+    - flat_pages/
+    - managed_assets/
+    - src/
+    - v2/css/less/
+    - index.html
+revision_file: .revision
